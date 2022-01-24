@@ -1,0 +1,15 @@
+.home p{
+    width: 80%;
+    margin: auto;
+    font-size: xx-large;
+    text-align: center;
+    font-weight:800;
+    color: rgb(57, 70, 185);
+}
+
+.home {
+    padding: 6px;
+    overflow-x: hidden;
+    width:100%;
+    overflow-x: hidden;
+}

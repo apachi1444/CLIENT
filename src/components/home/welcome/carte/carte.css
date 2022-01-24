@@ -1,0 +1,26 @@
+.carte{
+    display: grid;
+    place-items: center;
+    height: 11em;
+    width: auto;
+    box-shadow: 1px 2px 1px 0.5px rgba(228, 228, 231, 0.829);
+    border-radius: 12px;
+    padding: 10px;
+    margin: 8px;
+}
+
+.carte h3{
+    text-align: center;
+    color: rgb(52, 52, 224);
+}
+
+.carte button{
+    border-radius: 8px;
+    background-color: rgb(23, 23, 126);
+    color: rgb(240, 236, 243);
+    outline: none;
+    padding: 4px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}

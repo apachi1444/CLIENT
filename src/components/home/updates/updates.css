@@ -1,0 +1,7 @@
+.updates{
+    width: min(500px, 90%);
+    height: max-content;
+    display: grid;
+    place-items: center;
+    padding: 6px;
+}

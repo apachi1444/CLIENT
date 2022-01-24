@@ -1,0 +1,22 @@
+.contacts{
+    background-color: #e5f4f5;
+    display:  flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.contacts div{
+    margin: 5px;
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: wrap;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+.contacts div .MuiSvgIcon-root{
+    fill: rgb(172, 172, 231);
+}

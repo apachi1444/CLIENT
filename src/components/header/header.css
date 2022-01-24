@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header h4{
+    margin: 6px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: #121e7a;
+    box-shadow: 1px 1.3px 1px 1px rgb(9, 9, 141);
+    cursor: pointer;
+    color: aliceblue;
+    letter-spacing: 1px;
+}
+
+.burg{
+    position: relative;
+}

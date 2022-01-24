@@ -1,0 +1,54 @@
+.burger{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgb(228, 226, 238);
+    color: rgb(0, 0, 0);
+    opacity: 0.9;
+    
+};
+
+.close{
+    margin: auto;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 70vw;
+
+}
+
+.links h4{
+    cursor: pointer;
+    color: rgb(7, 23, 255);
+}
+
+.links h4:hover{
+    color: rgb(187, 170, 228);
+}
+.menu{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.menu .MuiSvgIcon-root{
+    width: 1.3em;
+    height: auto;
+    fill: rgb(10, 10, 12);
+    margin: auto;
+}
+.close .MuiSvgIcon-root{
+    width: 1.3em;
+    height: auto;
+    fill: rgb(50, 50, 185);
+    margin: auto;
+}
