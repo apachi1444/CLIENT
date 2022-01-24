@@ -1,4 +1,4 @@
-# Renting project, it helps connect students with room/house owners
+# Renting project, it helps connect students with room/apartement owners
 
 ##Live Demo:
 
