@@ -2,6 +2,6 @@
 
 ##Live Demo:
 
-Ckeck out [this link](https://colocakesh.netlify.app) to view a live demo of the project.
+Ckeck out [this link](#) to view a live demo of the project.
 
 
