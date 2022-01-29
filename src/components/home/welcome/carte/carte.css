@@ -1,9 +1,9 @@
 .carte{
     display: grid;
     place-items: center;
-    height: 11em;
+    height: 14em;
     width: auto;
-    box-shadow: 1px 2px 1px 0.5px rgba(228, 228, 231, 0.829);
+    box-shadow: 1px 2px 1px 1px rgba(222, 222, 224, 0.829);
     border-radius: 12px;
     padding: 10px;
     margin: 8px;

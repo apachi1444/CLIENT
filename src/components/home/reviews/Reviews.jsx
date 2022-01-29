@@ -4,7 +4,7 @@ import "./reviews.css";
 function Reviews() {
     return (
         <div className="reviews">
-            Reviews
+            Reviews Page Is Not Built Yet
         </div>
     )
 }

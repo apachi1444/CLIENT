@@ -1,7 +1,31 @@
 .updates{
-    width: min(500px, 90%);
+    width: 80%;
     height: max-content;
     display: grid;
+    grid-gap: 4px;
+    grid-template-rows: auto auto;
     place-items: center;
-    padding: 6px;
+    margin: auto;
+    padding: 4px;
+    box-shadow: 1px 1px 1px 0.5px rgb(231, 228, 228);
+    border-radius: 4px;
+}
+
+.updates .cards{
+    overflow-x: scroll;
+    white-space: nowrap;
+    height: 50vh;
+    width: 90%;
+    margin: auto;
+    overflow-y: hidden;
+    border-radius: 4px;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    border: 2px solid rgb(228, 228, 236);
+    border-radius: 4px;
 }
