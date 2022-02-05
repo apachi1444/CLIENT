@@ -1,3 +1,11 @@
+@keyframes burger-down {
+    0%{
+         opacity: 0;  
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .burger{
     display: grid;
     place-items: center;
@@ -6,10 +14,9 @@
     right: 0;
     left: 0;
     z-index: 2;
-    background-color: rgb(228, 226, 238);
-    color: rgb(0, 0, 0);
-    opacity: 0.9;
-    
+    background-color: rgb(213, 213, 228);
+    color: rgb(58, 4, 253);
+    animation: burger-down 0.5s ease-in;    
 };
 
 .close{
@@ -25,9 +32,9 @@
 
 }
 
-.links h4{
+.links h3{
     cursor: pointer;
-    color: rgb(7, 23, 255);
+    color: rgb(17, 16, 24);
 }
 
 .links h4:hover{

@@ -1,5 +1,4 @@
 import React from 'react';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import './card.css';
 
 function Card({details}) {
@@ -7,9 +6,8 @@ function Card({details}) {
         <div className="card">
             <div className="image">
                 <img src={details?.image} alt="Room" />
-                <div className="location">{details?.location}</div>
-                <div className="price">{details?.price}</div>
-                <div className="more-about"><MoreVertIcon/></div>
+                <h4 className="location">{details?.location}</h4>
+                <h4 className="price">{details?.price}</h4>
             </div>
         </div>
     );

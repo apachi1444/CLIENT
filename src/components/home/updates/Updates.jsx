@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import EastIcon from '@mui/icons-material/East';
-import WestIcon from '@mui/icons-material/West';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import Card from './card/Card';
 import "./updates.css";
 
@@ -22,11 +21,13 @@ const details=(counter)=>({
 function Updates() {
     const itemsNumber=images.length;//this will be dynamic later on
     const [current, setCurrent]=useState(0);
+    const [direction, setDirection]=useState(false);//true for right, false for left
     const moveIt=(flag)=>{
         return ()=>{
+            setDirection(flag);
             if(flag && current<itemsNumber-1) setCurrent(current+1);
             else {
-                if(current>0) setCurrent(current-1);
+                if(current>0 && !flag) setCurrent(current-1);
             } 
         }
     };
@@ -36,8 +37,13 @@ function Updates() {
                 {itemsNumber!==0 && <Card details={details(current)}/>} 
             </div>
             <div className="arrows">
-                <div className="left" onClick={moveIt(false)}><WestIcon/></div>
-                <div className="right"onClick={moveIt(true)} ><EastIcon/></div>
+                <div className={`right cercle${direction ? " clicked": ""}`} onClick={moveIt(true)} >
+                    <FiberManualRecordIcon/>
+                </div>
+                <div className="middle cercle"><FiberManualRecordIcon/></div>
+                <div className={`right cercle${!direction ? " clicked": ""}`} onClick={moveIt(false)}>
+                    <FiberManualRecordIcon/>
+                </div>
             </div>
         </div>
     )

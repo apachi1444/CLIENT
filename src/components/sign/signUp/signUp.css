@@ -8,7 +8,7 @@
     margin: 10vw auto 10vw auto;
     display: grid;
     place-items: center;
-    box-shadow: 1px 2px 1px .5px rgb(230, 230, 233);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
 }
 
 .field{
@@ -37,7 +37,7 @@
     grid-area: 1/1/2/3;
     justify-self: center;
     border:  none;
-    border-bottom: 1px solid rgb(187, 157, 216);
+    border-bottom: 1px solid rgb(199, 184, 214);
     padding: 4px;
 }
 
@@ -45,8 +45,9 @@
     outline: none;
 }
 .field .view-me{
-    width: 100%;
-    grid-area: 3/3/4/4;
+    width: max-content;
+    grid-area: 3/2/4/3;
+    justify-self: end;
 }
 
 .sign-up .forgot-password, .sign-up .have-account{

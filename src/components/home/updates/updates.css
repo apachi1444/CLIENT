@@ -25,7 +25,15 @@
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    border: 2px solid rgb(228, 228, 236);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     border-radius: 4px;
     width: 5em;
+}
+
+.arrows .cercle .MuiSvgIcon-root{
+    fill: rgba(157, 155, 194, 0.452);
+}
+
+.clicked .MuiSvgIcon-root{
+    fill: rgb(28, 28, 223) !important;
 }

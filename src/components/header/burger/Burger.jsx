@@ -16,12 +16,12 @@ function Burger() {
         <div className="burger">
             <div  onClick={toggle} className="close"><CloseIcon/></div>
             <div className="links">
-                <h4 onClick={()=>dispatch(pager("home"))}>{selected("home", "Aceuil")}</h4>
-                <h4 onClick={()=>dispatch(pager("locations"))}>{selected("locations", "Locations")}</h4>
-                <h4 onClick={()=>dispatch(pager("posts"))}>{selected("posts", "Annonces")}</h4>
-                <h4 onClick={()=>dispatch(pager("about"))}>{selected("about", "A Propos")}</h4>
-                <h4 onClick={()=>dispatch(pager("signup"))}>{selected("signup", "S'inscrire")}</h4>
-                <h4 onClick={()=>dispatch(pager("signin"))}>{selected("signin", "Se Connecter")}</h4>
+                <h3 onClick={()=>dispatch(pager("home"))}>{selected("home", "Aceuil")}</h3>
+                <h3 onClick={()=>dispatch(pager("locations"))}>{selected("locations", "Locations")}</h3>
+                <h3 onClick={()=>dispatch(pager("posts"))}>{selected("posts", "Annonces")}</h3>
+                <h3 onClick={()=>dispatch(pager("about"))}>{selected("about", "A Propos")}</h3>
+                <h3 onClick={()=>dispatch(pager("signup"))}>{selected("signup", "S'inscrire")}</h3>
+                <h3 onClick={()=>dispatch(pager("signin"))}>{selected("signin", "Se Connecter")}</h3>
             </div>
         </div>
     )

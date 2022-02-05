@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
     return (
         <div className='footer'>
-            Footer
+            <p>© 2022, Colocakesh.com, Inc.</p>
         </div>
     )
 }
