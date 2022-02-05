@@ -1,24 +1,23 @@
 .updates{
-    width: 80%;
+    width: 60%;
     height: max-content;
     display: grid;
     grid-gap: 4px;
     grid-template-rows: auto auto;
     place-items: center;
     margin: auto;
-    padding: 4px;
-    box-shadow: 1px 1px 1px 0.5px rgb(231, 228, 228);
+    padding: 10px;
     border-radius: 4px;
 }
 
+@media screen and (max-width: 500px) {
+    .updates{
+        width: 100%;
+    }
+  }
 .updates .cards{
-    overflow-x: scroll;
-    white-space: nowrap;
-    height: 50vh;
-    width: 90%;
-    margin: auto;
-    overflow-y: hidden;
-    border-radius: 4px;
+    width: 100%;
+    /* height: 20vh; */
 }
 
 .arrows{
@@ -28,4 +27,5 @@
     margin: auto;
     border: 2px solid rgb(228, 228, 236);
     border-radius: 4px;
+    width: 5em;
 }

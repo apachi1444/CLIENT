@@ -8,9 +8,10 @@
 .header h4{
     margin: 6px;
     padding: 4px;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: #121e7a;
-    box-shadow: 1px 1.3px 1px 1px rgb(9, 9, 141);
+    /* box-shadow: 1px 1.3px 1px 1px rgb(9, 9, 141); */
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     cursor: pointer;
     color: aliceblue;
     letter-spacing: 1px;

@@ -1,30 +1,46 @@
 
+@keyframes slide-it {
+    0%{
+        opacity: 0;
+    }
 
+    100%{
+        opacity: 100%;
+    }
+}
 .card{
-    height: 100%;
-    display: inline-block;
-    margin: 6px;
-    width: auto;
+    display: grid;
+    padding: 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    height: max-content;
+    width: 100%;
+    border-radius: 4px;
+    animation: slide-it 0.5s ease-in;
 }
 
 .image{
     position: relative;
-    height: 80%;
-    width: auto;
     border-radius: 4px;
-    box-shadow: 1px 1px 1px 0.5px rgb(203, 203, 209);
-    font-weight: 700;
-    color: blue;
+    font-weight: 800;
+    color: rgb(99, 60, 190);
+    padding: 4px;
+}
+.image  img{
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 4px;
+    width: 100%;
 }
 .location{
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 6px;
+    left: 6px;
 }
 .price{
     position: absolute;
-    top: 4px;
-    right: 4px;
+    bottom: 6px;
+    left: 6px;
 }
 
 .more-about{
@@ -35,7 +51,7 @@
 }
 
 .desc{
-    height: 19%;
-    overflow-y: scroll;
+    height: 12vh;
+    overflow-y: auto;
     width: 100%;
 }
