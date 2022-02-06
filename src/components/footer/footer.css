@@ -1,5 +1,16 @@
 .footer{
     background-color: #0f0f0f;
+    display: grid;
+    place-items: center;
+}
+
+.inner-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #0f0f0f;
     text-align: center;
     color: whitesmoke;
+    width: max-content;
 }

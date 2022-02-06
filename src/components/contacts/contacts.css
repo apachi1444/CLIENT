@@ -1,10 +1,22 @@
-.contacts{
+.contacts, .phone-email{
     background-color: #e5f4f5;
     display:  flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     padding: 5px;
+}
+
+.contacts svg{
+    margin-left: 20px;
+}
+.phone-email div{
+    margin: auto 10px;
+}
+.contacts img{
+    width: 100px;
+    height: auto;
+    background-color: blue;
 }
 
 .contacts div{
