@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import "./contacts.css";
 
 function Contacts() {
+
   return (
     <div className="contacts">
       <Logo fill={"blue"} background={"#e5f4f5"} />

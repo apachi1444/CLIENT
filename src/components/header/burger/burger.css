@@ -35,6 +35,10 @@
 .links h3{
     cursor: pointer;
     color: rgb(17, 16, 24);
+    background-color: #ebecf5;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 14px;
+    padding: 3px;
 }
 
 .links h4:hover{
@@ -58,4 +62,9 @@
     height: auto;
     fill: rgb(50, 50, 185);
     margin: auto;
+}
+
+.on-it{
+    color: blue;
+    background-color: rgb(175, 175, 211) !important;
 }

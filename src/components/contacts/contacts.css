@@ -7,6 +7,9 @@
     padding: 5px;
 }
 
+.phone h6, .email h6{
+    padding: 4px;
+} 
 .contacts svg{
     margin-left: 20px;
 }
