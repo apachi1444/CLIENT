@@ -1,0 +1,38 @@
+
+.media{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 150px;
+}
+
+@media (max-width: 451px) {
+    .media{
+        margin: auto;
+        width: 200px;
+    }
+}
+
+.media-box{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+.media-box .MuiSvgIcon-root{
+    width: 30px ;
+    height: auto;
+    fill: rgb(103, 58, 185);
+    grid-area: 2/1/3/2;
+}
+
+.media-box .MuiSvgIcon-root:hover{
+    fill: rgb(140, 140, 212);
+}
+.media-box .num{
+    grid-area: 1/2/2/3;
+    color:  rgb(103, 58, 185);
+    border-radius:50%;
+    padding: 3px;
+    font-weight: bold;
+}

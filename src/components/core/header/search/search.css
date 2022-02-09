@@ -1,0 +1,36 @@
+
+.search-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+    background-color: #f7f8fc;
+    padding: 4px 6px;
+    border-radius: 20px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+@media (max-width: 362px) {
+    .search-me{
+        margin: auto;
+    }
+}
+.search-me label{
+    width: max-content;
+    padding: 1px;
+    margin: auto;
+}
+.search-me label .MuiSvgIcon-root{
+    width: 20px;
+    height: auto;
+    fill: rgb(19, 19, 82);
+}
+
+.search-me input{
+    border: none;
+    outline: none;
+    height: 20px;
+    border-radius: 7px;
+    padding: 2px;
+    font-weight: 600;
+    font-family: Poppins;
+}

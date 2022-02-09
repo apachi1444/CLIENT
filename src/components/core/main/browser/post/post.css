@@ -1,0 +1,17 @@
+
+.post{
+    width: 99%;
+    height: max-content;
+    margin: 10px auto;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.post-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(246, 248, 248);
+    
+}

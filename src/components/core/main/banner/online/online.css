@@ -1,0 +1,27 @@
+
+
+.head{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr ;
+    width: 100%;
+    place-items: center;
+}
+@media (max-width: 902px) {
+    .head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+.head .icon-t .MuiSvgIcon-root{
+    width: 2em;
+    height: auto;
+}
+.head h3{
+    cursor: pointer;
+    font-family: Righteous, Poppins, sans-serif;
+}
+.head h4{
+    justify-self: start;
+}

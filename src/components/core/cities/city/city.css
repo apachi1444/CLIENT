@@ -1,0 +1,15 @@
+
+.city{
+    width: max-content;
+    margin: 2px 10px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    
+}
+
+.city h4{
+    width: max-content;
+    font-family: Poppins, sans-serif;
+    
+}

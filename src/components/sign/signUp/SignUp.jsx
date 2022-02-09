@@ -18,7 +18,7 @@ function SignUp() {
             <Field icon={<LockOpenIcon/>} label={"Confirm"} isPassword={true}/>
             <div onClick={()=>dispatch(pager("signin"))} className="have-account">Already Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
-            <button className='signning'>Sign Up</button>
+            <button className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>Sign Up</button>
         </div>
     )
 }

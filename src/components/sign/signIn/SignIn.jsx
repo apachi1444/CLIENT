@@ -10,12 +10,13 @@ function SignIn() {
     const dispatch = useDispatch();
     return (
         <div className="sign-up">
+            
             <div className="avatar"><PermIdentityIcon/></div>
             <Field label={"Username"} />
             <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}/>
             <div onClick={()=>dispatch(pager("signup"))} className="have-account">Don't Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
-            <button className='signning'>Sign In</button>
+            <button className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>Sign In</button>
         </div>
     )
 }

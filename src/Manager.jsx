@@ -5,7 +5,6 @@ import SignIn from './components/sign/signIn/SignIn';
 import SignUp from './components/sign/signUp/SignUp';
 
 function Manager({page}) {
-    console.log(page);
     switch (page) {
         case "home":
             return <Home/>

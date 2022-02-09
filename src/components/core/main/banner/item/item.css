@@ -1,0 +1,17 @@
+
+.item .item-head{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 3em;
+    border: 1px solid rgb(187, 187, 230);
+    border-radius: 4px;
+    padding: 4px 0;
+    margin: 6px 0;
+}
+
+.item h4{
+    cursor: pointer;
+}

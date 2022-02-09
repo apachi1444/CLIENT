@@ -1,0 +1,32 @@
+
+.banner{
+    width: 100%;
+    height: 70vh;
+    border-left: 1px solid pink;
+    padding: 2px 20px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue rgb(189, 196, 231);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(242, 242, 247);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(145, 145, 221);
+    border-radius: 20px;
+    border: 2px solid rgb(186, 197, 228);
+  }

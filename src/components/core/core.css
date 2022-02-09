@@ -1,0 +1,33 @@
+.core{
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
+    place-items: center;
+    font-family: Righteous, Poppins, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 6px 1em;
+    max-height: 100%;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: blue rgb(189, 196, 231);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+    height: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(242, 242, 247);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgb(145, 145, 221);
+    border-radius: 20px;
+    border: 2px solid rgb(186, 197, 228);
+  }

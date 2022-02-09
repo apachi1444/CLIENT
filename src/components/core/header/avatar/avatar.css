@@ -1,0 +1,13 @@
+
+.avatar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: max-content;
+}
+
+.avatar h3{
+    color: #4B48E3;
+    margin-left: 10px;
+}

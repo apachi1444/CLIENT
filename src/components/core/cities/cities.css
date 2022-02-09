@@ -1,0 +1,11 @@
+
+.cities{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, auto);
+    grid-auto-flow: column;
+    width: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #F6F4FB;
+    border-radius: 6px;
+}

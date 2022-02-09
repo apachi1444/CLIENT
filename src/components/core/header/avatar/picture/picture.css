@@ -1,0 +1,19 @@
+
+.picture{
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+
+.red-dot{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: red;
+}
