@@ -1,0 +1,15 @@
+
+.friend{
+    width: 100%;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid rgb(245, 245, 248);
+    margin-top: 2px;
+}
+
+.friend h3{
+    color: rgb(55, 55, 194);
+}

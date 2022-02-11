@@ -1,22 +1,28 @@
 import React from 'react';
 import Picture from '../../../header/avatar/picture/Picture';
 import Controller from "./controller/Controller";
-import Details from './details/Details';
 import Reaction from './reaction/Reaction';
 import Slider from './slider/Slider';
+import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
 import "./post.css";
 
-function Post({ownerImage, imagesVideosUrls, username, detailsObject, comments, hearts, likes, dislikes}) {
+function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, 
+            comments, hearts, likes, dislikes, description, commentsTree, stars}) {
   return (
       <div className="post">
           <div className="post-head">
-              <div className="post-pic"><Picture width={"40px"} imgUrl={ownerImage}/></div>
+              <div className="post-pic"><Picture width={"40px"} auto={false} imgUrl={ownerImage}/></div>
               <h4>{username}</h4>
+              <div className="stars">
+                  <div className="user-stars"><StarsOutlinedIcon/></div>
+                  <span className="str">{stars}</span>
+                </div>
               <Controller/>
           </div>
           <Slider images={imagesVideosUrls}/>
-          <Details detailsObject={detailsObject}/>
-          <Reaction comments={comments} hearts={hearts} likes={likes} dislikes={dislikes}/>
+          <p className="describe">{description}</p>
+          <Reaction comments={comments} hearts={hearts} likes={likes} 
+            dislikes={dislikes} commentsTree={commentsTree}/>
       </div>
   );
 }
@@ -30,19 +36,15 @@ Post.defaultProps={
         "https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685521__340.jpg"
     ],
     username: "James B",
-    detailsObject: {
-        price: "2000Dhs",
-        area: '50m^2',
-        address: "39882, Sidi Aabad, Marrakesh",
-        roomsNumber: 2,
-        moreInfo: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help settle in"
-    },
-    comments: {
-        commentsNumber: 0,
-        commentsJsx: null
-    },
+    comments: 0,
     hearts :0,
     likes : 0,
-    dislikes: 0
+    dislikes: 0,
+    stars: 300,
+    rooms: 3,
+    area: "60m^2",
+    price: "2000Dhs",
+    address: "39882, Sidi Aabad, Marrakesh",
+    description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help settle in"
 }
 export default Post;

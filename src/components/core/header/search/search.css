@@ -18,6 +18,8 @@
     width: max-content;
     padding: 1px;
     margin: auto;
+    display: grid;
+    place-items: center;
 }
 .search-me label .MuiSvgIcon-root{
     width: 20px;

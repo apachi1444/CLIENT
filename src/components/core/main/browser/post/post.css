@@ -6,12 +6,42 @@
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     border-radius: 4px;
     padding: 4px;
+    background-color: rgb(240, 245, 250);
 }
 
 .post-head{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: rgb(246, 248, 248);
-    
+    align-items: center;    
+}
+
+.post p{
+    font-weight: 800;
+    line-height: 1.6;
+    border-left: 1px solid rgb(215, 215, 230);
+    border-bottom: 1px solid rgb(215, 215, 230);
+    border-radius: 0 0 0 4px;
+    padding-left: 3px;
+    margin-top: 3px;
+
+}
+
+.stars{
+    width: max-content;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-items: center;
+}
+
+.stars .str{
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+    bottom: calc(25% / 2);
+    margin-left: 3px;
+    color: rgb(124, 124, 197);
+}
+
+.user-stars .MuiSvgIcon-root{
+    fill: rgb(124, 124, 197);
 }

@@ -1,14 +1,15 @@
 
-.slider-pics{
+.slider{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     overflow-x: auto;
     padding: 4px 0;
+    position: relative;
 }
 
-.slider-pics img{
+.slider img{
     height: 30vh;
     width: auto;
     border-radius: 6px;

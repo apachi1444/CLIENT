@@ -1,0 +1,38 @@
+
+.actions-list{
+    position: relative;
+}
+
+.center-list{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: max-content;
+    background-color: rgb(230, 230, 247);
+    color: rgb(63, 30, 153);
+    list-style: none;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.center-list li{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: start;
+    align-items: center;
+    gap: 4px;
+    margin: 6px 0;
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    font-weight: 700;
+}
+
+.center-list li:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+.ac .MuiSvgIcon-root{
+    fill: blueviolet;
+}

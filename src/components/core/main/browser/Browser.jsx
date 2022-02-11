@@ -6,11 +6,6 @@ function Browser() {
   return (
       <div className="browser">
           <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
       </div>
   );
 }

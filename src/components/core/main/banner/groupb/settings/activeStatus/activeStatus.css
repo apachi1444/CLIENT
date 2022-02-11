@@ -1,0 +1,18 @@
+
+.active-status{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    place-items: center;
+    width: 100%;
+}
+
+.active-status label{
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.active-status input{
+    justify-self: end;
+    cursor: pointer;
+}

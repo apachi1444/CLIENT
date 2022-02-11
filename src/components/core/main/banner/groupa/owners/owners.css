@@ -1,0 +1,12 @@
+
+.owners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    height: 35vh;
+    overflow-x: auto;
+    padding: 4px 0;
+    overflow-y: hidden;
+    max-height: 100%;
+}

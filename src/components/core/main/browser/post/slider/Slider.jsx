@@ -4,7 +4,7 @@ import "./slider.css";
 
 function Slider({images}) {
   return (
-    <div className="slider-pics">
+    <div className="slider">
         {images.map((item, i)=><img src={item} alt={`Item number ${i}`} key={uuid()}/>)}
     </div>
   );

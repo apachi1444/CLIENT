@@ -1,0 +1,18 @@
+
+.location-t{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    place-items: center;
+    width: 100%;
+}
+
+.location-t label{
+    justify-self: start;
+    margin-left: 10px;
+}
+
+.location-t input{
+    justify-self: end;
+    cursor: pointer;
+}

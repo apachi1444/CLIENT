@@ -1,0 +1,22 @@
+
+.owner{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    place-items: center;
+    margin: 2px 4px;
+    border: 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    padding: 4px 15px;
+    border-radius: 4px;
+    height: 100%;
+    width: auto;
+}
+
+.owner h5, .owner h6{
+    background-color: black;
+    opacity: 0.9;
+    color: rgb(212, 212, 231);
+    padding: 3px;
+    margin: 4px 0;
+    border-radius: 4px;
+}

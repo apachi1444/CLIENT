@@ -1,0 +1,14 @@
+
+.request{
+    display: grid;
+    place-items: center;
+    border: 2px solid rgb(152, 152, 199);
+    background-color: black;
+    border-radius: 50%;
+}
+
+.request .MuiSvgIcon-root{
+    fill: rgb(152, 152, 199);
+    border-radius: 50%;
+    padding: 2px;
+}

@@ -1,0 +1,17 @@
+
+.options{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    width: 40%;
+    gap: 10px;
+    place-items: center;
+    margin: 2px auto;
+}
+
+.options label{
+    justify-self: start;
+}
+
+.options input{
+    justify-self: end;
+}

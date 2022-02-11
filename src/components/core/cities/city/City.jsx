@@ -17,8 +17,8 @@ function City({city, isCurrent}) {
   };
   return (
       <div className="city" ref={divRef} onClick={showMe}>
-          <Picture border={"1px solid blue"}  width={"55px"} isCurrent={isCurrent}
-            imgUrl={"https://cdn.pixabay.com/photo/2016/01/07/17/17/mosque-1126197__340.jpg"}/>
+          <Picture border={"2px solid blue"} auto={false}  width={"55px"} isCurrent={isCurrent}
+            imgUrl={"https://cdn.pixabay.com/photo/2019/04/29/20/41/amsterdam-4167026__340.png"}/>
           <h4>{city}</h4>
       </div>
   );

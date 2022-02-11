@@ -1,0 +1,10 @@
+.language{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+    margin: auto;
+}
+
+.language input{
+    cursor: pointer;
+}
