@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import AppsIcon from '@mui/icons-material/Apps';
-import { v4 as uuid } from 'uuid';
 
 import "./item.css";
 function Item({icon, title, body}) {
@@ -27,7 +26,6 @@ function Item({icon, title, body}) {
 Item.defaultProps={
   title: "Title",
   body: [<p>"Items List"</p>],
-  icon: <AppsIcon/>,
-  key: uuid()
+  icon: <AppsIcon/>
 }
 export default Item;

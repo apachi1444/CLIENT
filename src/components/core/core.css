@@ -2,7 +2,7 @@
     display: grid;
     grid-template-rows: max-content max-content 1fr;
     place-items: center;
-    font-family: Righteous, Poppins, sans-serif;
+    font-family: Poppins, sans-serif;
     width: 100vw;
     height: 100vh;
     overflow: hidden;

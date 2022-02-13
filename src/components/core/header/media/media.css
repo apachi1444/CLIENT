@@ -7,7 +7,7 @@
     width: 150px;
 }
 
-@media (max-width: 451px) {
+@media (max-width: 513px) {
     .media{
         margin: auto;
         width: 200px;

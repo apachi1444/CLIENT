@@ -18,3 +18,8 @@
     border-radius: 50%;
     background-color: red;
 }
+
+.picture img{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}

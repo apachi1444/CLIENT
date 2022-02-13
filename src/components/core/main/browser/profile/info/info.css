@@ -1,0 +1,24 @@
+
+.info-data{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    
+}
+
+
+.info-data h3{
+    color: white;
+}
+
+.info-data p{
+    max-width: 80%;
+    color: rgb(249, 249, 252);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
+    font-weight: 800;
+    padding: 4px;
+    border-radius: 6px;
+}

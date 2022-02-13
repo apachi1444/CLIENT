@@ -7,3 +7,19 @@
     height: 70vh;
     overflow-x: hidden;
 }
+
+.go-home{
+    position: absolute;
+    inset: 10px 20px auto auto;
+    padding: 4px 20px;
+    width: max-content;
+    display: grid;
+    place-items: center;
+    z-index: 4;
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+.go-home .MuiSvgIcon-root{
+    fill: rgb(238, 238, 245);
+}

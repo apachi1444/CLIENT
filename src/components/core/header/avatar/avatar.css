@@ -5,9 +5,68 @@
     align-items: center;
     flex-wrap: wrap;
     width: max-content;
+    position: relative;
 }
 
 .avatar h3{
     color: #4B48E3;
     margin-left: 10px;
+}
+
+.avatar .about-mee{
+    display: grid;
+    place-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.about-mee .MuiSvgIcon-root{
+    fill: blue;
+}
+
+@keyframes gobig {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
+.avatar .my-actions{
+    position: absolute;
+    inset: 100% 0 auto auto;
+    padding: 6px;
+    list-style: none;
+    width: max-content;
+    background-color: #FAFAFA;
+    z-index: 20;
+    border-radius: 4px;
+    animation: gobig 0.5s ease-out;
+}
+
+.my-actions .my-act{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    padding: 4px;
+
+}
+
+.my-actions .my-act:hover{
+    background-color: whitesmoke;
+}
+.my-act h5{
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(33, 33, 117);
+}
+
+.my-actions .my-act .MuiSvgIcon-root{
+    fill: blue;
 }

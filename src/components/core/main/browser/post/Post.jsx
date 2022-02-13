@@ -45,6 +45,6 @@ Post.defaultProps={
     area: "60m^2",
     price: "2000Dhs",
     address: "39882, Sidi Aabad, Marrakesh",
-    description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help settle in"
+    description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help you settle in"
 }
 export default Post;

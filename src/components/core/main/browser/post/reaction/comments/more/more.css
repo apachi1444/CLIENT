@@ -1,0 +1,13 @@
+
+.view-more{
+    display: grid;
+    place-items: center;
+    width: max-content;
+    margin: auto;
+    color: rgb(109, 109, 184);
+    cursor: pointer;
+}
+
+.view-more .MuiSvgIcon-root{
+    fill: rgb(55, 87, 156);
+}
