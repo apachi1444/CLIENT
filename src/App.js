@@ -11,8 +11,8 @@ import './app.css';
 
 function App() {
   const page=useSelector(state=>state.pager);
-  // if(page==="core") return <Core/>;//Just for now page;
-  if(page!=="test") return <Core/>;//Just for now page, testing
+  if(page==="core") return <Core/>;//Just for now page;
+  // if(page!=="test") return <Core/>;//Just for now page, testing
   return (
     <div className='app'>
       <Contacts/>

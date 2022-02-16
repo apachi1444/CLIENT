@@ -1,0 +1,51 @@
+.notifications{
+    width: 100%;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.notification{
+    width: 99%;
+    margin: 4px auto;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    padding: 6px;
+}
+.notification .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .more-action{
+    position: absolute;
+    inset: 100% 0 auto auto;
+    padding: 6px;
+    list-style: none;
+    width: max-content;
+    background-color: #FAFAFA;
+    z-index: 60;
+    border-radius: 4px;
+    animation: gobig 0.5s ease-out;
+}
+
+.header .MuiSvgIcon-root{
+    padding: 3px;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 30px ;
+    height: auto;
+}
+.notification .saying{
+    font-family: 'Source Sans Pro', sans-serif;
+    border-left: 1px solid rgb(254, 254, 255);
+    border-bottom: 1px solid rgb(254, 254, 255);
+    border-radius: 0 0 0 6px;
+    padding: 0 0 2px 2px;
+    font-weight: 600;
+}
+.notification .time-s{
+    font-size: x-small;
+    font-weight: 800;
+}

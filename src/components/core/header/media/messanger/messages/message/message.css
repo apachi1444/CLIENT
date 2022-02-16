@@ -1,0 +1,109 @@
+
+.message-container{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    height: 100%;
+}
+.message-container .msgs{
+    height: 100%;
+    overflow-y: auto;
+}
+.image-username{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: 700;
+    background-color: black;
+    position: relative;
+}
+
+.image-username h5{
+    color: rgb(146, 146, 226);
+    border: 1px solid rgb(191, 189, 228);
+    padding: 3px;
+    border-radius: 6px;
+}
+.message-action .MuiSvgIcon-root{
+    fill: rgb(146, 146, 226);
+}
+.send-msg{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.send-msg .send-ms{
+    flex-grow: 2;
+    height: 2.5em;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid rgb(170, 158, 189);
+    padding: 3px;
+    resize: none;
+}
+
+.send-msg .send-ms-l{
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    padding: 3px;
+    margin: auto;
+}
+
+.send-ms-l .MuiSvgIcon-root{
+    fill: rgb(91, 91, 173);
+}
+
+.send-ms-l .MuiSvgIcon-root:hover{
+    fill: blue;
+}
+
+.more-actions{
+    position: relative;
+}
+
+/**/
+
+
+.image-username .more-action{
+    position: absolute;
+    inset: calc(100% + 6px) 0 auto auto;
+    padding: 6px;
+    list-style: none;
+    width: max-content;
+    background-color: #FAFAFA;
+    z-index: 60;
+    border-radius: 4px;
+    animation: gobig 0.5s ease-out;
+}
+
+.more-action .list-item{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    padding: 4px;
+
+}
+
+.more-action .list-item:hover{
+    background-color: whitesmoke;
+}
+.list-item h5{
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(33, 33, 117);
+}
+
+.more-action .list-item .MuiSvgIcon-root{
+    fill: blue;
+}

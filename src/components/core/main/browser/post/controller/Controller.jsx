@@ -9,9 +9,12 @@ import MarkChatUnreadOutlinedIcon from '@mui/icons-material/MarkChatUnreadOutlin
 import NotificationsOffOutlinedIcon from '@mui/icons-material/NotificationsOffOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 
+import browser from './../../../../../../redux/actions/browser';
+import { useDispatch } from 'react-redux';
 import "./controller.css";
 
 function Controller({isFriend, posterName, isMe}) {
+  const dispatch=useDispatch();
   const [open, setOpen]=useState(false);
   const toggle=()=>setOpen(!open);
   return (
@@ -25,7 +28,7 @@ function Controller({isFriend, posterName, isMe}) {
                 {
                 isMe ? <li className="action"><PostAddOutlinedIcon/><h3>Mute my posts</h3></li>:
                 <>
-                  <li className="action"><AccountBoxOutlinedIcon/><h3>{posterName}'s Profile</h3></li>
+                  <li className="action" onClick={()=>dispatch(browser('profile'))}><AccountBoxOutlinedIcon/><h3>{posterName}'s Profile</h3></li>
                   <li className="action">
                     {!isFriend ? <InsertLinkOutlinedIcon/>: <MarkChatUnreadOutlinedIcon/>}
                     <h3>{!isFriend ? `Connect to ${posterName}`: `Message ${posterName}`}</h3>

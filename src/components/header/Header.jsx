@@ -16,12 +16,12 @@ function Header() {
     );
   return (
     <div className="header">
-      <h4 onClick={() => dispatch(pager("home"))}>Accueil</h4>
+      <h4 onClick={() => dispatch(pager("home"))}>Home</h4>
       <h4 onClick={() => dispatch(pager("locations"))}>Locations</h4>
-      <h4 onClick={() => dispatch(pager("posts"))}>Annonces</h4>
-      <h4 onClick={() => dispatch(pager("about"))}>A Propos</h4>
-      <h4 onClick={() => dispatch(pager("signup"))}>S'inscrire</h4>
-      <h4 onClick={() => dispatch(pager("signin"))}>Se Connecter</h4>
+      <h4 onClick={() => dispatch(pager("posts"))}>Services</h4>
+      <h4 onClick={() => dispatch(pager("about"))}>About</h4>
+      <h4 onClick={() => dispatch(pager("signup"))}>Sign Up</h4>
+      <h4 onClick={() => dispatch(pager("signin"))}>Sign In</h4>
     </div>
   );
 }

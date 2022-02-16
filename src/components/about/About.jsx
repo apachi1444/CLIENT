@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import './about.css';
 
 function About() {
     return (
-        <div>
-            About Page Is Not Build Yet
+        <div className="about">
+            About Page Is Not Built Yet
         </div>
     )
 }
 
-export default About
+export default About;

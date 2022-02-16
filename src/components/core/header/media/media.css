@@ -1,3 +1,9 @@
+.media-container{
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    
+}
 
 .media{
     display: flex;
@@ -5,19 +11,15 @@
     align-items: center;
     flex-wrap: wrap;
     width: 150px;
-}
-
-@media (max-width: 513px) {
-    .media{
-        margin: auto;
-        width: 200px;
-    }
+    margin: auto;
+    
 }
 
 .media-box{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    place-items: center;
 }
 .media-box .MuiSvgIcon-root{
     width: 30px ;
@@ -42,4 +44,6 @@
     border-radius:50%;
     padding: 3px;
     font-weight: bolder;
+    height: max-content;
+    width: max-content;
 }

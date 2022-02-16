@@ -1,0 +1,49 @@
+
+
+.messanger{
+    position: fixed;
+    inset: calc(14% + 5px) 10px 0 auto;
+    background-color: #e8e8f1;
+    width: 50vw;
+    z-index: 30;
+    border-radius: 4px;
+    animation: slide-in .5s ease-in;
+    padding: 6px 6px 5vh 6px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    overflow-y: auto;
+}
+
+@media (max-width: 518px) {
+    .messanger{
+        position: fixed;
+        inset: calc(20% + 5px) 0 0 0;
+        width: 100vw;
+        border-radius: 0;
+        border-top: 2px solid rgb(203, 203, 218);
+    }
+}
+
+@media (max-width: 375px) {
+    .messanger{
+        position: fixed;
+        inset: calc(25% + 5px) 0 0 0;
+        width: 100vw;
+        border-radius: 0;
+        border-top: 2px solid rgb(203, 203, 218);
+    }
+}
+
+@keyframes slide-in {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        opacity: 0.6;
+        transform: scale(0.4);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

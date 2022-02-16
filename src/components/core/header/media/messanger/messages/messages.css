@@ -1,0 +1,8 @@
+
+
+.messages{
+    background-color: rgb(255, 255, 255);
+    padding: 4px;
+    height: 100%;
+    overflow-y: auto;
+}

@@ -9,7 +9,7 @@ function Logo({ width, height, fill, background }) {
       fill={fill}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_2_25)">
+      <g clipPath="url(#clip0_2_25)">
         <rect width="284" height="354" fill={background} />
         <path
           d="M63 153.319L117.391 92H122.428L202 153.319L117.391 107.824L133.507 199.802L184.877 272L133.507 218.593L80.1232 272L133.507 199.802L117.391 107.824L63 153.319Z"

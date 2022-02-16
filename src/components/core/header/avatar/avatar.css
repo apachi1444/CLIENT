@@ -6,6 +6,10 @@
     flex-wrap: wrap;
     width: max-content;
     position: relative;
+    flex-grow: 1;
+    max-width: 360px;
+    margin: auto;
+    padding-right: 20px;
 }
 
 .avatar h3{
@@ -41,7 +45,7 @@
     list-style: none;
     width: max-content;
     background-color: #FAFAFA;
-    z-index: 20;
+    z-index: 60;
     border-radius: 4px;
     animation: gobig 0.5s ease-out;
 }

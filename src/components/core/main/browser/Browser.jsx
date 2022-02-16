@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Post from "./post/Post";
 import "./browser.css";
 import Profile from "./profile/Profile";
+import Banner from "./../banner/Banner";
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import browser from '../../../../redux/actions/browser';
 
@@ -18,6 +19,13 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Profile/>
+        </div>
+      );
+    case 'banner':
+      return (
+        <div className="browser">
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <Banner/>
         </div>
       );
     default:

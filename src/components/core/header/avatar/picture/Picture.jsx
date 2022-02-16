@@ -1,11 +1,11 @@
 import React from 'react';
 import "./picture.css";
 
-function Picture({imgUrl, width, auto, border, isCurrent}) {
+function Picture({imgUrl, width, auto, border, isCurrent, cb}) {
     const stylesDiv={width, height: width, border};
     const stylesImg=(auto ? {width: "auto", height: "100%"}: {width: "100%", height: "auto"});
     return (
-        <div className="picture" style={stylesDiv}>
+        <div className="picture" style={stylesDiv} onClick={cb}>
             <img src={imgUrl} alt="Avatar" style={stylesImg}/>
             {isCurrent && <div className='red-dot'></div>}
         </div>
@@ -17,6 +17,7 @@ Picture.defaultProps={
     width: "15px",
     border : "1px solid pink",
     auto: true,
-    isCurrent: false
+    isCurrent: false,
+    cb: ()=>{}
 }
 export default Picture;

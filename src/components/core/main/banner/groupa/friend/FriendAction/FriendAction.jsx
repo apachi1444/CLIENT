@@ -4,10 +4,13 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import BlockOutlinedIcon from '@mui/icons-material/BlockOutlined';
+import { useDispatch } from "react-redux";
 import { v4 as uuid } from 'uuid';
+import browser from "./../../../../../../../redux/actions/browser";
 import "./friendAction.css";
 
 function FriendAction({userId}) {
+  const dispatch=useDispatch();
   const [open, setOpen]=useState(false);
   return (
     <div className='friend-action'>
@@ -17,7 +20,9 @@ function FriendAction({userId}) {
         { open &&
         <div className="actions-list">
           <ul className="center-list">
-            <li><AccountBoxOutlinedIcon/> <h4>View Profile</h4></li>
+            <li onClick={()=>dispatch(browser("profile"))}>
+              <AccountBoxOutlinedIcon/> <h4>View Profile</h4>
+            </li>
             <li><MessageOutlinedIcon/> <h4>Write Message</h4></li>
             <li><BlockOutlinedIcon/> <h4>Block/Unconnect</h4></li>
           </ul>

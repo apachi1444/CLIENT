@@ -4,7 +4,6 @@ import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import Logo from "./Logo";
 
 import "./contacts.css";
-
 function Contacts() {
 
   return (

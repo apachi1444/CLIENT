@@ -8,12 +8,11 @@
     padding: 4px 6px;
     border-radius: 20px;
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    flex-grow: 1;
+    max-width: 260px;
+    margin: 4px auto;
 }
-@media (max-width: 362px) {
-    .search-me{
-        margin: auto;
-    }
-}
+
 .search-me label{
     width: max-content;
     padding: 1px;
