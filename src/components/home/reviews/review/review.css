@@ -1,41 +1,38 @@
-
 .review{
     position: relative;
     width: 100%;
     height: max-content;
-    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 26%), 0 1px 2px rgb(0 0 0 / 33%);
     padding: 6px;
+    border-radius: 6px;
+    background-color: rgb(231, 231, 247);
+    
 }
 
-.review .name{
-    position: absolute;
-    top:  4px;
-    left: 4px;
+.review:hover{
+    background-color: rgb(192, 192, 219);
+}
+@media (max-width: 420px) {
+    .review{
+        width: 99vw;
+        margin: 2vh auto;
+    }
 }
 
 .review .image-wrapper{
     display: grid;
     place-items: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
     margin: 10px auto;
-    background-color: black;
+    width: max-content;
+    max-width: 100%;
 }
 
-.image-wrapper img{
-    width: 100%;
-    height: auto;
-    transform: scale(1.3);
+.image-wrapper .reviewer-job{
+    font-size: x-small;
+    font-weight: 700;
 }
-
 .review p{
     font-size: medium;
-    height: 30vh;
-    overflow-y: auto;
-    text-indent: 10px;
-    background-color: rgb(250, 249, 255);
-    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-    border-radius: 4px;
+    color: black;
+    line-height: 1.6;
 }

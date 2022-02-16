@@ -1,5 +1,5 @@
 .footer{
-    background-color: #0f0f0f;
+    background-color: black;
     display: grid;
     place-items: center;
 }
@@ -9,7 +9,6 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #0f0f0f;
     text-align: center;
     color: whitesmoke;
     width: max-content;

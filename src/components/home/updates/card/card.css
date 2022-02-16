@@ -22,8 +22,10 @@
     position: relative;
     border-radius: 4px;
     font-weight: 800;
-    color: rgb(81, 8, 252);
+    color: white;
     padding: 4px;
+    font-weight: 700;
+    font-family: 'Poppins', 'sans-serif';
 }
 .image  img{
     inline-size: 100%;
@@ -32,12 +34,13 @@
     border-radius: 4px;
     width: 100%;
 }
-.location{
+
+.image .location{
     position: absolute;
     top: 6px;
     left: 6px;
 }
-.price{
+.image .price{
     position: absolute;
     bottom: 6px;
     left: 6px;

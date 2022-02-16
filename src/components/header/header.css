@@ -5,15 +5,19 @@
     flex-wrap: wrap;
 }
 
+@media (min-width: 732px) {
+    .header{
+        padding: 2px 15%;
+    }
+}
 .header h4{
     margin: 6px;
     padding: 4px;
-    border-radius: 14px;
-    background-color: #ebecf5;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     cursor: pointer;
-    color: blue;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 800;
 }
 
 .burg{

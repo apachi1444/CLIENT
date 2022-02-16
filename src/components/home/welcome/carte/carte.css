@@ -3,7 +3,7 @@
     place-items: center;
     height: 14em;
     width: auto;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 80%), 0 1px 2px rgb(0 0 0 / 100%);
     border-radius:4px;
     padding: 10px;
     margin: 8px;
@@ -11,17 +11,22 @@
 
 .carte h3{
     text-align: center;
-    color: rgb(74, 74, 223);
+    color: whitesmoke;
+    padding: 2px;
+    border: 1px solid blue;
+    border-radius: 6px;
 }
 
 .carte button{
-    border-radius: 8px;
-    background-color: rgb(23, 23, 126);
-    color: rgb(240, 236, 243);
+    border-radius: 5px;
+    background-color: red;
+    color: black;
     outline: none;
     padding: 4px;
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    font-weight: 800;
+    font-family: 'Poppins', 'sans-serif';
 }

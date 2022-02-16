@@ -1,13 +1,15 @@
 import React from 'react';
+import Picture from '../../../core/header/avatar/picture/Picture';
 import "./review.css";
 
 
-function Review({image, name, feedback}) {
+function Review({image, name, profession, feedback}) {
   return(
     <div className="review">
-        <div className="name">{name}</div>
         <div className="image-wrapper">
-            <img src={image} alt="Reviewer" />
+            <Picture imgUrl={image} width={'60px'} auto={false} border={"2px solid blueviolet"}/>
+            <h3 className="name">{name}</h3>
+            <div className="reviewer-job">{profession}</div>
         </div>
         <p>{feedback}</p>
     </div>

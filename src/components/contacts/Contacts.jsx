@@ -8,11 +8,11 @@ function Contacts() {
 
   return (
     <div className="contacts">
-      <Logo fill={"blue"} background={"#e5f4f5"} />
+      <Logo fill={"rgb(172, 172, 231)"} background={"black"} />
       <div className="phone-email">
         <div className="email">
           <DraftsOutlinedIcon />
-          <h6>someemailgoeshere@gmail.com</h6>
+          <h6>Send Us An Email</h6>
         </div>
         <div className="phone">
           <LocalPhoneOutlinedIcon />

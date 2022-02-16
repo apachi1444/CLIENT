@@ -1,5 +1,5 @@
 .contacts, .phone-email{
-    background-color: #e5f4f5;
+    background-color: black;
     display:  flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +9,7 @@
 
 .phone h6, .email h6{
     padding: 4px;
+    color: rgb(172, 172, 231);
 } 
 .contacts svg{
     margin-left: 20px;

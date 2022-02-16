@@ -7,7 +7,7 @@ import Welcome from './welcome/Welcome';
 function Home() {
     return (
         <div className="home">
-            <p className="intro">Trouver L'Appartement Ou La Colocation De Vos Reves, Maintenant!</p>
+            <p className="intro">Find The Apartment Or The Room Of Your Dreams, Right Now!</p>
             <Welcome/>
             <Updates/>
             <Reviews/>
