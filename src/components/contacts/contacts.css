@@ -36,3 +36,8 @@
 .contacts div .MuiSvgIcon-root{
     fill: rgb(172, 172, 231);
 }
+
+.contacts-action .MuiSvgIcon-root{
+    fill: rgb(172, 172, 231);
+    cursor: pointer;
+}

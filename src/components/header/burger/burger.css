@@ -14,9 +14,10 @@
     right: 0;
     left: 0;
     z-index: 2;
-    background-color: rgb(213, 213, 228);
-    color: rgb(58, 4, 253);
-    animation: burger-down 0.5s ease-in;    
+    background-color: black;
+    animation: burger-down 0.5s ease-in;
+    border-top: 1px solid rgb(50, 50, 59);
+    padding-bottom: 6px    
 };
 
 .close{
@@ -29,16 +30,19 @@
     align-items: center;
     flex-direction: column;
     height: 70vw;
+    background-color: black;
 
 }
 
-.links h3{
+.links h4{
     cursor: pointer;
-    color: rgb(17, 16, 24);
-    background-color: #ebecf5;
+    color: rgb(172, 172, 231);
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     border-radius: 14px;
     padding: 3px;
+    text-decoration: center;
+    border: 1px solid rgb(10, 10, 10);
+    margin-bottom: 6px;
 }
 
 .links h4:hover{
@@ -60,11 +64,10 @@
 .close .MuiSvgIcon-root{
     width: 1.3em;
     height: auto;
-    fill: rgb(50, 50, 185);
+    fill: rgb(113, 113, 185);
     margin: auto;
 }
 
 .on-it{
-    color: blue;
-    background-color: rgb(175, 175, 211) !important;
+    color: rgb(111, 111, 165) !important;
 }

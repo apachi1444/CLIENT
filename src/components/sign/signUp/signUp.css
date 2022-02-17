@@ -2,13 +2,14 @@
     cursor: pointer;
 }
 .sign-up{
-    padding: 10vw;
+    padding: 10px 10vw;
     width: max-content;
     border-radius: 3px;
     margin: 10vw auto 10vw auto;
     display: grid;
     place-items: center;
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .field{
@@ -74,9 +75,39 @@
 .sign-up .avatar .MuiSvgIcon-root{
     width: 3em;
     height: auto;
+    fill: rgb(188, 188, 190);
 }
+
 
 .view-me .MuiSvgIcon-root{
     fill: rgb(67, 67, 179);
 
 }
+
+.sign-up h6{
+    margin: 6px auto 2px auto;
+}
+.o-auth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1px;
+}
+
+.o-auth .o-icon{
+    margin: 0 4px;
+}
+
+.o-auth .google .MuiSvgIcon-root{
+    fill: #4885ed;
+};
+.o-auth .facebook .MuiSvgIcon-root{
+    fill: #3b5998;
+};
+.o-auth .github .MuiSvgIcon-root{
+    fill: #171515;
+};
+.o-auth .twitter .MuiSvgIcon-root{
+    fill: #00acee;
+};

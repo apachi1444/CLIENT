@@ -23,12 +23,12 @@ function Burger() {
         <CloseIcon />
       </div>
       <div className="links">
-        <h3 onClick={() => dispatch(pager("home"))} className={selected("home")}>Accueil</h3>
-        <h3 onClick={() => dispatch(pager("locations"))} className={selected("locations")}>Locations</h3>
-        <h3 onClick={() => dispatch(pager("posts"))} className={selected("posts")}>Annonces</h3>
-        <h3 onClick={() => dispatch(pager("about"))} className={selected("about")}>A propos</h3>
-        <h3 onClick={() => dispatch(pager("signup"))} className={selected("signup")}>S'Inscrire</h3>
-        <h3 onClick={() => dispatch(pager("signin"))} className={selected("signin")}>Se Connecter</h3>
+        <h4 onClick={() => dispatch(pager("home"))} className={selected("home")}>Accueil</h4>
+        <h4 onClick={() => dispatch(pager("locations"))} className={selected("locations")}>Locations</h4>
+        <h4 onClick={() => dispatch(pager("posts"))} className={selected("posts")}>Annonces</h4>
+        <h4 onClick={() => dispatch(pager("about"))} className={selected("about")}>A propos</h4>
+        <h4 onClick={() => dispatch(pager("signup"))} className={selected("signup")}>S'Inscrire</h4>
+        <h4 onClick={() => dispatch(pager("signin"))} className={selected("signin")}>Se Connecter</h4>
         
       </div>
     </div>
