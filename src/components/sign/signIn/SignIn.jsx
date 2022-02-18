@@ -2,7 +2,6 @@ import React from 'react';
 import Field from '../signUp/Field';
 import '../signUp/signUp.css';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useDispatch } from "react-redux";
 import pager from "../../../redux/actions/pager";
 
@@ -16,19 +15,17 @@ function SignIn() {
     const dispatch = useDispatch();
     return (
         <div className="sign-up">
-            
-            <div className="avatar"><PermIdentityIcon/></div>
             <Field label={"Username"} />
             <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}/>
             <div onClick={()=>dispatch(pager("signup"))} className="have-account">Don't Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
             <button className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>Sign In</button>
-            <h6>Or Sign Up With</h6>
+            <h6>Or Log In With</h6>
             <div className="o-auth">
-                <div className="o-icon google"><GoogleIcon/></div>
-                <div className="o-icon facebook"><FacebookIcon/></div>
-                <div className="o-icon github"><GitHubIcon/></div>
-                <div className="o-icon twitter"><TwitterIcon/></div>
+                <div className="google"><GoogleIcon style={{fill: '#4885ed'}}/></div>
+                <div className="facebook"><FacebookIcon style={{fill: '#3b5998'}}/></div>
+                <div className="github"><GitHubIcon style={{fill: '#171515'}}/></div>
+                <div className="twitter"><TwitterIcon style={{fill: '#00acee'}}/></div>
             </div>
         </div>
     )

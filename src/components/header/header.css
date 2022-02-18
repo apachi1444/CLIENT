@@ -10,17 +10,21 @@
         padding: 2px 15%;
     }
 }
-.header h3{
+.header h4{
     margin: 6px;
-    padding: 4px;
+    padding: 2px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%);
     cursor: pointer;
     letter-spacing: 2px;
-    font-weight: 800;
-    color: rgb(58, 58, 145);
+    color: rgb(24, 24, 129);
+    border: 1px solid rgb(234, 234, 243);
+    font-weight: 900;
 }
 
+.header h4:hover{
+    border: 1px solid rgb(88, 88, 177);
+}
 .burg{
     position: relative;
 }

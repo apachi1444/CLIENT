@@ -21,7 +21,7 @@ function Manager({page}) {
         case "signup":
             return <SignUp/>
         default:
-            return <>This Page Is Not Built Yet</>
+            return <h1 style={{margin: 'auto'}}>This Page Is Not Built Yet</h1>
     }
 }
 

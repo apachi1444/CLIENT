@@ -9,14 +9,13 @@ function Field({ label, isPassword, isEmail, cb }) {
     const cbx=(e)=>{
         setData(e?.target?.value);
         cb(data);
-    }
+    };
     return (
         <div className="field">
             <input value={data} type={isPassword && !visible ? "password": isEmail ? "email": "text"} 
             onChange={cbx} placeholder={label}/>
-            <div className="border"></div>
             <div className="view-me" onClick={()=>setVisible(!visible)} >
-                { isPassword && (visible ? <VisibilityOutlinedIcon/>: <VisibilityOffOutlinedIcon/>) }
+                { isPassword && (!visible ? <VisibilityOutlinedIcon/>: <VisibilityOffOutlinedIcon/>) }
             </div>
         </div>
     )

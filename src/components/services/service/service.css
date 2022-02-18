@@ -1,0 +1,24 @@
+
+.service{
+    display: grid;
+    place-items: center;
+    width: 60%;
+    margin: 14px auto;
+    padding: 10px 1%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 6px;
+}
+
+.service .serv-title{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.serv-title .number{
+    margin-right: 6px;
+    text-align: center;
+    padding: auto;
+    text-decoration: underline;
+};

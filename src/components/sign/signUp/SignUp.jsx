@@ -16,7 +16,11 @@ function SignUp() {
     const dispatch = useDispatch();
     return (
         <form className="sign-up">
-            <div className="avatar"><PermIdentityIcon/></div>
+            <div className="avatar">
+                <input type="file" id='ava'/>
+                <label htmlFor='ava' className="avatar"><PermIdentityIcon/></label>
+                <p>Add Profile Picture</p>
+            </div>
             <Field label={"Username"} />
             <Field icon={<MailOutlineIcon/>} label={"Email"} isEmail={true}/>
             <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}/>
@@ -28,10 +32,10 @@ function SignUp() {
             </button>
             <h6>Or Sign Up With</h6>
             <div className="o-auth">
-                <div className="o-icon google"><GoogleIcon/></div>
-                <div className="o-icon facebook"><FacebookIcon/></div>
-                <div className="o-icon github"><GitHubIcon/></div>
-                <div className="o-icon twitter"><TwitterIcon/></div>
+                <div className="google"><GoogleIcon style={{fill: '#4885ed'}}/></div>
+                <div className="facebook"><FacebookIcon style={{fill: '#3b5998'}}/></div>
+                <div className="github"><GitHubIcon style={{fill: '#171515'}}/></div>
+                <div className="twitter"><TwitterIcon style={{fill: '#00acee'}}/></div>
             </div>
         </form>
     )
