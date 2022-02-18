@@ -16,6 +16,7 @@
 }
 .phone-email div{
     margin: auto 10px;
+    cursor: pointer;
 }
 .contacts img{
     width: 100px;
