@@ -2,11 +2,16 @@
 .service{
     display: grid;
     place-items: center;
-    width: 60%;
+    width: 98%;
     margin: 14px auto;
-    padding: 10px 1%;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    padding: 0px 1%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 56%), 0 1px 2px rgb(0 0 0 / 63%);
     border-radius: 6px;
+    position: relative;
+    height: 80vh;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: aqua;
 }
 
 .service .serv-title{
@@ -14,11 +19,50 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin: auto;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-weight: 800;
 }
 
+.serv-title:hover{
+    color: rgb(74, 74, 197);
+    cursor: pointer;
+    background-color: rgb(226, 226, 240);
+}
 .serv-title .number{
     margin-right: 6px;
     text-align: center;
     padding: auto;
     text-decoration: underline;
 };
+
+.movers-arrows{
+    position: absolute;
+    inset: auto auto 0% auto;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all ease 0.1s;
+    background-color: blue;
+    height: max-content;
+}
+
+.movers-arrows .turn-left{
+    transform: translateY(50px) translateX(-100%) translateX(8px);
+}
+
+.movers-arrows .turn-right{
+    transform: translateY(50px) translateY(100%) translateX(16px);
+}
+
+.turn-left .MuiSvgIcon-root, .turn-right .MuiSvgIcon-root{
+    fill: rgb(11, 11, 160);
+    border: 1px solid rgb(179, 174, 174);
+    border-radius: 50%;
+    width: 33px;
+    height: auto;
+}

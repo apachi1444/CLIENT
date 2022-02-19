@@ -1,25 +1,23 @@
-import React from "react";
-import "./locations.css";
 import Modal from "react-modal";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
-import Zone from "./Zone/zone";
+import Zone from "./zone/Zone";
 import zones from "../../assets/objects/cities";
+import "./locations.css";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//   },
+// };
 function Locations() {
   let subtitle;
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
   }
@@ -65,39 +63,17 @@ function Locations() {
         ))}
       </div>
 
-      <button
-        onClick={openModal}
-        className=""
-        data-bs-toggle="modal"
-        data-bs-target={Modal}
-      >
+      <button onClick={openModal} className="" data-bs-toggle="modal" data-bs-target={Modal}>
         <i className="bi bi-pin-map-fill" style={{ color: "red" }}></i>
       </button>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        contentLabel="Example Modal"
-      >
-        <div
-          className="modal fade"
-          id="enroll"
-          tabindex="-1"
-          aria-labelledby="enrollLabel"
-          aria-hidden="true"
-        >
+      <Modal isOpen={modalIsOpen} onAfterOpen={afterOpenModal} onRequestClose={closeModal} 
+            contentLabel="Example Modal">
+        <div className="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title" id="enrollLabel">
-                  Enrollment
-                </h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
+                <h5 className="modal-title" id="enrollLabel">Enrollment</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div className="modal-body">
                 <p className="lead">
@@ -105,35 +81,19 @@ function Locations() {
                 </p>
                 <form>
                   <div className="mb-3">
-                    <label for="first-name" className="col-form-label">
-                      First Name:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="first-name"
-                    />
+                    <label htmlFor="first-name" className="col-form-label">First Name:</label>
+                    <input type="text" className="form-control" id="first-name"/>
                   </div>
                   <div className="mb-3">
-                    <label for="last-name" className="col-form-label">
-                      Last Name:
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="last-name"
-                    />
+                    <label htmlFor="last-name" className="col-form-label">Last Name:</label>
+                    <input type="text" className="form-control" id="last-name"/>
                   </div>
                   <div className="mb-3">
-                    <label for="email" className="col-form-label">
-                      Email:
-                    </label>
+                    <label htmlFor="email" className="col-form-label">Email:</label>
                     <input type="email" className="form-control" id="email" />
                   </div>
                   <div className="mb-3">
-                    <label for="phone" className="col-form-label">
-                      Phone:
-                    </label>
+                    <label htmlFor="phone" className="col-form-label">Phone:</label>
                     <input type="tel" className="form-control" id="phone" />
                   </div>
                 </form>

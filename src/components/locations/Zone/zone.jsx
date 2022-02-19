@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import Picture from "../../core/header/avatar/picture/Picture";
-import { useDispatch } from "react-redux";
 import "./zone.css";
 
 function Zone({ zone }) {

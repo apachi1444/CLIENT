@@ -11,6 +11,12 @@ function Burger() {
   const [open, setOpen] = useState(false);
   const toggle = () => setOpen(!open);
   const selected = (page) => (current === page ? "on-it" : "");
+  const handlePage=(page)=>{
+    return ()=>{
+      dispatch(pager(page));
+      toggle();
+    }
+  }
   if (!open)
     return (
       <div onClick={toggle} className="menu">
@@ -23,12 +29,12 @@ function Burger() {
         <CloseIcon />
       </div>
       <div className="links">
-        <h4 onClick={() => dispatch(pager("home"))} className={selected("home")}>Accueil</h4>
-        <h4 onClick={() => dispatch(pager("locations"))} className={selected("locations")}>Locations</h4>
-        <h4 onClick={() => dispatch(pager("posts"))} className={selected("posts")}>Annonces</h4>
-        <h4 onClick={() => dispatch(pager("about"))} className={selected("about")}>A propos</h4>
-        <h4 onClick={() => dispatch(pager("signup"))} className={selected("signup")}>S'Inscrire</h4>
-        <h4 onClick={() => dispatch(pager("signin"))} className={selected("signin")}>Se Connecter</h4>
+        <h4 onClick={handlePage('home')} className={selected("home")}>Home</h4>
+        <h4 onClick={handlePage("locations")} className={selected("locations")}>Locations</h4>
+        <h4 onClick={handlePage("services")} className={selected("services")}>Services</h4>
+        <h4 onClick={handlePage("about")} className={selected("about")}>About</h4>
+        <h4 onClick={handlePage("signin")} className={selected("signin")}>Sign In</h4>
+        <h4 onClick={handlePage("signup")} className={selected("signup")}>Sign Up</h4>
         
       </div>
     </div>
