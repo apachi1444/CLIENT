@@ -2,7 +2,8 @@
 
 .plane{
     position: absolute;
-    inset: auto 80% auto auto auto ;
+    /* inset: auto 80% auto auto auto ; */
+    inset: auto 33% auto auto;
     transition: all ease-in 200ms;
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -19,12 +20,17 @@
     }
 }
 
+@media (max-width: 1033px) {
+    .plane{
+        inset: auto 40% auto auto;
+    }
+}
+
 @media (max-width: 850px) {
     .plane{
         inset: auto 33% auto auto;
     }
 }
-
 .front-plane{
     z-index: 2000;
 }

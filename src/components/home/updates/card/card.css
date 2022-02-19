@@ -37,15 +37,21 @@
 
 .image .location{
     position: absolute;
-    top: 6px;
-    left: 6px;
+    top: 8px;
+    left: 16px;
+    border: none;
 }
 .image .price{
     position: absolute;
-    bottom: 6px;
-    left: 6px;
+    bottom: 16px;
+    left: 16px;
 }
 
+.image .location, .image .price{
+    box-shadow: 0 2px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%);
+    border-radius: 6px;
+    padding: 1px;
+}
 .more-about{
     position: absolute;
     bottom: 4px;
