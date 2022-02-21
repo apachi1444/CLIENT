@@ -48,3 +48,10 @@
 .user-stars .MuiSvgIcon-root{
     fill: rgb(124, 124, 197);
 }
+
+.post .post-date{
+    font-weight: 800;
+    font-size: small;
+    color: blue;
+    letter-spacing: 1px;
+}

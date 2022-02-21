@@ -5,9 +5,10 @@ import Reaction from './reaction/Reaction';
 import Slider from './slider/Slider';
 import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
 import "./post.css";
+import postedSince from '../../../../../logic/algorithms/postedSince';
 
 function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, 
-            comments, hearts, likes, dislikes, description, commentsTree, stars}) {
+            comments, hearts, likes, dislikes, description, commentsTree, stars, postTime}) {
   return (
       <div className="post">
           <div className="post-head">
@@ -21,6 +22,7 @@ function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, userna
           </div>
           <Slider images={imagesVideosUrls}/>
           <p className="describe">{description}</p>
+          <p className="post-date">{`Posted ${postedSince(postTime)}`}</p>
           <Reaction comments={comments} hearts={hearts} likes={likes} 
             dislikes={dislikes} commentsTree={commentsTree}/>
       </div>
@@ -45,6 +47,7 @@ Post.defaultProps={
     area: "60m^2",
     price: "2000Dhs",
     address: "39882, Sidi Aabad, Marrakesh",
-    description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help you settle in"
+    description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help you settle in",
+    postTime: new Date()
 }
 export default Post;

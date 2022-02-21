@@ -23,7 +23,7 @@ function Online({onlinePeople, list}) {
             <div className="connecters-list">
                 {list.map(item=>(
                     <div className="online-person" key={uuid()}>
-                        <Picture imgUrl={item.imgUrl} width={"50px"} border={"2px solid pink"} isCurrent={true}/>
+                        <Picture imgUrl={item.imgUrl} auto={false} width={"50px"} border={"2px solid pink"} isCurrent={true}/>
                         <h5>{item.username}</h5>
                     </div>
                 ))}

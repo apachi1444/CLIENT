@@ -40,7 +40,7 @@ function Messages() {
   }
   const cb=()=>setOpen(!open);
   const sortHolders=(arr)=>{
-    return arr.sort((a, b)=>a.isArchived-b.isArchived);
+    return arr.sort((a, b)=>b.isArchived-a.isArchived);
   };
   return (
     <div className="messages">

@@ -34,13 +34,16 @@ function Media({invitations, messages, notifications}) {
     <div className="media-container">
         <div className="media">
           <div className="media-box" onClick={chat('messages')}>
-            <MessageOutlinedIcon/><div className="num">{messages}</div>
+            <button className="messanger-bt"><MessageOutlinedIcon/></button>
+            <div className="num">{messages}</div>
           </div>
           <div className="media-box" onClick={chat('notifications')}>
-            <NotificationsNoneOutlinedIcon/><div className="num">{notifications}</div>
+            <button className="messanger-bt"><NotificationsNoneOutlinedIcon/></button>
+            <div className="num">{notifications}</div>
           </div>
           <div className="media-box" onClick={chat('requests')}>
-            <PersonAddOutlinedIcon/><div className="num">{invitations}</div>
+            <button className="messanger-bt"><PersonAddOutlinedIcon/></button>
+            <div className="num">{invitations}</div>
           </div>
         </div>
         <Messanger on={mess.on} current={mess.current}/>
