@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Picture from '../../../header/avatar/picture/Picture';
 import Controller from "./controller/Controller";
 import Reaction from './reaction/Reaction';
@@ -7,8 +7,12 @@ import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
 import "./post.css";
 import postedSince from '../../../../../logic/algorithms/postedSince';
 
-function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, 
-            comments, hearts, likes, dislikes, description, commentsTree, stars, postTime}) {
+function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, isMine,
+            comments, hearts, likes, dislikes, description, commentsTree, stars, postTime, mode}) {
+  const [des, setDes]=useState(description);
+  const handleDes=(e)=>{
+      setDes(e.target.value);
+  }
   return (
       <div className="post">
           <div className="post-head">
@@ -18,10 +22,13 @@ function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, userna
                   <div className="user-stars"><StarsOutlinedIcon/></div>
                   <span className="str">{stars}</span>
                 </div>
-              <Controller/>
+              <Controller isMe={isMine}/>
           </div>
           <Slider images={imagesVideosUrls}/>
+          { mode ? 
+          <textarea value={des} onChange={handleDes} name="desc" id="desc" className="desc-field"></textarea>:
           <p className="describe">{description}</p>
+          }
           <p className="post-date">{`Posted ${postedSince(postTime)}`}</p>
           <Reaction comments={comments} hearts={hearts} likes={likes} 
             dislikes={dislikes} commentsTree={commentsTree}/>
@@ -48,6 +55,8 @@ Post.defaultProps={
     price: "2000Dhs",
     address: "39882, Sidi Aabad, Marrakesh",
     description: "This is a room for 2 people as capacity, the price is negotiable with some conditions of course. Just for the record the electricity and water are included, for further info please DM me, I will be happy to help you settle in",
-    postTime: new Date()
+    postTime: new Date(),
+    mode: false,
+    isMine: false
 }
 export default Post;

@@ -13,6 +13,7 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 import CloudQueueOutlinedIcon from '@mui/icons-material/CloudQueueOutlined';
 import StackedLineChartOutlinedIcon from '@mui/icons-material/StackedLineChartOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
 import pager from '../../../../redux/actions/pager';
 import browser from '../../../../redux/actions/browser';
 
@@ -41,10 +42,12 @@ function Avatar({username}) {
                 <li className="my-act" onClick={()=>dispatch(browser("profile"))}>
                   <AccountBoxOutlinedIcon/> <h5>View Profile</h5>
                 </li>
-                <li className="my-act"><ChangeCircleOutlinedIcon/> <h5>Update Profile</h5></li>
+                <li className="my-act" onClick={()=>dispatch(browser("editProfile"))}>
+                  <ChangeCircleOutlinedIcon/> <h5>Update Profile</h5></li>
                 <li className="my-act"><DeleteOutlineOutlinedIcon/> <h5>Delete Account</h5></li>
                 <li className="my-act"><CloudQueueOutlinedIcon/> <h5>View Network</h5></li>
                 <li className="my-act"><StackedLineChartOutlinedIcon/> <h5>Statistics</h5></li>
+                <li className="my-act"><VpnKeyOutlinedIcon/> <h5>Change Password</h5></li>
                 <li className="my-act" onClick={()=>dispatch(pager("home"))} ><LogoutOutlinedIcon/> <h5>Log Out</h5></li>
               </ul>
             }

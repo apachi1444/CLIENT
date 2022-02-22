@@ -8,6 +8,9 @@ import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import MarkChatUnreadOutlinedIcon from '@mui/icons-material/MarkChatUnreadOutlined';
 import NotificationsOffOutlinedIcon from '@mui/icons-material/NotificationsOffOutlined';
 import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
 import browser from './../../../../../../redux/actions/browser';
 import { useDispatch } from 'react-redux';
@@ -26,7 +29,13 @@ function Controller({isFriend, posterName, isMe}) {
               {open && 
               <ul className="actions">
                 {
-                isMe ? <li className="action"><PostAddOutlinedIcon/><h3>Mute my posts</h3></li>:
+                isMe ? 
+                <>
+                  <li className="action"><ShareOutlinedIcon/><h3>Share Post</h3></li>
+                  <li className="action"><PostAddOutlinedIcon/><h3>Mute Post</h3></li>
+                  <li className="action"><VisibilityOffOutlinedIcon/><h3>Hide From Profile</h3></li>
+                  <li className="action"><DeleteOutlinedIcon/><h3>Delete Post</h3></li>
+                </>:
                 <>
                   <li className="action" onClick={()=>dispatch(browser('profile'))}><AccountBoxOutlinedIcon/><h3>{posterName}'s Profile</h3></li>
                   <li className="action">
@@ -47,6 +56,6 @@ function Controller({isFriend, posterName, isMe}) {
 Controller.defaultProps={
   isFriend: false,
   posterName: "Jordan B",
-  isMe: false
+  isMe: false,
 }
 export default Controller;

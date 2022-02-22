@@ -3,14 +3,17 @@ import Info from './info/Info';
 import Posts from './posts/Posts';
 import './profile.css';
 
-function Profile() {
+function Profile({ mode }) {
   return (
     <div className="profile">
-        <Info/>
+        <Info mode={mode}/>
         <h4 className='all-posts'>All Posts(17)</h4>
-        <Posts/>
+        <Posts mode={mode}/>
     </div>
   )
 }
 
-export default Profile
+Profile.defaultpProps={
+  mode: false
+}
+export default Profile;

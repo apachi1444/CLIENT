@@ -22,3 +22,52 @@
     padding: 4px;
     border-radius: 6px;
 }
+
+.outer-info{
+    position: relative;
+    width: max-content;
+    display: grid;
+    place-items: center;
+}
+
+.outer-info .change-picture{
+    position: absolute;
+    inset: auto 0px 20px auto;
+    display: none;
+    pointer-events: none;
+}
+
+.outer-info label{
+    position: absolute;
+    inset: auto 0 -5px auto;
+}
+
+.outer-info label .MuiSvgIcon-root{
+    fill:  rgb(230, 230, 238);
+}
+.change-pro-info {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+.change-pro-info .edit-username, .edit-bio{
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 6px;
+    resize: none;
+    outline: none;
+    border: none;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.change-pro-info .edit-username{
+    font-weight: 600;
+    height: 2em;
+    font-size: medium ;
+    overflow: hidden;
+}
+
+.change-pro-info .edit-bio{
+    height: max-content;
+    font-weight: 600;
+}
