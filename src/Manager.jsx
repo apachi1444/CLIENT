@@ -5,6 +5,7 @@ import SignIn from './components/sign/signIn/SignIn';
 import SignUp from './components/sign/signUp/SignUp';
 import Services from './components/services/Services';
 import Locations from './components/locations/Locations';
+import AnnounceForm from './components/Announce Forms/announce_form';
 
 function Manager({page}) {
     switch (page) {
@@ -20,6 +21,8 @@ function Manager({page}) {
             return <SignIn/>
         case "signup":
             return <SignUp/>
+        case "announce":
+            return <AnnounceForm/>
         default:
             return <h1 style={{margin: 'auto'}}>This Page Is Not Built Yet</h1>
     }
