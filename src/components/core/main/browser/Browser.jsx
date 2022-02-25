@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Post from "./post/Post";
-import "./browser.css";
 import Profile from "./profile/Profile";
 import Banner from "./../banner/Banner";
 import Network from "./network/Network";
+import "./browser.css";
 
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SaveAsOutlinedIcon from '@mui/icons-material/SaveAsOutlined';

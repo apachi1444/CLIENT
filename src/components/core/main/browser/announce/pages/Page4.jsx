@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Annonce from '../model/annonce';
 import '../css/form_css.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Page4 =()=>{
 

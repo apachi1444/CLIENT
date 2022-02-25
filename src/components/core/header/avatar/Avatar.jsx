@@ -19,11 +19,23 @@ import pager from '../../../../redux/actions/pager';
 import browser from '../../../../redux/actions/browser';
 
 function Avatar({username}) {
+  const pages=["banner", "newPost", "profile", "editProfile", "network", "changePassword", "deleteAccount"];
   const dispatch=useDispatch();
   const [open, setOpen]=useState(false);
   const toggle=()=>{
     setOpen(!open);
   };
+  const navigate=(page)=>{
+    if(page==="home") return()=>{
+      dispatch(pager(page));
+      setOpen(!open);
+    }
+    if(pages.includes(page)) return()=>{
+      dispatch(browser(page));
+      setOpen(!open);
+    };
+    return ()=>{};
+  }
   const isMiniScreen=useMedia({maxWidth: "600px"});
   return (
       <div className="avatar">
@@ -37,31 +49,31 @@ function Avatar({username}) {
             {open && 
               <ul className="my-actions">
                 {isMiniScreen && 
-                <li className="my-act" onClick={()=>dispatch(browser("banner"))}>
+                <li className="my-act" onClick={navigate("banner")}>
                   <DashboardOutlinedIcon/> <h5>Dashboard</h5></li>
                 }
-                <li className="my-act" onClick={()=>dispatch(browser("newPost"))}>
+                <li className="my-act" onClick={navigate("newPost")}>
                   <AddOutlinedIcon/> <h5>New Post</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(browser("profile"))}>
+                <li className="my-act" onClick={navigate("profile")}>
                   <AccountBoxOutlinedIcon/> <h5>View Profile</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(browser("editProfile"))}>
+                <li className="my-act" onClick={navigate("editProfile")}>
                   <ChangeCircleOutlinedIcon/> <h5>Update Profile</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(browser("network"))}>
+                <li className="my-act" onClick={navigate("network")}>
                   <CloudQueueOutlinedIcon/> <h5>View Network</h5>
                 </li>
                 <li className="my-act">
                   <StackedLineChartOutlinedIcon/> <h5>Statistics</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(browser("changePassword"))}>
+                <li className="my-act" onClick={navigate("changePassword")}>
                   <VpnKeyOutlinedIcon/> <h5>Change Password</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(browser("deleteAccount"))}>
+                <li className="my-act" onClick={navigate("deleteAccount")}>
                   <DeleteOutlineOutlinedIcon/> <h5>Delete Account</h5>
                 </li>
-                <li className="my-act" onClick={()=>dispatch(pager("home"))} >
+                <li className="my-act" onClick={navigate("home")} >
                   <LogoutOutlinedIcon/> <h5>Log Out</h5>
                 </li>
               </ul>
