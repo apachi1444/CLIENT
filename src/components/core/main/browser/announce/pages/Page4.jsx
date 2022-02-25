@@ -100,7 +100,7 @@ const Page4 =()=>{
                         </div>
                         <div style={{zIndex:"1",display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                             <Button type="submit" className="btn btn-default" style={{color:"#07436b",backgroundColor:"#fff"}} onClick={()=>{
-                                    navigate('/form_page3');
+                                    navigate('/page3');
                                 }}>Précédent</Button>  
                             <Button type="submit" onClick={(e)=>{
                                 handleSubmit(e);
