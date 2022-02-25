@@ -4,9 +4,13 @@ import Post from "./post/Post";
 import "./browser.css";
 import Profile from "./profile/Profile";
 import Banner from "./../banner/Banner";
+import Network from "./network/Network";
+
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SaveAsOutlinedIcon from '@mui/icons-material/SaveAsOutlined';
 import browser from '../../../../redux/actions/browser';
+import Password from './password/Password';
+import Delete from './delete/Delete';
 
 function Browser() {
   const ref=useRef(null);
@@ -43,6 +47,27 @@ function Browser() {
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <div className="go-save" onClick={handleSave}><SaveAsOutlinedIcon/></div>
           <Profile mode={true}/>
+        </div>
+      );
+    case 'network':
+      return (
+        <div className="browser">
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <Network/>
+        </div>
+      );
+    case 'changePassword':
+      return (
+        <div className="browser">
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <Password/>
+        </div>
+      );
+    case 'deleteAccount':
+      return (
+        <div className="browser">
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <Delete/>
         </div>
       );
     default:

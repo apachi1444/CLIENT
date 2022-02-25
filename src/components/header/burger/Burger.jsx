@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import pager from "../../../redux/actions/pager";
+import { motion } from "framer-motion";
 import "./burger.css";
 
 function Burger() {
@@ -24,7 +25,11 @@ function Burger() {
       </div>
     );
   return (
-    <div className="burger">
+    <motion.div className="burger"
+      initial={{ y: "-100%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, type: "spring"}}
+    >
       <div onClick={toggle} className="close">
         <CloseIcon />
       </div>
@@ -37,7 +42,7 @@ function Burger() {
         <h4 onClick={handlePage("signup")} className={selected("signup")}>Sign Up</h4>
         
       </div>
-    </div>
+    </motion.div>
   );
 }
 

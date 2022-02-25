@@ -13,11 +13,11 @@ import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
-function Message({imgUrl, username, msgs, cb, isArchived, isMuted}) {
+function Message({imgUrl, username, msgs, cb, isArchived, isMuted, noCb}) {
   const [open, setOpen]=useState(false);
   return (
     <div className="message-container">
-      <div className="go-back" onClick={cb}><KeyboardBackspaceOutlinedIcon/></div>
+      <div className="go-back" onClick={cb}>{ !noCb && <KeyboardBackspaceOutlinedIcon/>}</div>
       <div className="image-username">
         <Picture width={"50px"} auto={false}/>
         <h5>{username}</h5>
@@ -70,6 +70,7 @@ function Message({imgUrl, username, msgs, cb, isArchived, isMuted}) {
 Message.defaultProps={
   username: "Jordan B",
   msgs: [],
-  cb: ()=>{}
+  cb: ()=>{},
+  noCb: false
 }
 export default Message

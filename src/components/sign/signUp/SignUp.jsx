@@ -6,7 +6,7 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useDispatch } from "react-redux";
 import pager from "../../../redux/actions/pager";
-
+import { motion } from 'framer-motion';
 import GoogleIcon from '@mui/icons-material/Google';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -15,7 +15,11 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 function SignUp() {
     const dispatch = useDispatch();
     return (
-        <form className="sign-up">
+        <motion.form className="sign-up"
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3}}
+        >
             <div className="avatar">
                 <input type="file" id='ava'/>
                 <label htmlFor='ava' className="avatar"><PermIdentityIcon/></label>
@@ -37,7 +41,7 @@ function SignUp() {
                 <div className="github"><GitHubIcon style={{fill: '#171515'}}/></div>
                 <div className="twitter"><TwitterIcon style={{fill: '#00acee'}}/></div>
             </div>
-        </form>
+        </motion.form>
     )
 }
 

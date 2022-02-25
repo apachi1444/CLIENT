@@ -8,6 +8,7 @@
     max-width: 100%;
     padding-top: 5px;
     position: relative;
+    overflow: auto;
 }
 
 @media (max-width: 600px) {

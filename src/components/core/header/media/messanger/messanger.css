@@ -2,7 +2,7 @@
 
 .messanger{
     position: fixed;
-    inset: calc(14% + 5px) 10px 0 auto;
+    inset: calc(22% + 5px) 10px 0 auto;
     background-color: #e8e8f1;
     width: 50vw;
     z-index: 30;
@@ -16,17 +16,20 @@
 @media (max-width: 518px) {
     .messanger{
         position: fixed;
-        inset: calc(20% + 5px) 0 0 0;
+        inset: calc(28% + 5px) 0 0 0;
         width: 100vw;
         border-radius: 0;
         border-top: 2px solid rgb(203, 203, 218);
+    }
+    .media{
+        width: 100%;
     }
 }
 
 @media (max-width: 375px) {
     .messanger{
         position: fixed;
-        inset: calc(25% + 5px) 0 0 0;
+        inset: calc(28% + 5px) 0 0 0;
         width: 100vw;
         border-radius: 0;
         border-top: 2px solid rgb(203, 203, 218);

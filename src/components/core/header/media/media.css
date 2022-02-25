@@ -2,6 +2,8 @@
     position: relative;
     flex-grow: 1;
     margin: auto;
+    display: grid;
+    place-items: center;
     
 }
 
@@ -9,8 +11,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    width: 150px;
+    /* flex-wrap: wrap; */
+    width: max-content;
     margin: auto;
     
 }

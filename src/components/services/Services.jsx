@@ -1,13 +1,18 @@
 import React from 'react';
 import Service from './service/Service';
 import { v4 as uuid } from 'uuid';
+import { motion } from "framer-motion";
 import './services.css';
 
 function Services({data}) {
   return (
-    <div className="services">
+    <motion.div className="services"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       {data.map((item)=>(<Service number={item.number} title={item.title} data={item.imgs} key={uuid()}/>))}
-    </div>
+    </motion.div>
   )
 }
 Services.defaultProps={

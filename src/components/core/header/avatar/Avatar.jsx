@@ -43,12 +43,23 @@ function Avatar({username}) {
                   <AccountBoxOutlinedIcon/> <h5>View Profile</h5>
                 </li>
                 <li className="my-act" onClick={()=>dispatch(browser("editProfile"))}>
-                  <ChangeCircleOutlinedIcon/> <h5>Update Profile</h5></li>
-                <li className="my-act"><DeleteOutlineOutlinedIcon/> <h5>Delete Account</h5></li>
-                <li className="my-act"><CloudQueueOutlinedIcon/> <h5>View Network</h5></li>
-                <li className="my-act"><StackedLineChartOutlinedIcon/> <h5>Statistics</h5></li>
-                <li className="my-act"><VpnKeyOutlinedIcon/> <h5>Change Password</h5></li>
-                <li className="my-act" onClick={()=>dispatch(pager("home"))} ><LogoutOutlinedIcon/> <h5>Log Out</h5></li>
+                  <ChangeCircleOutlinedIcon/> <h5>Update Profile</h5>
+                </li>
+                <li className="my-act" onClick={()=>dispatch(browser("network"))}>
+                  <CloudQueueOutlinedIcon/> <h5>View Network</h5>
+                </li>
+                <li className="my-act">
+                  <StackedLineChartOutlinedIcon/> <h5>Statistics</h5>
+                </li>
+                <li className="my-act" onClick={()=>dispatch(browser("changePassword"))}>
+                  <VpnKeyOutlinedIcon/> <h5>Change Password</h5>
+                </li>
+                <li className="my-act" onClick={()=>dispatch(browser("deleteAccount"))}>
+                  <DeleteOutlineOutlinedIcon/> <h5>Delete Account</h5>
+                </li>
+                <li className="my-act" onClick={()=>dispatch(pager("home"))} >
+                  <LogoutOutlinedIcon/> <h5>Log Out</h5>
+                </li>
               </ul>
             }
       </div>

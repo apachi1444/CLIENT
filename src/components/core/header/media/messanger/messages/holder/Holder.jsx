@@ -32,6 +32,10 @@ Holder.defaultProps={
     username: "James B",
     timeStamp: new Date(),
     isMuted: false,
+    isArchived: false,
+    volume: ()=>{},
+    archive: ()=>{},
+    delete_t: ()=>{},
     cb: ()=>{}
 }
 

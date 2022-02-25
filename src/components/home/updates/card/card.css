@@ -1,13 +1,4 @@
 
-@keyframes slide-it {
-    0%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 100%;
-    }
-}
 .card{
     display: grid;
     padding: 6px;
@@ -15,7 +6,6 @@
     height: max-content;
     width: 100%;
     border-radius: 4px;
-    animation: slide-it 0.5s ease-in;
 }
 
 .image{

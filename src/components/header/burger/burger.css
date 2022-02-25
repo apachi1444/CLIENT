@@ -1,11 +1,4 @@
-@keyframes burger-down {
-    0%{
-         opacity: 0;  
-    }
-    100%{
-        opacity: 1;
-    }
-}
+
 .burger{
     display: grid;
     place-items: center;
@@ -15,7 +8,6 @@
     left: 0;
     z-index: 2;
     background-color: black;
-    animation: burger-down 0.5s ease-in;
     border-top: 1px solid rgb(50, 50, 59);
     padding-bottom: 6px    
 };

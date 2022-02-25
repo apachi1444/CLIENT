@@ -11,14 +11,15 @@
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     padding: 6px;
 }
-.notification .header{
+.notification .not-header{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
+    width: 100%;
 }
-.header .more-action{
+.not-header .more-action{
     position: absolute;
     inset: 100% 0 auto auto;
     padding: 6px;
@@ -30,7 +31,7 @@
     animation: gobig 0.5s ease-out;
 }
 
-.header .MuiSvgIcon-root{
+.not-header .MuiSvgIcon-root{
     padding: 3px;
     border-radius: 50%;
     border: 1px solid white;

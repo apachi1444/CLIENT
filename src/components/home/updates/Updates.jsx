@@ -19,29 +19,32 @@ const details=(counter)=>({
 });
 
 function Updates() {
-    const itemsNumber=images.length;//this will be dynamic later on
+    //this loop is just for testing, we will call the api later on to bring 3 models
+    const data=[];
+    for(let i=0; i<3; i++) data.push(details(i));
+
     const [current, setCurrent]=useState(0);
-    const [direction, setDirection]=useState(false);//true for right, false for left
-    const moveIt=(flag)=>{
+    const [flag, setFlag]=useState(false);
+    const moveIt=(i)=>{
         return ()=>{
-            setDirection(flag);
-            if(flag && current<itemsNumber-1) setCurrent(current+1);
-            else {
-                if(current>0 && !flag) setCurrent(current-1);
-            } 
-        }
-    };
+            setCurrent(i);
+            setFlag(!flag);
+        };
+    }
+    
     return (
         <div className="updates">
             <div className="cards">
-                {itemsNumber!==0 && <Card details={details(current)}/>} 
+                <Card details={data[current]} flag={flag}/> 
             </div>
             <div className="arrows">
-                <div className={`right cercle${direction ? " clicked": ""}`} onClick={moveIt(true)} >
+                <div className={`right cercle${current===0 ? " clicked": ""}`} onClick={moveIt(0)} >
                     <FiberManualRecordIcon/>
                 </div>
-                <div className="middle cercle"><FiberManualRecordIcon/></div>
-                <div className={`right cercle${!direction ? " clicked": ""}`} onClick={moveIt(false)}>
+                <div className={`right cercle${current===1 ? " clicked": ""}`} onClick={moveIt(1)}>
+                    <FiberManualRecordIcon/>
+                </div>
+                <div className={`right cercle${current===2 ? " clicked": ""}`} onClick={moveIt(2)}>
                     <FiberManualRecordIcon/>
                 </div>
             </div>

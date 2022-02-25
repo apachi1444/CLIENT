@@ -7,7 +7,7 @@ function Search() {
     return (
         <div className="outer-search">
             <form action="get" className='search'>
-                <input type="text" placeholder='Recherche...'/>
+                <input type="text" placeholder='Search...'/>
                 <button type='submit' className='submit-s'><SearchIcon/></button>
             </form>
         </div>
