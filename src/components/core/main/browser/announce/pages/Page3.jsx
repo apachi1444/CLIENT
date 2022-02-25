@@ -89,12 +89,12 @@ const Page3 =()=>{
                         </div>
                         <div style={{zIndex:"1",display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                             <Button type="submit" className="btn btn-default" style={{color:"#07436b",backgroundColor:"#fff"}} onClick={()=>{
-                                    navigate('/form_page2');
+                                    navigate('/page2');
                                 }}>Précédent</Button>  
                             <Button type="submit" onClick={(e)=>{
                                     if(validated===true){
                                         Annonce["images"]=images;
-                                        navigate('/form_page4');
+                                        navigate('/page4');
                                     }else{
                                         setImages(null);
                                     }
