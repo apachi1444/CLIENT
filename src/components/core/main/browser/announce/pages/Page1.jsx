@@ -119,7 +119,7 @@ const Page1 =()=>{
                                     Annonce["quartier"]=quartier;
                                     Annonce["adresse"]=adresse;
                                     Annonce["url"]=url_maps;
-                                    navigate('/form_page2');
+                                    navigate('/page2');
                                 }else{
                                     alert("Veuillez valider tout les champs svp!!!");
                                 }
