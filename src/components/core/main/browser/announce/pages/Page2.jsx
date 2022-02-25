@@ -229,7 +229,7 @@ const Page2 =()=>{
                                             Annonce["size"]=surf;
                                             Annonce["caution"]=caut;
                                             Annonce["supplementaire"]=others;
-                                            navigate('/pageeee3');
+                                            navigate('/page3');
                                         }else{
                                             alert("Veuillez valider tout les champs svp!!!");
                                         }
