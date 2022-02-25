@@ -29,7 +29,7 @@ const Page3 =()=>{
             <Row>
                 <Button className="btn btn-warning">en attandant d'ajouter le header</Button>
             </Row>
-            <Row style={{paddingBottom:'100px',paddingTop:'50px'}}>
+            <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
                             <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div>
@@ -61,12 +61,15 @@ const Page3 =()=>{
                             <Form id="myform3" noValidated validated={validated}>
                                 <Row className="mb-3">
                                     <Col lg={6}>
-                                        <h4 style={{textDecoration:"underline"}}>Images<br/>(au maximum 8)<br/>(taille maximale 3Mb)</h4>
+                                        <h4 style={{textDecoration:"underline"}}>Images<br/>(au maximum 8, taille maximale 3Mb)</h4>
                                     </Col>
-                                    <div style={{width:"400px",borderStyle:"dashed",height:"400px",background:"#FFF3D4",alignItems:"center"}}>
-                                        <Form.Group as={Col} controlId="formGridPrice">
-                                            <Camera color="blue" size={200} style={{marginLeft:"25%"}}/>
-                                            <Form.Control type="file" accept="image/*" style={{boxShadow:"0px 0px 3px #000"}} multiple  onChange={(img)=>{
+                                    <div style={{width:"400px",border:"2px dashed blueviolet",height:"400px",background:"white",
+                                        alignItems:"center", borderRadius: 10}}>
+                                        <Form.Group as={Col} controlId="formGridPrice" style={{display: "grid", placeItems: "center"}}>
+                                            <Camera color="blue"  style={{width: "60%", height: "auto", margin: "2px auto"}}/>
+                                            <Form.Control type="file" accept="image/*" 
+                                                style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)", borderRadius: 10}} multiple  
+                                                onChange={(img)=>{
                                                 if(img.target.files.length > 8){
                                                     alert("Vous ne pouvez pas depasser plus de 8 images");
                                                     document.getElementById("formGridPrice").value=null;
@@ -105,9 +108,9 @@ const Page3 =()=>{
                 </Row>
             </Row>
             <Row>
-                <div style={{height:"500px"}}>
+                {/* <div style={{height:"500px"}}>
                     La suite
-                </div>
+                </div> */}
             </Row>
         </Container>
 

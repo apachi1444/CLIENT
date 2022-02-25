@@ -32,28 +32,28 @@ const Page1 =()=>{
             <Row>
                 <Button className="btn btn-warning">en attandant d'ajouter le header</Button>
             </Row>
-            <Row style={{paddingBottom:'100px',paddingTop:'50px'}}>
+            <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3}>
                             <div className='boule_active'>1</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div>
+                            <div style={{color:"#130681",margin:"2px 10%"}}>Informations<br/>Générales</div>
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>2</div>
-                            <div style={{marginLeft:"30%"}}>Description<br/>Générale</div>
+                            <div style={{margin:"2px 10%"}}>Description<br/>Générale</div>
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>3</div>
-                            <div style={{marginLeft:"30%"}}>Images</div>
+                            <div style={{margin:"2px 10%"}}>Images</div>
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>4</div>
-                            <div style={{marginLeft:"30%"}}>Informations<br/>personelles</div>
+                            <div style={{margin:"2px 10%"}}>Informations<br/>personelles</div>
                         </Col>
-                    </Row>
+            </Row>
             <Row style={{background:"#D2ECEF"}}>
                 <Row>
-                    <Col lg={1} sm={0}></Col>
-                    <Col lg={6} sm={12} style={{justifyContent:"center"}}>
+                    <Col lg={1} sm={1}></Col>
+                    <Col  style={{justifyContent:"center"}}>
                         <h3 style={{marginTop:"50px"}}>INFORMATIONS GENERALES</h3>
                         <div className='barre_sous_titre'></div>
                         <div style={{display:"flex"}}>
@@ -63,9 +63,11 @@ const Page1 =()=>{
                         <Form id="myform1" noValidate validated={validated}>
                             
                             <Form.Group className="mb-3">
-                                <Form.Label style={{fontSize:'20px'}}>(<span style={{color:'red'}}>*</span>) Type</Form.Label>
-                                <Form.Select style={{boxShadow:"0px 0px 3px #000"}} onChange={(a)=>{
-                                    setAnnonce(a.target.value)
+                                <Form.Label style={{fontSize:'20px'}}>
+                                    (<span style={{color:'red'}}>*</span>) Type
+                                </Form.Label>
+                                <Form.Select style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} onChange={(e)=>{
+                                    setAnnonce(e.target.value)
                                 }} required>
                                     <option></option>
                                     <option>Chambre</option>
@@ -74,7 +76,7 @@ const Page1 =()=>{
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label style={{fontSize:'20px'}}>(<span style={{color:'red'}}>*</span>) Ville</Form.Label>
-                                <Form.Select style={{boxShadow:"0px 0px 3px #000"}} onChange={(a)=>{
+                                <Form.Select style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} onChange={(a)=>{
                                     setVille(a.target.value)
                                 }} required>
                                     <option></option>
@@ -84,7 +86,7 @@ const Page1 =()=>{
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label style={{fontSize:'20px'}}>(<span style={{color:'red'}}>*</span>) Quartier</Form.Label>
-                                <Form.Select style={{boxShadow:"0px 0px 3px #000"}} onChange={(a)=>{
+                                <Form.Select style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} onChange={(a)=>{
                                     setQuartier(a.target.value)
                                 }} required>
                                     <option></option>
@@ -97,21 +99,23 @@ const Page1 =()=>{
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label style={{fontSize:'20px'}}>(<span style={{color:'red'}}>*</span>) Adresse</Form.Label>
-                                <Form.Control style={{boxShadow:"0px 0px 3px #000"}} placeholder="Tapez une adresse" onChange={(a)=>{
+                                <Form.Control style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} placeholder="Tapez une adresse" onChange={(a)=>{
                                     setAdresse(a.target.value);
                                 }} required/>
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label style={{fontSize:'20px'}}>Url Maps</Form.Label>
-                                <Form.Control style={{boxShadow:"0px 0px 3px #000"}} placeholder="Tapez une url Maps" onChange={(a)=>{
+                                <Form.Control style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} placeholder="Tapez une url Maps" onChange={(a)=>{
                                     setUrl_maps(a.target.value);
                                 }}/>
                             </Form.Group>
                             
                         </Form>
                         <div style={{display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
-                            <Button type="submit" className="btn btn-default" style={{color:"#07436b",backgroundColor:"#fff"}} disabled>Précédent</Button>  
-                            <Button type="submit" onClick={(e)=>{
+                            <Button type="submit" className="btn btn-default" 
+                                style={{color:"#07436b",backgroundColor:"#fff"}} disabled>Précédent
+                            </Button>  
+                            <Button type="submit"  onClick={(e)=>{
                                 handleSubmit(e);
                                 if(document.getElementById("myform1").checkValidity()===true){
                                     Annonce["type"]=annonce;
@@ -129,9 +133,9 @@ const Page1 =()=>{
                 </Row>
             </Row>
             <Row>
-                <div style={{height:"500px"}}>
+                {/* <div style={{height:"500px"}}>
                     La suite
-                </div>
+                </div> */}
             </Row>
         </Container>
 

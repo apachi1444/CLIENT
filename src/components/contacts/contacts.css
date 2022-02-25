@@ -10,6 +10,7 @@
 .phone h6, .email h6{
     padding: 4px;
     color: rgb(172, 172, 231);
+    font-size: small;
 } 
 .contacts svg{
     margin-left: 20px;

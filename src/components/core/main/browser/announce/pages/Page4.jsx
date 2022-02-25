@@ -31,7 +31,7 @@ const Page4 =()=>{
             <Row>
                 <Button className="btn btn-warning">en attandant d'ajouter le header</Button>
             </Row>
-            <Row style={{paddingBottom:'100px',paddingTop:'50px'}}>
+            <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
                             <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div>
@@ -52,17 +52,21 @@ const Page4 =()=>{
             <Row style={{background:"#D2ECEF"}}>
                 <Row>
                     <Col lg={1} sm={1}></Col>
-                    <Col lg={6} sm={10} style={{justifyContent:"center"}}>
+                    <Col  style={{justifyContent:"center"}}>
                         <h3 style={{marginTop:"50px"}}>INFORMATIONS PERSONNELLES</h3>
                         <div className='barre_sous_titre'></div>
                         <div style={{display:"flex"}}>
                             <ExclamationCircle color="red" size={20} />
-                            <h5 style={{marginLeft:'20px',marginBottom:'10px'}}>Les champs avec (<span style={{color:'red'}}>*</span>) sont obligatoires !</h5>
+                            <h5 style={{marginLeft:'20px',marginBottom:'10px'}}>
+                                Les champs avec (<span style={{color:'red'}}>*</span>) sont obligatoires !
+                            </h5>
                         </div>
                         <div style={{backgroundColor:"#fff",padding:"20px",zIndex:'0'}}>
                             <Form id="myform4" noValidated validated={validated}>
                                 <InputGroup className="mb-3">
-                                    <InputGroup.Text id="basic-addon1"><Person color="black" size={20}/></InputGroup.Text>
+                                    <InputGroup.Text id="basic-addon1">
+                                        <Person color="black" size={20}/>
+                                    </InputGroup.Text>
                                     <FormControl
                                     placeholder="nom et prénom"
                                     aria-label="nom_prenom"
@@ -73,7 +77,8 @@ const Page4 =()=>{
                                     />
                                 </InputGroup>
                                 <InputGroup className="mb-3">
-                                    <InputGroup.Text id="basic-addon1"><Envelope color="black" size={20}/></InputGroup.Text>
+                                    <InputGroup.Text id="basic-addon1"><Envelope color="black" size={20}/>
+                                    </InputGroup.Text>
                                     <FormControl
                                     type="email"
                                     placeholder="email"
@@ -85,7 +90,8 @@ const Page4 =()=>{
                                     />
                                 </InputGroup>
                                 <InputGroup className="mb-3">
-                                    <InputGroup.Text id="basic-addon1"><Phone color="black" size={20}/></InputGroup.Text>
+                                    <InputGroup.Text id="basic-addon1"><Phone color="black" size={20}/>
+                                    </InputGroup.Text>
                                     <FormControl
                                     placeholder="téléphone"
                                     aria-label="telephone"
@@ -121,9 +127,9 @@ const Page4 =()=>{
                 </Row>
             </Row>
             <Row>
-                <div style={{height:"500px"}}>
+                {/* <div style={{height:"500px"}}>
                     La suite
-                </div>
+                </div> */}
             </Row>
         </Container>
 

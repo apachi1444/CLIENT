@@ -10,8 +10,8 @@
     display: grid;
     grid-template-columns: 80% 1fr;
     width: 400px;
-    margin: 4px auto 4px auto;
-    padding: 4px;
+    margin: 4px auto;
+    padding: 2px;
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 58%);
     border-radius: var(--bord);
     
@@ -29,7 +29,7 @@
     border-radius: var(--bord) 0 0 var(--bord);
     border: 2px solid rgb(221, 221, 236);
     border-right: none;
-    padding: 3px;
+    padding: 3px 6px;
 }
 
 .search button{

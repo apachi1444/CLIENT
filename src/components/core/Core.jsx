@@ -10,7 +10,7 @@ function Core() {
       <motion.div className="core"
         initial={{ y: "-100vh" }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.1 }}
       >
           <Header/>
           <Cities/>

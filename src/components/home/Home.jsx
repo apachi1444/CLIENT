@@ -1,9 +1,9 @@
 import React from 'react';
-import "./home.css";
 import Reviews from './reviews/Reviews';
 import Updates from './updates/Updates';
 import Welcome from './welcome/Welcome';
 import { motion } from "framer-motion";
+import "./home.css";
 
 function Home() {
     return (
@@ -12,7 +12,13 @@ function Home() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
         >
-            <p className="intro">Find The Apartment Or The Room Of Your Dreams, Right Now!</p>
+            <motion.p className="intro"
+                initial={{y: "100vh", opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{duration: 0.5, delay: 0.4, type: "spring", stiffness: 120}}
+            >
+                Find The Apartment Or The Room Of Your Dreams, Right Now!
+            </motion.p>
             <Welcome/>
             <Updates/>
             <Reviews/>

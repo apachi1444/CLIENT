@@ -20,7 +20,7 @@ function Online({onlinePeople, list}) {
                 </div>
             </div>
             { open && 
-            <div className="connecters-list">
+            <div className={`connecters-list${open ? " spread": ""}`}>
                 {list.map(item=>(
                     <div className="online-person" key={uuid()}>
                         <Picture imgUrl={item.imgUrl} auto={false} width={"50px"} border={"2px solid pink"} isCurrent={true}/>

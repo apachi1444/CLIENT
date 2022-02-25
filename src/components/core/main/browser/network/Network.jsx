@@ -17,7 +17,11 @@ function Network({username, network, members}) {
       setOpen(!open);
   } 
   return (
-    <div className="network">
+    <motion.div className="network"
+        initial={{ x: "100vw", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.3}}
+    >
         <div className="my-network">
             <Picture width={"50px"} auto={false}/>
             <p className="my-name-net">{username}</p>
@@ -65,7 +69,7 @@ function Network({username, network, members}) {
                 <Networker/>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
