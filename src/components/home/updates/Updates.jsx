@@ -24,18 +24,16 @@ function Updates() {
     for(let i=0; i<3; i++) data.push(details(i));
 
     const [current, setCurrent]=useState(0);
-    const [flag, setFlag]=useState(false);
     const moveIt=(i)=>{
         return ()=>{
             setCurrent(i);
-            setFlag(!flag);
         };
     }
     
     return (
         <div className="updates">
             <div className="cards">
-                <Card details={data[current]} flag={flag}/> 
+                <Card details={data[current]}/> 
             </div>
             <div className="arrows">
                 <div className={`right cercle${current===0 ? " clicked": ""}`} onClick={moveIt(0)} >

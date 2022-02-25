@@ -93,7 +93,7 @@ nav {
 }
 .listOfCities {
   height: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   margin-top: 1rem;
 }
@@ -142,4 +142,10 @@ nav {
   .theMap {
     height: 100%;
   }
+}
+
+.location-nav .location-lat .input,  .input{
+  outline: none;
+  border: none;
+  font-weight: 600;
 }

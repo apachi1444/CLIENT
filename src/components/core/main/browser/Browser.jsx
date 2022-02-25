@@ -11,6 +11,7 @@ import SaveAsOutlinedIcon from '@mui/icons-material/SaveAsOutlined';
 import browser from '../../../../redux/actions/browser';
 import Password from './password/Password';
 import Delete from './delete/Delete';
+import AnnounceForm from './announce/Announce';
 
 function Browser() {
   const ref=useRef(null);
@@ -68,6 +69,13 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Delete/>
+        </div>
+      );
+    case 'newPost':
+      return (
+        <div className="browser">
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <AnnounceForm/>
         </div>
       );
     default:
