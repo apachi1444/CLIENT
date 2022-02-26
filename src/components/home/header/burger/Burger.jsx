@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import pager from "../../../redux/actions/pager";
+import pager from "../../../../redux/actions/pager";
 import { motion } from "framer-motion";
 import "./burger.css";
 

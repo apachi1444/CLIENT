@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useMedia } from "use-media";
-import pager from "../../redux/actions/pager";
+import pager from "../../../redux/actions/pager";
 import Burger from "./burger/Burger";
 import "./header.css";
 

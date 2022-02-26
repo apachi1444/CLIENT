@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import Header from "./components/header/Header";
-import Contacts from "./components/contacts/Contacts";
-import Footer from "./components/footer/Footer";
-import Manager from './Manager';
-import Search from './components/search/Search';
 import { useSelector } from "react-redux";
+import Header from "./components/home/header/Header";
+import Contacts from "./components/home/contacts/Contacts";
+import Footer from "./components/home/footer/Footer";
+import Manager from './Manager';
+import Search from './components/home/search/Search';
 import Core from "./components/core/Core";
-import './app.css';
 import Loading from "./templates/loading/Loading";
+import './app.css';
 
 //This is just for testing
 

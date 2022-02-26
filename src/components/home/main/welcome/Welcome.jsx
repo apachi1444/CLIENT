@@ -1,11 +1,11 @@
 import React from 'react';
 import Reviews from './reviews/Reviews';
 import Updates from './updates/Updates';
-import Welcome from './welcome/Welcome';
+import WelcomeP from './welcome/Welcome';
 import { motion } from "framer-motion";
-import "./home.css";
+import "./welcome.css";
 
-function Home() {
+function Welcome() {
     return (
         <motion.div className="home"
             initial={{ x: "100vw", opacity: 0 }}
@@ -19,11 +19,11 @@ function Home() {
             >
                 Find The Apartment Or The Room Of Your Dreams, Right Now!
             </motion.p>
-            <Welcome/>
+            <WelcomeP/>
             <Updates/>
             <Reviews/>
         </motion.div>
     )
 }
 
-export default Home;
+export default Welcome;

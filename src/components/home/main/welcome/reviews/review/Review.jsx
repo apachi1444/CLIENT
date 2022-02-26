@@ -1,5 +1,5 @@
 import React from 'react';
-import Picture from '../../../core/header/avatar/picture/Picture';
+import Picture from '../../../../../core/header/avatar/picture/Picture';
 import "./review.css";
 
 

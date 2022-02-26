@@ -1,14 +1,15 @@
 
 .audio-holder{
-    margin: 4px 1%;
-    width: 98%;
-    border-radius: 4px;
-    box-shadow: 0 1px 4px 0 rgb(32 33 36 / 20%);
-    padding: 6px;
+    width: 99%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 6px auto;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+    padding: 6px;
+    border-radius: 6px;
+    background-color: rgb(244, 247, 248);
 }
 
 .audio-holder .calling-acts{

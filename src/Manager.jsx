@@ -1,15 +1,15 @@
 import React from 'react';
-import Home from "./components/home/Home";
-import About from "./components/about/About";
-import SignIn from './components/sign/signIn/SignIn';
-import SignUp from './components/sign/signUp/SignUp';
-import Services from './components/services/Services';
-import Locations from './components/locations/Locations';
+import Welcome from "./components/home/main/welcome/Welcome";
+import About from "./components/home/main/about/About";
+import SignIn from './components/home/main/sign/signIn/SignIn';
+import SignUp from './components/home/main/sign/signUp/SignUp';
+import Services from './components/home/main/services/Services';
+import Locations from './components/home/main/locations/Locations';
 
 function Manager({page}) {
     switch (page) {
         case "home":
-            return <Home/>
+            return <Welcome/>
         case "about":
             return <About/>
         case "services":

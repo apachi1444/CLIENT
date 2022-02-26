@@ -10,6 +10,7 @@ import PauseCircleOutlineOutlinedIcon from '@mui/icons-material/PauseCircleOutli
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import ScrollToBottom from 'react-scroll-to-bottom';
+import { motion } from 'framer-motion';
 import "./video.css";
 
 function Video({navigate, username, elapsedTime}) {
@@ -23,7 +24,11 @@ function Video({navigate, username, elapsedTime}) {
     setOpen(!open);
   }
   return (
-    <div className="video">
+    <motion.div className="video"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="go-backx" onClick={navigate} ><KeyboardBackspaceOutlinedIcon/></div>
       <div className="screen">
         <div className="top-right">
@@ -63,7 +68,7 @@ function Video({navigate, username, elapsedTime}) {
       <ScrollToBottom className="chats-section">
         { open && <Message noCb={true}/> }
       </ScrollToBottom>
-    </div>
+    </motion.div>
   )
 }
 

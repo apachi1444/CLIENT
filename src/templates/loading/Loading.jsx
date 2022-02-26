@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from "../../components/contacts/Logo";
+import Logo from "../../components/home/contacts/Logo";
 import { motion } from 'framer-motion';
 
 import "./loading.css";

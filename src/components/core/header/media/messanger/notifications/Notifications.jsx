@@ -6,16 +6,20 @@ import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import ThumbDownOutlinedIcon from '@mui/icons-material/ThumbDownOutlined';
 import StarRateOutlinedIcon from '@mui/icons-material/StarRateOutlined';
 import './notifications.css';
-
+import { motion } from 'framer-motion';
 function Notifications() {
   return (
-    <div className="notifications">
+    <motion.div className="notifications"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <Notification icon={<ChatBubbleOutlineOutlinedIcon/>}/>
       <Notification icon={<FavoriteBorderOutlinedIcon/>}/>
       <Notification icon={<ThumbUpOutlinedIcon/>}/>
       <Notification icon={<ThumbDownOutlinedIcon/>}/>
       <Notification icon={<StarRateOutlinedIcon/>}/>
-    </div>
+    </motion.div>
   )
 }
 

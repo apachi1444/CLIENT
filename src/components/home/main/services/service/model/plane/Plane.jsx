@@ -1,5 +1,5 @@
 import React from 'react';
-import useWindowDimensions from '../../../../../logic/algorithms/windowDims';
+import useWindowDimensions from '../../../../../../../logic/algorithms/windowDims';
 import './plane.css';
 //for testing
 // import Picture from "../../../../core/header/avatar/picture/Picture";

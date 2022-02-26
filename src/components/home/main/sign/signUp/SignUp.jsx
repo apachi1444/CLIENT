@@ -1,16 +1,16 @@
 import React from 'react';
+import { useDispatch } from "react-redux";
 import Field from './Field';
-import './signUp.css';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import { useDispatch } from "react-redux";
-import pager from "../../../redux/actions/pager";
+import pager from "../../../../../redux/actions/pager";
 import { motion } from 'framer-motion';
 import GoogleIcon from '@mui/icons-material/Google';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import './signUp.css';
 
 function SignUp() {
     const dispatch = useDispatch();

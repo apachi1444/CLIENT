@@ -3,7 +3,7 @@ import Field from '../signUp/Field';
 import '../signUp/signUp.css';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { useDispatch } from "react-redux";
-import pager from "../../../redux/actions/pager";
+import pager from "../../../../../redux/actions/pager";
 
 import { motion }from "framer-motion";
 import GoogleIcon from '@mui/icons-material/Google';

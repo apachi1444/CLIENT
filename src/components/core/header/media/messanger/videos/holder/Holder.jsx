@@ -3,12 +3,18 @@ import Picture from '../../../../avatar/picture/Picture';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import VideocamOutlinedIcon from '@mui/icons-material/VideocamOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import { motion } from 'framer-motion';
+
 import "../../audios/holder/holder.css";
 
 
 function Holder({navigate, username}) {
   return (
-    <div className="audio-holder">
+    <motion.div className="audio-holder"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="avatar-caller">
         <Picture width={"40px"} border={"1px solid blueviolet"} auto={false} />
       </div>
@@ -18,7 +24,7 @@ function Holder({navigate, username}) {
         <div className="phone-ac" ><LocalPhoneOutlinedIcon/></div>
         <div className="phone-ac"><DeleteOutlinedIcon/></div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 Holder.defaultProps={

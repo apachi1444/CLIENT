@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./locations.css";
-import City from "../core/cities/city/City";
+import City from "../../../core/cities/city/City";
 import { v4 as uuid } from "uuid";
+import { motion } from "framer-motion";
 
 function Locations() {
   const [lat, setLat]=useState("");
@@ -13,7 +14,7 @@ function Locations() {
     setLong(e?.target?.value);
   }
   return (
-    <div className="locations"
+    <motion.div className="locations"
       initial={{ x: "100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
@@ -79,7 +80,7 @@ function Locations() {
           </main>
         </aside>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

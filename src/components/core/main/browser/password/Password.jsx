@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Field from "../../../../sign/signUp/Field";
+import Field from "../../../../home/main/sign/signUp/Field";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
-import "../../../../sign/signUp/signUp.css";
+import "../../../../home/main/sign/signUp/signUp.css";
 
 function Password() {
     return (

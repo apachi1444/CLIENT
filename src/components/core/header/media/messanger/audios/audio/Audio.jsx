@@ -5,7 +5,7 @@ import CallOutlinedIcon from '@mui/icons-material/CallOutlined';
 import PhonePausedOutlinedIcon from '@mui/icons-material/PhonePausedOutlined';
 import CallEndOutlinedIcon from '@mui/icons-material/CallEndOutlined';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
-
+import { motion } from 'framer-motion';
 import "./audio.css";
 
 function Audio({navigate, mode, duration}) {
@@ -18,7 +18,11 @@ function Audio({navigate, mode, duration}) {
     }
   };
   return (
-    <div className="audio">
+    <motion.div className="audio"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
         <div className="calls-section">
           <div className="call-duration">{duration}</div>
           <div className="get-out" onClick={navigate} ><EastOutlinedIcon/></div>
@@ -42,7 +46,7 @@ function Audio({navigate, mode, duration}) {
         <div className="chats-sec">
           { chat && <Message noCb={true}/> }
         </div>
-    </div>
+    </motion.div>
   )
 }
 Audio.defaultProps={
