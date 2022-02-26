@@ -18,7 +18,7 @@ function Groupa() {
         <Item icon={<SingleBedOutlinedIcon/>} title={"Rooms"} body={[<Rooms/>]}  key={uuid()}/>
         <Item icon={<ApartmentOutlinedIcon/>} title={"Apartments"} body={[<Rooms/>]}  key={uuid()}/>
         <Item icon={<EmojiPeopleOutlinedIcon/>} title={"More Owners"} body={[<Owners/>]}  key={uuid()}/>
-        <Item icon={<LanguageOutlinedIcon/>} title={"Connections"} body={friendsList} key={uuid()}/>
+        <Item icon={<LanguageOutlinedIcon/>} title={"Friends"} body={friendsList} key={uuid()}/>
     </div>
   );
 }

@@ -5,14 +5,18 @@
     box-shadow: 0 3px 6px rgb(0 0 0 / 26%), 0 1px 2px rgb(0 0 0 / 33%);
     padding: 6px;
     border-radius: 6px;
-    background-color: rgb(231, 231, 247);
+    background-color: rgb(240, 240, 247);
     
 }
-
-.review:hover{
-    background-color: rgb(192, 192, 219);
+.review p{
+    font-size: medium !important;
+    color: black;
+    line-height: 1.6;
 }
-@media (max-width: 420px) {
+.review:hover{
+    background-color: rgb(247, 246, 250);
+}
+@media only screen and (max-width: 420px) {
     .review{
         width: 99vw;
         margin: 2vh auto;
@@ -31,8 +35,8 @@
     font-size: x-small;
     font-weight: 700;
 }
-.review p{
+
+
+.image-wrapper h3{
     font-size: medium;
-    color: black;
-    line-height: 1.6;
 }

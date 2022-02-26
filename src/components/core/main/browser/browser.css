@@ -36,3 +36,17 @@
 .go-home .MuiSvgIcon-root, .go-save .MuiSvgIcon-root{
     fill: rgb(238, 238, 245);
 }
+
+.browser > .add-new{
+    position: absolute;
+    inset: auto auto 5px;
+    transform:  translateX(10px);
+}
+.browser > .add-new .MuiSvgIcon-root{
+    
+    fill: rgb(238, 238, 245);
+    background-color: rgb(0, 0, 236);
+    border-radius: 50%;
+    width: 1.3em;
+    height: auto;
+}

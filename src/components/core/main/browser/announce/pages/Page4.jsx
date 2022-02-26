@@ -28,9 +28,7 @@ const Page4 =()=>{
 
     return(
         <Container fluid style={{background:'#EFECEC'}}>
-            <Row>
-                <Button className="btn btn-warning">en attandant d'ajouter le header</Button>
-            </Row>
+            
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
@@ -112,10 +110,7 @@ const Page4 =()=>{
                                 if(document.getElementById("myform4").checkValidity()===true){
                                     Annonce["nom_prenom"]=nom_prenom;
                                     Annonce["email"]=email;
-                                    Annonce["telephone"]=tel;
-                                    console.log("on va envoyer toutes ls données saisies à la base de données ici\n");
-                                    console.log("Affichage des données qu'on va envoyer :\n");
-                                    console.log(Annonce);
+                                    Annonce["telephone"]=tel
                                 }else{
                                     alert("Veuillez valider tout les champs svp!!!");
                                 }
@@ -126,11 +121,7 @@ const Page4 =()=>{
                     <Col lg={1} sm={1}></Col>
                 </Row>
             </Row>
-            <Row>
-                {/* <div style={{height:"500px"}}>
-                    La suite
-                </div> */}
-            </Row>
+            
         </Container>
 
     );

@@ -23,6 +23,10 @@ function Video({navigate, username, elapsedTime}) {
   const toggle=()=>{
     setOpen(!open);
   }
+  const styles={
+    backgroundImage: "url('https://cdn.pixabay.com/photo/2019/05/20/13/15/webinar-4216601__340.jpg'",
+    backgroundSize: "cover"
+  }
   return (
     <motion.div className="video"
       initial={{ x: "100vw", opacity: 0 }}
@@ -30,8 +34,12 @@ function Video({navigate, username, elapsedTime}) {
       transition={{ duration: 0.3 }}
     >
       <div className="go-backx" onClick={navigate} ><KeyboardBackspaceOutlinedIcon/></div>
-      <div className="screen">
-        <div className="top-right">
+      <div className="screen" style={styles}>
+
+        <div className="top-r" style={{
+          position: "absolute",
+          inset: "4px 4px auto auto"
+        }}>
           <LocalPhoneOutlinedIcon/>
           <div className="cam" onClick={()=>setSettings({
             camOn: !settings.camOn,
@@ -41,9 +49,21 @@ function Video({navigate, username, elapsedTime}) {
           { !settings.camOn ? <VideocamOutlinedIcon/>: <VideocamOffOutlinedIcon/> }
           </div> 
         </div>
-        <div className="top-left">{elapsedTime}</div>
-        <div className="bottom-right"><CancelOutlinedIcon/></div>
-        <div className="bottom-left">
+
+        <div className="top-l" style={{
+          position: "absolute",
+          inset: "4px auto auto 4px"
+        }}>{elapsedTime}</div>
+
+        <div className="bottom-r" style={{
+          position: "absolute",
+          inset: "auto 4px 4px auto"
+        }}><CancelOutlinedIcon/></div>
+
+        <div className="bottom-l" style={{
+          position: "absolute",
+          inset: "auto auto 4px 4px"
+        }}>
           <div className="mic" onClick={()=>setSettings({
             camOn: settings.camOn,
             micOn: !settings.micOn,
@@ -59,6 +79,7 @@ function Video({navigate, username, elapsedTime}) {
           { settings.isPaused ? <ArrowRightOutlinedIcon/>: <PauseCircleOutlineOutlinedIcon/> }
           </div>
         </div>
+
       </div>
       <h3 className="video-name">{username}</h3>
       {open ? 

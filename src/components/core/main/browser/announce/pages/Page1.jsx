@@ -29,9 +29,6 @@ const Page1 =()=>{
 
     return(
         <Container fluid style={{background:'#EFECEC'}}>
-            <Row>
-                <Button className="btn btn-warning">en attandant d'ajouter le header</Button>
-            </Row>
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3}>
                             <div className='boule_active'>1</div>
@@ -132,11 +129,7 @@ const Page1 =()=>{
                     </Col>
                 </Row>
             </Row>
-            <Row>
-                {/* <div style={{height:"500px"}}>
-                    La suite
-                </div> */}
-            </Row>
+            
         </Container>
 
     );

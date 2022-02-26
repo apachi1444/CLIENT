@@ -2,7 +2,7 @@
 
 .messanger{
     position: fixed;
-    inset: calc(22% + 5px) 10px 0 auto;
+    inset: calc(20% + 5px) 10px 0 auto;
     background-color: #e8e8f1;
     width: 50vw;
     z-index: 30;

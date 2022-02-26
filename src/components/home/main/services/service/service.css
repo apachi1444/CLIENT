@@ -23,7 +23,8 @@
     box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
     border-radius: 6px;
     padding: 4px 6px;
-    font-weight: 800;
+    font-weight: 900;
+    color: rgb(14, 14, 87);
 }
 
 .serv-title:hover{

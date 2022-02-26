@@ -48,10 +48,18 @@
 }
 .media-box .num{
     grid-area: 1/2/2/3;
-    color:  rgb(103, 58, 185);
+    color: white;
     border-radius:50%;
-    padding: 3px;
+    padding: 0px 3px;
     font-weight: bolder;
     height: max-content;
     width: max-content;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.media-box .spotted-icon .MuiSvgIcon-root{
+    background-color: rgb(103, 58, 185);
+    transition: all ease 0.1s;
+    fill: white;
 }

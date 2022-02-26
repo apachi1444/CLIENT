@@ -27,23 +27,33 @@ function Media({invitations, messages, notifications, audio, video}) {
     <div className="media-container">
         <div className="media">
           <div className="media-box" onClick={chat('messages')}>
-            <button className="messanger-bt"><MessageOutlinedIcon/></button>
+            <button className={`messanger-bt${mess.current==="messages" ? " spotted-icon": ""}`}>
+              <MessageOutlinedIcon/>
+            </button>
             <div className="num">{messages}</div>
           </div>
           <div className="media-box" onClick={chat('notifications')}>
-            <button className="messanger-bt"><NotificationsNoneOutlinedIcon/></button>
+            <button className={`messanger-bt${mess.current==="notifications" ? " spotted-icon": ""}`}>
+              <NotificationsNoneOutlinedIcon/>
+            </button>
             <div className="num">{notifications}</div>
           </div>
           <div className="media-box" onClick={chat('requests')}>
-            <button className="messanger-bt"><PersonAddOutlinedIcon/></button>
+            <button className={`messanger-bt${mess.current==="requests" ? " spotted-icon": ""}`}>
+              <PersonAddOutlinedIcon/>
+            </button>
             <div className="num">{invitations}</div>
           </div>
           <div className="media-box" onClick={chat('audios')}>
-            <button className="messanger-bt"><LocalPhoneOutlinedIcon/></button>
+            <button className={`messanger-bt${mess.current==="audios" ? " spotted-icon": ""}`}>
+              <LocalPhoneOutlinedIcon/>
+            </button>
             <div className="num">{audio}</div>
           </div>
           <div className="media-box" onClick={chat('videos')}>
-            <button className="messanger-bt"><VideocamOutlinedIcon/></button>
+            <button className={`messanger-bt${mess.current==="videos" ? " spotted-icon": ""}`}>
+              <VideocamOutlinedIcon/>
+            </button>
             <div className="num">{video}</div>
           </div>
         </div>
@@ -54,9 +64,9 @@ function Media({invitations, messages, notifications, audio, video}) {
 
 Media.defaultProps={
     invitations: 0,
-    messages: 0,
-    notifications: 0,
-    audio: 0,
-    video: 0
+    messages: 1,
+    notifications: 11,
+    audio: 111,
+    video: 222
 }
 export default Media;

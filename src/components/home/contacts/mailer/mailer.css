@@ -3,12 +3,12 @@
 .mailer{
     position: absolute;
     inset: 20vh 10vw 10vh 10vw;
-    border: 2px solid rgb(170, 170, 212);
     border-radius: 6px;
     z-index: 20;
     background-color: white;
     padding: 1%;
     width: auto;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
 }
 
 .mailer .center-mailer{
@@ -19,7 +19,7 @@
     place-items: center;
     overflow-y: auto;
     border-radius: 6px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    /* box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%); */
     padding: 6px;
     max-width: 100%;
 }

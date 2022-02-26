@@ -14,7 +14,6 @@ import CloudQueueOutlinedIcon from '@mui/icons-material/CloudQueueOutlined';
 import StackedLineChartOutlinedIcon from '@mui/icons-material/StackedLineChartOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import pager from '../../../../redux/actions/pager';
 import browser from '../../../../redux/actions/browser';
 
@@ -52,9 +51,6 @@ function Avatar({username}) {
                 <li className="my-act" onClick={navigate("banner")}>
                   <DashboardOutlinedIcon/> <h5>Dashboard</h5></li>
                 }
-                <li className="my-act" onClick={navigate("newPost")}>
-                  <AddOutlinedIcon/> <h5>New Post</h5>
-                </li>
                 <li className="my-act" onClick={navigate("profile")}>
                   <AccountBoxOutlinedIcon/> <h5>View Profile</h5>
                 </li>

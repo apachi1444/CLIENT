@@ -6,54 +6,35 @@
     max-height: 120vh;
 }
 
+.video h3{
+    color: rgb(139, 139, 219);
+    letter-spacing: 1px;
+}
 .video .screen{
+    position: relative;
     aspect-ratio: 16/9;
     border-radius: 6px;
     box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
     width: 100%;
-    position: relative;
 }
 
-.screen .top-left{
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    width: max-content;
-    gap: 4px;
-    position: absolute;
-    inset: 4px auto auto 4px;
-    background-color: yellow;
-};
-.screen .top-right{
-    position: absolute;
-    inset: 4px 4px auto auto;
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    width: max-content;
-    gap: 4px;
-    background-color: red;
-};
+.screen .top-r, .screen .top-l,
+.screen .bottom-r, .screen .bottom-l{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(219, 217, 231);
+}
 
-.screen .bottom-right{
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    width: max-content;
-    gap: 4px;
-    position: absolute;
-    inset: auto 4px 4px auto;
-    background-color: blue;
-};
-.screen .bottom-left{
-    display: grid;
-    grid-template-columns: auto auto;
-    place-items: center;
-    width: max-content;
-    gap: 4px;
-    position: absolute;
-    inset: auto auto 4px 4px;
-    background-color: green;;
+.screen .top-r .MuiSvgIcon-root, .screen .top-l .MuiSvgIcon-root,
+.screen .bottom-r .MuiSvgIcon-root, .screen .bottom-l .MuiSvgIcon-root{
+    fill: rgb(219, 217, 231);
+}
+
+.screen .bottom-r .MuiSvgIcon-root{
+    background-color: red;
+    border-radius: 50%;
+    padding: 3px;
 }
 .video .close-chatt{
     border-radius: 4px;
