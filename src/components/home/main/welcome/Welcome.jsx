@@ -7,10 +7,10 @@ import "./welcome.css";
 
 function Welcome() {
     return (
-        <div className="home"
-            // initial={{ x: "100vw", opacity: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 0.3 }}
+        <motion.div className="home"
+            initial={{ x: "100vw", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.3 }}
         >
             <motion.p className="intro"
                 initial={{y: "100vh", opacity: 0}}
@@ -22,7 +22,7 @@ function Welcome() {
             <WelcomeP/>
             <Updates/>
             <Reviews/>
-        </div>
+        </motion.div>
     )
 }
 
