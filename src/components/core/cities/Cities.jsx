@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import cities from '../../../assets/objects/cities';
 import { useSelector } from 'react-redux';
 import {v4 as uuid} from "uuid";
+import { motion } from "framer-motion";
 import "./cities.css";
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
@@ -18,11 +19,15 @@ function Cities() {
             <div className="open-cities" onClick={toggle}>
                 {open ? <ExpandLessOutlinedIcon/>: <PlaceOutlinedIcon/>}
             </div>
-            {open && <div className="cities">
+            {open && <motion.div className="cities"
+                initial={{scale: 0, opacity: 0}}
+                animate={{scale: 1, opacity: 1}}
+                transition={{duration: 0.4}}
+                >
                 { cities.map((item)=>(
                 <City city={item.ville} key={uuid()} isCurrent={city_t.city===item.ville}/>
                 ))}
-            </div>}
+            </motion.div>}
         </>
         
     );

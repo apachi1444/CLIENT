@@ -12,12 +12,13 @@ import Owners from './owners/Owners';
 
 function Groupa() {
   //an api call here to get the friendslist
-  const friendsList=[<Friend key={uuid()}/>, <Friend key={uuid()}/>, <Friend key={uuid()}/>, <Friend key={uuid()}/>, <Friend key={uuid()}/>];
+  const friendsList=[<Friend key={uuid()}/>, <Friend key={uuid()}/>, 
+                    <Friend key={uuid()}/>, <Friend key={uuid()}/>, <Friend key={uuid()}/>];
   return (
     <div className="groupa">
-        <Item icon={<SingleBedOutlinedIcon/>} title={"Rooms"} body={[<Rooms/>]}  key={uuid()}/>
-        <Item icon={<ApartmentOutlinedIcon/>} title={"Apartments"} body={[<Rooms/>]}  key={uuid()}/>
-        <Item icon={<EmojiPeopleOutlinedIcon/>} title={"More Owners"} body={[<Owners/>]}  key={uuid()}/>
+        <Item icon={<SingleBedOutlinedIcon/>} title={"Rooms"} body={[<Rooms key={uuid()}/>]}  key={uuid()}/>
+        <Item icon={<ApartmentOutlinedIcon/>} title={"Apartments"} body={[<Rooms key={uuid()}/>]}  key={uuid()}/>
+        <Item icon={<EmojiPeopleOutlinedIcon/>} title={"More Owners"} body={[<Owners key={uuid()}/>]}  key={uuid()}/>
         <Item icon={<LanguageOutlinedIcon/>} title={"Friends"} body={friendsList} key={uuid()}/>
     </div>
   );

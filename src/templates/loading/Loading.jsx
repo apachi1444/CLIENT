@@ -18,17 +18,17 @@ function Loading({width, gap, color, start, still}) {
             <motion.div className="dot-bullet" style={dotStyles}
                 initial={{scale: 0, opacity: 0}}
                 animate={{scale: 1, opacity: 1}}
-                transition={{delay: 0, duration: 0.5, yoyo: Infinity}}
+                transition={{delay: 0, duration: 0.5, repeat: Infinity}}
             ></motion.div>
             <motion.div className="dot-bullet" style={dotStyles}
                 initial={{scale: 0, opacity: 0}}
                 animate={{scale: 1, opacity: 1}}
-                transition={{delay: 0.1, duration: 0.5, yoyo: Infinity}}
+                transition={{delay: 0.1, duration: 0.5, repeat: Infinity}}
             ></motion.div>
             <motion.div className="dot-bullet" style={dotStyles}
                 initial={{scale: 0, opacity: 0}}
                 animate={{scale: 1, opacity: 1}}
-                transition={{delay: 0.2, duration: 0.5, yoyo: Infinity}}
+                transition={{delay: 0.2, duration: 0.5, repeat: Infinity}}
             ></motion.div>
         </div>
     </div>

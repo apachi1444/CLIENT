@@ -11,15 +11,16 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import RadioButtonCheckedOutlinedIcon from '@mui/icons-material/RadioButtonCheckedOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccountBoxOutlinedIcon from '@mui/icons-material/AccountBoxOutlined';
+import { v4 as uuid } from "uuid";
 
 function Settings() {
   return (
     <>
-        <Item icon={<LanguageOutlinedIcon/>} title={"Language"} body={[<Language/>]}/>
-        <Item icon={<DarkModeOutlinedIcon/>} title={"Theme"} body={[<Theme/>]}/>
-        <Item icon={<RadioButtonCheckedOutlinedIcon/>} title={"Active Status"} body={[<ActiveStatus/>]}/>
-        <Item icon={<LocationOnOutlinedIcon/>} title={"Location"} body={[<Location/>]}/>
-        <Item icon={<AccountBoxOutlinedIcon/>} title={"Profile Info"} body={[<ProfileInfo/>]}/>
+        <Item icon={<LanguageOutlinedIcon/>} title={"Language"} body={[<Language/>]} key={uuid()}/>
+        <Item icon={<DarkModeOutlinedIcon/>} title={"Theme"} body={[<Theme/>]} key={uuid()}/>
+        <Item icon={<RadioButtonCheckedOutlinedIcon/>} title={"Active Status"} body={[<ActiveStatus/>]} key={uuid()}/>
+        <Item icon={<LocationOnOutlinedIcon/>} title={"Location"} body={[<Location/>]} key={uuid()}/>
+        <Item icon={<AccountBoxOutlinedIcon/>} title={"Profile Info"} body={[<ProfileInfo/>]} key={uuid()}/>
     </>
   )
 }

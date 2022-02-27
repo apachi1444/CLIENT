@@ -1,12 +1,14 @@
+
+
 .reviews{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-gap: 15px;
     place-items: center;
+    width: 100%;
 }
-
-@media (max-width: 420px) {
+@media only screen and (max-width: 350px) {
     .reviews{
-        display: block;
+        grid-template-columns: auto;
     }
 }

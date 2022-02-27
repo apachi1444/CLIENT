@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import AppsIcon from '@mui/icons-material/Apps';
 import { motion } from "framer-motion";
+import { v4 as uuid } from 'uuid';
+
 import "./item.css";
 
 function Item({icon, title, body}) {
@@ -16,6 +18,7 @@ function Item({icon, title, body}) {
           initial={{x: 20, opacity: 0}}
           animate={{x: 0, opacity: 1}}
           transition={{duration: 0.4}}
+          key={uuid()}
       >
           <div className="item-head" >
             <div className="item-icon" onClick={toggle}>{icon}</div>
