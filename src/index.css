@@ -2,7 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 body {
   overflow: hidden;
@@ -27,3 +27,13 @@ h1, h2, h3, h4, h5, h6{
   font-weight: 600;
 }
 
+.app {
+  font-family: Poppins;
+  display:  grid;
+  height: 100vh;
+  grid-template-rows: auto auto auto 1fr auto;
+  background-color: #fdfdfd;
+  width: 100vw;
+  max-height: 100vh;
+  overflow:hidden;
+}
