@@ -37,6 +37,7 @@
     "react-spring": "^9.4.3",
     "react-three-fiber": "^6.0.13",
     "redux": "^4.1.2",
+    "styled-components": "^5.3.3",
     "three": "^0.137.5",
     "use-media": "^1.4.0",
     "uuid": "^8.3.2",

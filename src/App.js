@@ -7,8 +7,18 @@ import Manager from './Manager';
 import Search from './components/home/search/Search';
 import Core from "./components/core/Core";
 import Loading from "./templates/loading/Loading";
-import './app.css';
+// import  styled  from "styled-components";
 
+import './app.css';
+// const Wrapper=styled.section`
+//   font-family: Poppins;
+//   display:  grid;
+//   height: 100vh;
+//   grid-template-rows: auto auto auto 1fr auto;
+//   background-color: #fdfdfd;
+//   width: 100vw;
+//   overflow:hidden;
+// `;
 //This is just for testing
 
 function App() {
@@ -19,7 +29,7 @@ function App() {
   if(page==="core") return <Core/>;//Just for now page;
   //if(page!=="test") return <Core/>;//Just for now page, testing
   return (
-    <div className='app'>
+    <div className="app">
       <Contacts/>
       <Header/>
       <Search/>
