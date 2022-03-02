@@ -3,9 +3,10 @@ import Picture from '../../../header/avatar/picture/Picture';
 import Controller from "./controller/Controller";
 import Reaction from './reaction/Reaction';
 import Slider from './slider/Slider';
+import Info from "./info/Info";
 import StarsOutlinedIcon from '@mui/icons-material/StarsOutlined';
-import "./post.css";
 import postedSince from '../../../../../logic/algorithms/postedSince';
+import "./post.css";
 
 function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, isMine,
             comments, hearts, likes, dislikes, description, commentsTree, stars, postTime, mode}) {
@@ -25,6 +26,7 @@ function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, userna
               <Controller isMe={isMine}/>
           </div>
           <Slider images={imagesVideosUrls}/>
+          <Info/>
           { mode ? 
           <textarea value={des} onChange={handleDes} name="desc" id="desc" className="desc-field"></textarea>:
           <p className="describe">{description}</p>

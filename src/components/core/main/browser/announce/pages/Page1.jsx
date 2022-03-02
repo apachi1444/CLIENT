@@ -25,7 +25,8 @@ const Page1 =({cb})=>{
 
     return(
         <Container fluid style={{background:'#EFECEC'}}>
-            <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
+            <Row style={{display: "flex", justifyContent: "space-between", alignItems: "center",
+                paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3}>
                             <div className='boule_active'>1</div>
                         </Col>

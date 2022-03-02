@@ -3,6 +3,7 @@
     overflow-y: auto;
     height: 100%;
     background-color: white;
+
 }
 
 .notification{
@@ -55,4 +56,22 @@
 .notification .time-s{
     font-size: x-small;
     font-weight: 800;
+}
+
+.close-me-out{
+    width: max-content;
+    margin: 3px auto;
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+    padding: 2px;
+}
+
+.close-me-out .MuiSvgIcon-root{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    fill: blue;
+    margin: 2px;
 }

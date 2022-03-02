@@ -2,9 +2,13 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import Holder from './holder/Holder';
 import Message from './message/Message';
+import { useDispatch } from 'react-redux';
+import messanger from "../../../../../../redux/actions/messanger";
+import CloseChat from '../notifications/CloseChat';
 import './messages.css';
 
 function Messages() {
+  const dispatch=useDispatch();
   const [open, setOpen]=useState(false);
   //this data is just for testing
   const [data, setData]=useState([
@@ -44,6 +48,7 @@ function Messages() {
   };
   return (
     <div className="messages">
+        <CloseChat cb={()=>{dispatch(messanger({on: false, current: ""}))}}/>
         {!open ? 
         <>
           {data.map((item, i)=>
