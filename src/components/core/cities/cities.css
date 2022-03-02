@@ -14,7 +14,7 @@
 
 .open-cities{
   position: fixed;
-  inset: 2px 2px auto auto;
+  inset: 1vh 3vw auto auto;
 }
 
 .open-cities .MuiSvgIcon-root{

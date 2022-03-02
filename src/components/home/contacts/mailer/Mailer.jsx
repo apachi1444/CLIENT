@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 import './mailer.css';
 
 function Mailer({isOpen, cb}) {
-  const styles={color: 'blue', fontWeight: '600', fontSize: 'small'};
+  const styles={
+    color: 'blue', fontWeight: '600', fontSize: 'small',
+    padding: "4px",
+    borderRadius: "600px"
+  };
   if(!isOpen) return <></>;
   return (
     <motion.form className="mailer"

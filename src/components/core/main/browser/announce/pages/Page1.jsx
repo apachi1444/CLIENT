@@ -1,15 +1,11 @@
 import {Row,Button,Col,Container, Form} from 'react-bootstrap';
 import {ExclamationCircle} from 'react-bootstrap-icons';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Annonce from '../model/annonce';
 import '../css/form_css.css';
 
 
-const Page1 =()=>{
-
-    let navigate = useNavigate();
-
+const Page1 =({cb})=>{
     const [annonce,setAnnonce] = useState('');
     const [ville,setVille] = useState('');
     const [quartier,setQuartier] = useState('');
@@ -32,19 +28,17 @@ const Page1 =()=>{
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3}>
                             <div className='boule_active'>1</div>
-                            <div style={{color:"#130681",margin:"2px 10%"}}>Informations<br/>Générales</div>
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>2</div>
-                            <div style={{margin:"2px 10%"}}>Description<br/>Générale</div>
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>3</div>
-                            <div style={{margin:"2px 10%"}}>Images</div>
+                            {/* <div style={{margin:"2px 10%"}}>Images</div> */}
                         </Col>
                         <Col lg={3}>
                             <div className='boule_inactive'>4</div>
-                            <div style={{margin:"2px 10%"}}>Informations<br/>personelles</div>
+                            {/* <div style={{margin:"2px 10%"}}>Informations<br/>personelles</div> */}
                         </Col>
             </Row>
             <Row style={{background:"#D2ECEF"}}>
@@ -110,21 +104,21 @@ const Page1 =()=>{
                         </Form>
                         <div style={{display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                             <Button type="submit" className="btn btn-default" 
-                                style={{color:"#07436b",backgroundColor:"#fff"}} disabled>Précédent
+                                style={{color:"#07436b",backgroundColor:"#fff"}} disabled>Back
                             </Button>  
                             <Button type="submit"  onClick={(e)=>{
                                 handleSubmit(e);
-                                if(document.getElementById("myform1").checkValidity()===true){
+                                if(document.getElementById("myform1").checkValidity()){
                                     Annonce["type"]=annonce;
                                     Annonce["ville"]=ville;
                                     Annonce["quartier"]=quartier;
                                     Annonce["adresse"]=adresse;
                                     Annonce["url"]=url_maps;
-                                    navigate('/page2');
+                                    cb(true);
                                 }else{
-                                    alert("Veuillez valider tout les champs svp!!!");
+                                    alert("Verify the required fields please!!");
                                 }
-                            }}>Continuer</Button>    
+                            }}>Continue</Button>    
                         </div>
                     </Col>
                 </Row>
@@ -134,5 +128,7 @@ const Page1 =()=>{
 
     );
 }
-
+Page1.defaultProps={
+    cb: ()=>{}
+}
 export default Page1;

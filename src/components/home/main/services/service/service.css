@@ -11,7 +11,7 @@
     height: 80vh;
     max-height: 100%;
     overflow: hidden;
-    background-color: aqua;
+    background-color: rgb(240, 240, 247);
 }
 
 .service .serv-title{

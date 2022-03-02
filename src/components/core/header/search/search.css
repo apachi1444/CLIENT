@@ -36,3 +36,10 @@
     font-family: Poppins;
     flex-grow: 1;
 }
+
+@media only screen and (max-width: 280px){
+    .search-me{
+        width: 100%;
+        margin: 6px auto;
+    }
+}

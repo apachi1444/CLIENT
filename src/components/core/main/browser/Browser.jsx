@@ -24,23 +24,22 @@ function Browser() {
   }
 
   const handleSave=()=>{
-    //code goes here to save changes...
+  //code goes here to save changes...
   };
   useEffect(() => {
     if(ref.current) ref.current.scrollIntoView({behavior: "smooth", block: "center"});
   }, []);
-  const newPost=<motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
-    initial={{ rotate: "180deg", opacity: 1 }}
-    animate={{ rotate: 0, opacity: 1 }}
-    transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
-  ><AddOutlinedIcon/></motion.div>;
   switch(page){
     case 'profile':
       return (
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Profile/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'banner':
@@ -48,7 +47,11 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Banner/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'editProfile':
@@ -57,7 +60,11 @@ function Browser() {
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <div className="go-save" onClick={handleSave}><SaveAsOutlinedIcon/></div>
           <Profile mode={true}/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'network':
@@ -65,7 +72,11 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Network/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'changePassword':
@@ -73,7 +84,11 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Password/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'deleteAccount':
@@ -81,7 +96,11 @@ function Browser() {
         <div className="browser">
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Delete/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       );
     case 'newPost':
@@ -109,7 +128,11 @@ function Browser() {
           <Post/>
           <Post/>
           <Post/>
-          {newPost}
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
         </div>
       )
   }

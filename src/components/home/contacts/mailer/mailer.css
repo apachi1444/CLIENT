@@ -40,12 +40,12 @@
     width: max-content;
 }
 .header-mailer h4{
-    color: blue;
-    font-weight: 800;
+    color: rgb(13, 13, 92);
     background-color: rgb(247, 246, 252);
     border-radius: 6px;
-    padding: 4px 5px;
+    padding: 6px 10px;
     box-shadow: 0 2px 3px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 20%);
+    font-family: Poppins;
 }
 
 #email-box-warning{

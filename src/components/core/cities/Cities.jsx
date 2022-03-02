@@ -22,7 +22,7 @@ function Cities() {
             {open && <motion.div className="cities"
                 initial={{scale: 0, opacity: 0}}
                 animate={{scale: 1, opacity: 1}}
-                transition={{duration: 0.4}}
+                transition={{duration: 0.2}}
                 >
                 { cities.map((item)=>(
                 <City city={item.ville} key={uuid()} isCurrent={city_t.city===item.ville}/>

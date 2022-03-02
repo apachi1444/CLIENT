@@ -1,14 +1,10 @@
 import {Row,Button,Col,Container, Form,InputGroup,FormControl} from 'react-bootstrap';
 import {Envelope, ExclamationCircle, Person, Phone} from 'react-bootstrap-icons';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Annonce from '../model/annonce';
 import '../css/form_css.css';
 
-const Page4 =()=>{
-
-    let navigate = useNavigate();
-
+const Page4 =({cb})=>{
     const [nom_prenom,setNom_prenom]= useState('');
     const [email, setEmail]= useState('');
     const [tel,setTel]=useState('');
@@ -32,19 +28,19 @@ const Page4 =()=>{
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>2</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Description<br/>Générale</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Description<br/>Générale</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>3</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Images</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Images</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>4</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>personelles</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>personelles</div> */}
                         </Col>
                     </Row>
             <Row style={{background:"#D2ECEF"}}>
@@ -103,19 +99,19 @@ const Page4 =()=>{
                         </div>
                         <div style={{zIndex:"1",display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                             <Button type="submit" className="btn btn-default" style={{color:"#07436b",backgroundColor:"#fff"}} onClick={()=>{
-                                    navigate('/page3');
-                                }}>Précédent</Button>  
+                                    cb(false);
+                                }}>Back</Button>  
                             <Button type="submit" onClick={(e)=>{
                                 handleSubmit(e);
-                                if(document.getElementById("myform4").checkValidity()===true){
+                                if(document.getElementById("myform4").checkValidity()){
                                     Annonce["nom_prenom"]=nom_prenom;
                                     Annonce["email"]=email;
-                                    Annonce["telephone"]=tel
+                                    Annonce["telephone"]=tel;
                                 }else{
-                                    alert("Veuillez valider tout les champs svp!!!");
+                                    alert("Verify the required fields please!!");
                                 }
                                 
-                            }}>Terminer</Button>    
+                            }}>Finish</Button>    
                         </div>
                     </Col>
                     <Col lg={1} sm={1}></Col>
@@ -126,5 +122,9 @@ const Page4 =()=>{
 
     );
 }
+Page4.defaultProps={
+    cb:(page)=>{
 
+    }
+}
 export default Page4;

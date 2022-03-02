@@ -1,13 +1,14 @@
 import React from 'react';
 import useWindowDimensions from '../../../../../../../logic/algorithms/windowDims';
 import './plane.css';
+
 //for testing
 // import Picture from "../../../../core/header/avatar/picture/Picture";
 // import Post from '../../../../core/main/browser/post/Post';
 
 function Plane({angle, count, backgroundImage, frontIndex, turnBy, component}) {
     const { width, height }=useWindowDimensions();
-    const radius=(width > 400? width/7: 100);
+    const radius=(width > 400? width/7: 120);
     const xMoves=radius*Math.sin(count*angle+turnBy);
     const zMoves=radius*Math.cos(count*angle+turnBy);
     const stylesA={ 

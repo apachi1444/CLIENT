@@ -2,17 +2,11 @@ import {Row,Button,Col,Container, Form} from 'react-bootstrap';
 import {Camera, ExclamationCircle} from 'react-bootstrap-icons';
 import Annonce from '../model/annonce';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../css/form_css.css';
 
-const Page3 =()=>{
-
-    let navigate = useNavigate();
-
+const Page3 =({cb})=>{
     const [images,setImages]=useState(null);
-
     const [validated, setValidated] = useState(true);
-
     const checkSize=(elems)=>{
         let maxSize=elems[0].size;
         for(let i=1;i<elems.length;i++){
@@ -30,19 +24,19 @@ const Page3 =()=>{
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Informations<br/>Générales</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>2</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Description<br/>Générale</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Description<br/>Générale</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>3</div>
-                            <div style={{color:"#130681",marginLeft:"30%"}}>Images</div>
+                            {/* <div style={{color:"#130681",marginLeft:"30%"}}>Images</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_inactive'>4</div>
-                            <div style={{marginLeft:"30%"}}>Informations<br/>personelles</div>
+                            {/* <div style={{marginLeft:"30%"}}>Informations<br/>personelles</div> */}
                         </Col>
                     </Row>
             <Row style={{background:"#D2ECEF"}}>
@@ -90,16 +84,16 @@ const Page3 =()=>{
                         </div>
                         <div style={{zIndex:"1",display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                             <Button type="submit" className="btn btn-default" style={{color:"#07436b",backgroundColor:"#fff"}} onClick={()=>{
-                                    navigate('/page2');
-                                }}>Précédent</Button>  
+                                    cb(false);
+                                }}>Back</Button>  
                             <Button type="submit" onClick={(e)=>{
                                     if(validated===true){
                                         Annonce["images"]=images;
-                                        navigate('/page4');
+                                        cb(true);
                                     }else{
                                         setImages(null);
                                     }
-                                }}>Continuer</Button>    
+                                }}>Continue</Button>    
                         </div>
                     </Col>
                     <Col lg={1} sm={1}></Col>
@@ -111,4 +105,9 @@ const Page3 =()=>{
     );
 }
 
+Page3.defaultProps={
+    cb:(page)=>{
+
+    }
+}
 export default Page3;

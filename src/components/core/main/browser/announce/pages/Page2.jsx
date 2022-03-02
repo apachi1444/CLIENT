@@ -1,15 +1,11 @@
 import {Row,Button,Col,Container, Form} from 'react-bootstrap';
 import {ExclamationCircle} from 'react-bootstrap-icons';
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Annonce from '../model/annonce';
 import '../css/form_css.css';
 
 
-const Page2 =()=>{
-
-    let navigate = useNavigate();
-
+const Page2 =({cb})=>{
     const [titre,setTitre] = useState('');
     const [prix,setPrix] = useState('');
     const [description,setDescription] = useState('');
@@ -25,8 +21,7 @@ const Page2 =()=>{
         if (form.checkValidity() === false) {
         event.preventDefault();
         event.stopPropagation();
-        }
-
+        };
         setValidated(true);
     };
 
@@ -36,31 +31,31 @@ const Page2 =()=>{
             <Row style={{paddingBottom:'100px',paddingTop:'50px', width: "80%", margin: "4px 10%"}}>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>1</div>
-                            <div style={{color:"#130681",margin:"2px 10%"}}>Informations<br/>Générales</div>
+                            {/* <div style={{color:"#130681",margin:"2px 10%"}}>General<br/>Info</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_active'>2</div>
-                            <div style={{color:"#130681",margin:"2px 10%"}}>Description<br/>Générale</div>
+                            {/* <div style={{color:"#130681",margin:"2px 10%"}}>General<br/>Description</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_inactive'>3</div>
-                            <div style={{margin:"2px 10%"}}>Images</div>
+                            {/* <div style={{margin:"2px 10%"}}>Images</div> */}
                         </Col>
                         <Col lg={3} style={{zIndex:'1'}}>
                             <div className='boule_inactive'>4</div>
-                            <div style={{margin:"2px 10%"}}>Informations<br/>personelles</div>
+                            {/* <div style={{margin:"2px 10%"}}>Personnal<br/>Info</div> */}
                         </Col>
                     </Row>
             <Row style={{background:"#D2ECEF"}}>
                 <Row style={{width: "100%"}}>
                     <Col lg={1} sm={1}></Col>
                     <Col lg={16} sm={16} style={{justifyContent:"center", margin: "2px auto"}}>
-                        <h3 style={{marginTop:"50px"}}>DESCRIPTION GENERALE</h3>
+                        <h3 style={{marginTop:"50px"}}>General Description</h3>
                         <div className='barre_sous_titre'></div>
                         <div style={{display:"flex"}}>
                             <ExclamationCircle color="red" size={20} />
                             <h5 style={{marginLeft:'20px',marginBottom:'10px'}}>
-                                Les champs avec (<span style={{color:'red'}}>*</span>) sont obligatoires !
+                                Fields with (<span style={{color:'red'}}>*</span>) are required!
                             </h5>
                         </div>
                         <div style={{backgroundColor:"#fff",padding:"20px"}}>
@@ -68,7 +63,7 @@ const Page2 =()=>{
                                 <Row className="mb-3" style={{display: "flex", flexWrap: "wrap"}}>
                                     <Form.Group as={Col} controlId="formGridTitle" style={{minWidth: "150px"}}>
                                         <Form.Label style={{fontSize:'20px'}}>
-                                            (<span style={{color:'red'}}>*</span>) Titre de l'annonce
+                                            (<span style={{color:'red'}}>*</span>) Title
                                         </Form.Label>
                                         <Form.Control 
                                             style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} 
@@ -79,7 +74,7 @@ const Page2 =()=>{
 
                                     <Form.Group as={Col} controlId="formGridPrice" style={{minWidth: "150px"}}>
                                         <Form.Label style={{fontSize:'20px'}}>
-                                            (<span style={{color:'red'}}>*</span>) Prix
+                                            (<span style={{color:'red'}}>*</span>) Price
                                         </Form.Label>
                                         <Form.Control 
                                             style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} 
@@ -99,7 +94,7 @@ const Page2 =()=>{
                                 </Form.Group>
                                 <Row className='mb-3'>
                                     <Form.Group as={Col} controlId="formGridRooms">
-                                        <Form.Label style={{fontSize:'15px'}}>nombre de<br/>chambres</Form.Label>
+                                        <Form.Label style={{fontSize:'15px'}}>Number of<br/>rooms</Form.Label>
                                         <Form.Select 
                                             style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} 
                                             onChange={(a)=>{
@@ -115,7 +110,7 @@ const Page2 =()=>{
                                         </Form.Select>
                                     </Form.Group>
                                     <Form.Group as={Col} controlId="formGridSize">
-                                        <Form.Label style={{fontSize:'15px'}}>Surface totale<br/>(en m²)</Form.Label>
+                                        <Form.Label style={{fontSize:'15px'}}>Total Surface<br/>(in m²)</Form.Label>
                                         <Form.Select 
                                             style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} 
                                             onChange={(a)=>{
@@ -129,7 +124,7 @@ const Page2 =()=>{
                                         </Form.Select>
                                     </Form.Group>
                                     <Form.Group as={Col} controlId="formGridCaution">
-                                        <Form.Label style={{fontSize:'15px'}}>Caution<br/>(en drhs)</Form.Label>
+                                        <Form.Label style={{fontSize:'15px'}}>Caution<br/>(in drhs)</Form.Label>
                                         <Form.Select 
                                             style={{boxShadow:"0 3px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%)"}} 
                                             onChange={(a)=>{
@@ -143,8 +138,9 @@ const Page2 =()=>{
                                         </Form.Select>
                                     </Form.Group>
                                 </Row>
-                                <h5 style={{textDecoration:'underline',marginBottom:"30px", color: "blueviolet", letterSpacing: "1px"}}>
-                                    Services<br/>supplémentaires
+                                <h5 style={{textDecoration:'underline',marginBottom:"30px", color: "blueviolet", 
+                                        letterSpacing: "1px"}}>
+                                    Additional<br/>Services
                                 </h5>
                                 <Form.Group as={Col} controlId="formGridOthers">
                                     <Form.Check
@@ -152,7 +148,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="wifi"
+                                        label="Wifi"
                                         name="group1"
                                         type="checkbox"
                                         id={"wifi"}
@@ -162,7 +158,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="climatisation"
+                                        label="Climatisation"
                                         name="group1"
                                         type="checkbox"
                                         id={"clim"}
@@ -172,7 +168,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="chauffage"
+                                        label="Chauffage"
                                         type="checkbox"
                                         id={"chauffage"}
                                     />
@@ -190,7 +186,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="concierge"
+                                        label="Concierge"
                                         type="checkbox"
                                         id={"concierge"}
                                     />
@@ -199,7 +195,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="sécurité"
+                                        label="Security"
                                         type="checkbox"
                                         id={"securite"}
                                     />
@@ -208,7 +204,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="balcon"
+                                        label="Balcony"
                                         type="checkbox"
                                         id={"balcon"}
                                     />
@@ -217,7 +213,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="terasse"
+                                        label="Terrace"
                                         type="checkbox"
                                         id={"terasse"}
                                     />
@@ -226,7 +222,7 @@ const Page2 =()=>{
                                             setOthers(others+" "+e.target.id);
                                         }}
                                         inline
-                                        label="autres"
+                                        label="Others"
                                         type="checkbox"
                                         id={"autres"}
                                     />
@@ -237,8 +233,8 @@ const Page2 =()=>{
                         <div style={{display:"flex",justifyContent:"space-around",marginTop:'100px',marginBottom:"100px"}}>
                                     <Button type="submit" className="btn btn-default" 
                                         style={{color:"#07436b",backgroundColor:"#fff"}} onClick={()=>{
-                                        navigate('/');
-                                    }}>Précédent</Button>  
+                                        cb(false);
+                                    }}>Back</Button>  
                                     <Button type="submit" onClick={(e)=>{
                                         handleSubmit(e);
                                         if(document.getElementById("myform2").checkValidity()===true){
@@ -249,11 +245,11 @@ const Page2 =()=>{
                                             Annonce["size"]=surf;
                                             Annonce["caution"]=caut;
                                             Annonce["supplementaire"]=others;
-                                            navigate('/page3');
+                                            cb(true);
                                         }else{
-                                            alert("Veuillez valider tout les champs svp!!!");
+                                            alert("Fill out the required fields please!!");
                                         }
-                                }}>Continuer</Button>    
+                                }}>Continue</Button>    
                         </div>
                     </Col>
                     <Col lg={1} sm={1}></Col>
@@ -265,4 +261,7 @@ const Page2 =()=>{
     );
 }
 
+Page2.defaultProps={
+    cb: ()=>{}
+}
 export default Page2;
