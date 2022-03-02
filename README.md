@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 # Renting SPA(single page application) with reactJs, it helps connect students with rooms/apartments owners
 
 ##Live Demo:
