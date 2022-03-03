@@ -3,6 +3,7 @@
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     height: 100%;
+    /* overflow: auto; */
 }
 .message-container .msgs{
     height: 100%;

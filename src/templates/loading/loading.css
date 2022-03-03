@@ -1,0 +1,16 @@
+.loading{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.loading .dots{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+};
+

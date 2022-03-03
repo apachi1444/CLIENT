@@ -1,0 +1,79 @@
+.network{
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    gap: 4px 0;
+    width: 99%;
+    margin: 25px auto 0 auto;
+    height: 91%;
+    overflow: hidden;
+}
+
+.my-network{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: 1/1/2/3;
+    padding-left: 6px;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 15%);
+    padding-bottom: 2px;
+}
+
+.my-network .my-name-net{
+    font-weight: 600;
+    border: 1px solid rgb(189, 189, 209);
+    border-radius: 14px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.my-network .members{
+    font-weight: 600;
+    font-size: small;
+}
+.my-network .network-actions{
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.network-actions .network-options{
+    position: absolute;
+    inset: 100% 20px auto auto;
+    list-style: none;
+    width: max-content;
+    background-color: white;
+    padding: 4px;
+    border-radius: 4px;
+    z-index: 300;
+}
+.network-options .network-op{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    margin: 6px 4px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.network-op p{
+    font-weight: 500;
+}
+.network-actions .network-op:hover{
+    background-color: whitesmoke;
+    color: rgb(116, 116, 167);
+}
+.network-set{
+    grid-area: 2/2/3/3;
+    height: 100%;
+    overflow-y: auto;
+    padding-left: 6px;
+}
+
+.network-set .inner-network-set{
+    border-left: 1px solid rgb(183, 183, 212);
+    width: 100%;
+    height: max-content;
+}

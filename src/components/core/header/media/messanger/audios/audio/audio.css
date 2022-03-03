@@ -1,0 +1,65 @@
+
+.audio{
+    display: grid;
+    padding: 4px 1%;
+    place-items: center;
+    width: 100%;
+    gap: 6px;
+    grid-template-rows: auto auto 1fr;
+    max-height: 100%;
+}
+
+.audio .calls-section{
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    width: 100%;
+    padding: 6px;
+    position: relative;
+}
+
+.calls-section .call-actions{
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.call-actions .hung-up{
+    margin: 2px 6px;
+}
+
+.calls-section .get-out{
+    position: absolute;
+    inset: 6px 4px auto auto;
+}
+
+.calls-section .call-duration{
+    position: absolute;
+    inset: 6px auto auto 4px;
+    font-weight: 700;
+    color: blueviolet;
+}
+.audio .chats-sec{
+    height: 100%;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.audio .close-chat{
+    border-radius: 4px;
+    background-color: rgb(18, 18, 104);
+    color: aliceblue;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    padding: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.hung-up .MuiSvgIcon-root{
+    fill: rgb(115, 115, 155);
+}
+.mode-on .MuiSvgIcon-root{
+    background-color: red;
+}

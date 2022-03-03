@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 732px) {
+    .header{
+        padding: 2px 15%;
+    }
+}
+.header h4{
+    margin: 6px;
+    padding: 4px 6px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%);
+    cursor: pointer;
+    letter-spacing: 2px;
+    color: rgb(24, 24, 129);
+    border: 1px solid rgb(234, 234, 243);
+    font-weight: 900;
+    font-size: large;
+    
+}
+
+.header h4:hover{
+    box-shadow: 0 2px 6px rgb(0 0 0 / 36%), 0 1px 2px rgb(0 0 0 / 43%);
+    transform: box-shadow ease-in 0.5s;
+}
+.burg{
+    position: relative;
+}

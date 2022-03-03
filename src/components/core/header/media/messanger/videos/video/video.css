@@ -1,0 +1,58 @@
+.video{
+    display: grid;
+    padding: 4px 1%;
+    place-items: center;
+    grid-template-rows: auto auto auto 1fr;
+    max-height: 120vh;
+}
+
+.video h3{
+    color: rgb(139, 139, 219);
+    letter-spacing: 1px;
+}
+.video .screen{
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    width: 100%;
+}
+
+.screen .top-r, .screen .top-l,
+.screen .bottom-r, .screen .bottom-l{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(219, 217, 231);
+}
+
+.screen .top-r .MuiSvgIcon-root, .screen .top-l .MuiSvgIcon-root,
+.screen .bottom-r .MuiSvgIcon-root, .screen .bottom-l .MuiSvgIcon-root{
+    fill: rgb(219, 217, 231);
+}
+
+.screen .bottom-r .MuiSvgIcon-root{
+    background-color: red;
+    border-radius: 50%;
+    padding: 3px;
+}
+.video .close-chatt{
+    border-radius: 4px;
+    background-color: rgb(18, 18, 104);
+    color: aliceblue;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    padding: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 6px auto;
+}
+
+.video .go-backx{
+    justify-self: start;
+}
+
+.video .chats-section{
+    max-height: 40vh;
+    overflow-y: auto;
+}

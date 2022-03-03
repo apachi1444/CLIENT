@@ -12,12 +12,17 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
 import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import { motion } from "framer-motion";
 
-function Message({imgUrl, username, msgs, cb, isArchived, isMuted}) {
+function Message({imgUrl, username, msgs, cb, isArchived, isMuted, noCb}) {
   const [open, setOpen]=useState(false);
   return (
-    <div className="message-container">
-      <div className="go-back" onClick={cb}><KeyboardBackspaceOutlinedIcon/></div>
+    <motion.div className="message-container"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="go-back" onClick={cb}>{ !noCb && <KeyboardBackspaceOutlinedIcon/>}</div>
       <div className="image-username">
         <Picture width={"50px"} auto={false}/>
         <h5>{username}</h5>
@@ -63,13 +68,14 @@ function Message({imgUrl, username, msgs, cb, isArchived, isMuted}) {
         <textarea name="send-mes" id="text-msg" className='send-ms' placeholder='message...'></textarea>
         <label htmlFor="text-msg" className="send-ms-l"><SendOutlinedIcon/></label>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
 Message.defaultProps={
   username: "Jordan B",
   msgs: [],
-  cb: ()=>{}
+  cb: ()=>{},
+  noCb: false
 }
 export default Message

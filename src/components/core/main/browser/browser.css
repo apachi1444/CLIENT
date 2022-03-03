@@ -3,9 +3,10 @@
     width: 100%;
     height: 100%;
     background-color: rgb(254, 254, 255);
-    overflow-y: auto;
-    height: 70vh;
+    /* height: 62vw; */
     overflow-x: hidden;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .browser .go-home{
@@ -34,4 +35,18 @@
 
 .go-home .MuiSvgIcon-root, .go-save .MuiSvgIcon-root{
     fill: rgb(238, 238, 245);
+}
+
+.browser > .add-new{
+    position: absolute;
+    inset: auto auto 5px;
+    transform:  translateX(10px);
+}
+.browser > .add-new .MuiSvgIcon-root{
+    
+    fill: rgb(238, 238, 245);
+    background-color: rgb(0, 0, 236);
+    border-radius: 50%;
+    width: 1.3em;
+    height: auto;
 }

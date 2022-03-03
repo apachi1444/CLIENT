@@ -1,16 +1,21 @@
 import React from 'react';
 import postedSince from "../../../../../../../logic/algorithms/postedSince";
-import "./holder.css";
+import { motion } from "framer-motion";
 import Picture from "../../../../avatar/picture/Picture";
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import UnarchiveOutlinedIcon from '@mui/icons-material/UnarchiveOutlined';
 import VolumeOffOutlinedIcon from '@mui/icons-material/VolumeOffOutlined';
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined';
+import "./holder.css";
 
 function Holder({ imgUrl, username, timeStamp, isMuted, isArchived, volume, delete_t, archive, cb}) {
   return (
-    <div className={`holder${isArchived ? ' shady': ''}`}>
+    <motion.div className={`holder${isArchived ? ' shady': ''}`}
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
         <Picture imgUrl={imgUrl} width={'60px'} auto={false} cb={cb} border={"1px solid blueviolet"}/>
         <h4 onClick={cb}>{username}</h4>
         <p>{postedSince(timeStamp)}</p>
@@ -23,7 +28,7 @@ function Holder({ imgUrl, username, timeStamp, isMuted, isArchived, volume, dele
               {!isMuted ? <VolumeUpOutlinedIcon/>: <VolumeOffOutlinedIcon/>}
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -32,6 +37,10 @@ Holder.defaultProps={
     username: "James B",
     timeStamp: new Date(),
     isMuted: false,
+    isArchived: false,
+    volume: ()=>{},
+    archive: ()=>{},
+    delete_t: ()=>{},
     cb: ()=>{}
 }
 

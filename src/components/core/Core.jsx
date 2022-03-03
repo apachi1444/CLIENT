@@ -3,14 +3,19 @@ import Cities from './cities/Cities';
 import "./core.css";
 import Header from './header/Header';
 import Main from './main/Main';
+import { motion } from "framer-motion";
 
 function Core() {
   return (
-      <div className="core">
+      <motion.div className="core"
+        initial={{ y: "-100vh" }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.1 }}
+      >
           <Header/>
           <Cities/>
           <Main/>
-      </div>
+      </motion.div>
   );
 }
 

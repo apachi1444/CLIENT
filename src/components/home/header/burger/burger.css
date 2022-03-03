@@ -1,0 +1,65 @@
+
+.burger{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background-color: black;
+    border-top: 1px solid rgb(50, 50, 59);
+    padding-bottom: 6px    
+};
+
+.close{
+    margin: auto;
+    cursor: pointer;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 70vw;
+    background-color: black;
+
+}
+
+.links h4{
+    cursor: pointer;
+    color: rgb(172, 172, 231);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+    border-radius: 14px;
+    padding: 3px;
+    text-decoration: center;
+    border: 1px solid rgb(10, 10, 10);
+    margin-bottom: 6px;
+}
+
+.links h4:hover{
+    color: rgb(187, 170, 228);
+}
+.menu{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.menu .MuiSvgIcon-root{
+    width: 1.3em;
+    height: auto;
+    fill: rgb(10, 10, 12);
+    margin: auto;
+}
+.close .MuiSvgIcon-root{
+    width: 1.3em;
+    height: auto;
+    fill: rgb(113, 113, 185);
+    margin: auto;
+}
+
+.on-it{
+    color: rgb(111, 111, 165) !important;
+}

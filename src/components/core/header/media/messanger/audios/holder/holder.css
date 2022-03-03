@@ -1,0 +1,33 @@
+
+.audio-holder{
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 6px auto;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+    padding: 6px;
+    border-radius: 6px;
+    background-color: rgb(244, 247, 248);
+}
+
+.audio-holder .calling-acts{
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calling-acts .phone-ac{
+    margin-left: 4px;
+}
+
+.phone-ac .MuiSvgIcon-root:hover{
+    background-color: red;
+    border-radius: 50%;
+}
+
+.audio-holder .caller-username{
+    color: rgb(50, 50, 189);
+}

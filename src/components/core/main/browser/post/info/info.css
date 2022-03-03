@@ -1,0 +1,27 @@
+
+.info-box, .serv-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.serv-info{
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 15%);
+    margin: 4px 2px;
+}
+
+.serv-info .serv-t{
+    font-weight: 700;
+    border: none;
+    color: rgb(89, 89, 180);
+}
+
+.serv-info .MuiSvgIcon-root{
+    background-color: rgb(219, 219, 231);
+    fill: rgb(117, 117, 236);
+    border-radius: 50%;
+    margin: 4px;
+}

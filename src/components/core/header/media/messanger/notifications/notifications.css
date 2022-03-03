@@ -2,23 +2,31 @@
     width: 100%;
     overflow-y: auto;
     height: 100%;
+    background-color: white;
+
 }
 
 .notification{
     width: 99%;
-    margin: 4px auto;
-    border-radius: 6px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
-    padding: 6px;
-}
-.notification .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    position: relative;
+    margin: 6px auto;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+    padding: 3px;
+    border-radius: 6px;
+    background-color: rgb(244, 247, 248);
 }
-.header .more-action{
+.notification .not-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.not-header .more-action{
     position: absolute;
     inset: 100% 0 auto auto;
     padding: 6px;
@@ -30,7 +38,7 @@
     animation: gobig 0.5s ease-out;
 }
 
-.header .MuiSvgIcon-root{
+.not-header .MuiSvgIcon-root{
     padding: 3px;
     border-radius: 50%;
     border: 1px solid white;
@@ -48,4 +56,22 @@
 .notification .time-s{
     font-size: x-small;
     font-weight: 800;
+}
+
+.close-me-out{
+    width: max-content;
+    margin: 3px auto;
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 14%), 0 1px 2px rgb(0 0 0 / 30%);
+    padding: 2px;
+}
+
+.close-me-out .MuiSvgIcon-root{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    fill: blue;
+    margin: 2px;
 }

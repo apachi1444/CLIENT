@@ -1,8 +1,10 @@
 import React from 'react';
-import Messages from './messages/Messages';
 import './messanger.css';
+import Messages from './messages/Messages';
 import Notifications from './notifications/Notifications';
 import Requests from './requests/Requests';
+import Videos from './videos/Videos';
+import Audios from './audios/Audios';
 
 function Messanger({on, current}) {  
   if(!on) return <></>;
@@ -11,6 +13,8 @@ function Messanger({on, current}) {
         {
           current==="notifications" ? <Notifications/> :
           current==="requests" ? <Requests/>:
+          current==="videos" ? <Videos/>:
+          current==="audios" ? <Audios/>:
           <Messages/>
         }
     </div>

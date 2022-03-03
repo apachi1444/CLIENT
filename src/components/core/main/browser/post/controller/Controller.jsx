@@ -14,6 +14,7 @@ import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
 
 import browser from './../../../../../../redux/actions/browser';
 import { useDispatch } from 'react-redux';
+import { motion } from "framer-motion";
 import "./controller.css";
 
 function Controller({isFriend, posterName, isMe}) {
@@ -27,7 +28,10 @@ function Controller({isFriend, posterName, isMe}) {
           </div>
           <div className="controller-ops">
               {open && 
-              <ul className="actions">
+              <motion.ul className="actions" 
+                initial={{x : "30vw", opacity: 0}}
+                animate={{x : 0, opacity: 1}}
+              >
                 {
                 isMe ? 
                 <>
@@ -46,7 +50,7 @@ function Controller({isFriend, posterName, isMe}) {
                   <li className="action"><NotificationsOffOutlinedIcon/><h3>Unfollow {posterName}</h3></li>
                 </>
                 }
-              </ul>
+              </motion.ul>
               }
           </div>
       </div>

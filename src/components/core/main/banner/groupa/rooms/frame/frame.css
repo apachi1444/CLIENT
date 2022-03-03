@@ -8,11 +8,12 @@
     margin: 0 10px;
 }
 .frame h6{
-    color: rgb(180, 180, 209);
+    color: rgb(22, 22, 116);
     font-weight: 800;
-    background-color: black;
+    background-color: rgb(191, 187, 224);
     border-radius: 4px;
     padding: 2px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
 }
 .frame .price-r{
     position: absolute;

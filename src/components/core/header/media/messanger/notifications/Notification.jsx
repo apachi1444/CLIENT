@@ -12,7 +12,7 @@ function Notification({imgUrl, username, reaction, timeStamp, isMuted, icon}) {
   const [open, setOpen]=useState(false);
   return (
     <div className="notification">
-        <div className="header">
+        <div className="not-header">
             <Picture width={'50px'} auto={false} border={"1px solid blue"}/>
             <h3>{username}</h3>
             {icon}

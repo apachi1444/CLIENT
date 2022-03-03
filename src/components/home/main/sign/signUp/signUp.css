@@ -1,0 +1,108 @@
+.MuiSvgIcon-root{
+    cursor: pointer;
+}
+.sign-up{
+    padding: 10px 10vw;
+    width: max-content;
+    border-radius: 10px;
+    margin: 4vw auto;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 36%), 0 1px 2px rgb(0 0 0 / 43%);
+    font-family: 'Poppins', 'sans-serif';
+    background-color: rgb(223, 223, 238);
+}
+
+.field{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 99%;
+    grid-gap: 4px;
+    padding: 2px;
+    margin: 4px auto;
+    place-items: center;
+}
+
+.sign-up .avatar{
+    display: grid;
+    place-items: center;
+}
+.avatar input{
+    display: none;
+}
+
+.avatar p{
+    font-size: x-small;
+    font-weight: 800;
+}
+.field input{
+    outline: none;
+    border: none;
+    height: 2em;
+    padding: 3px 15px;
+    border-radius: 8px;
+    font-family: 'Poppins', 'sans-serif';
+    box-shadow: 0 3px 6px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 10%);
+    font-weight: 600;
+};
+
+.field .view-me{
+    width: max-content;
+}
+
+.view-me .MuiSvgIcon-root{
+    fill: rgb(149, 149, 192);
+    width: 20px;
+    height: auto;
+}
+.field input:focus{
+    outline: none;
+}
+
+.sign-up .forgot-password, .sign-up .have-account{
+    padding: 3px;
+}
+
+.forgot-password:hover, .have-account:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+
+.sign-up .signning{
+    padding: 4px;
+    font-size: medium;
+    border-radius: 6px;
+    border-width: 1px;
+    cursor: pointer;
+    background-color: rgb(58, 60, 192);
+    color: white;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 25%), 0 1px 2px rgb(0 0 0 / 35%);
+}
+
+.sign-up .avatar .MuiSvgIcon-root{
+    width: 3em;
+    height: auto;
+    fill: rgb(188, 188, 190);
+}
+
+.sign-up h6{
+    margin: 6px auto 2px auto;
+}
+.o-auth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1px;
+}
+
+.o-auth div{
+    margin: 0 4px;
+}
+
+
