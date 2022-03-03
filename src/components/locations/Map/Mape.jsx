@@ -8,9 +8,10 @@ import MapGraphics from "./mapGraphics/MapGraphics";
 import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer";
 import SceneView from "@arcgis/core/views/SceneView";
 import "./map.css";
+
 const Mape = () => {
   const mapRef = useRef(null);
-  const [view, setview] = useState(null);
+  const [view, setView] = useState(null);
   const glResult1 = new GraphicsLayer({
     id: "glResult1",
   });
@@ -29,7 +30,7 @@ const Mape = () => {
       container: mapRef.current,
       center: [-7.992047, 31.628674],
       zoom: 15,
-    }).when((view) => setview(view));
+    }).when((view) => setView(view));
     // the when function is a callback two param succes and err
   }, []);
 

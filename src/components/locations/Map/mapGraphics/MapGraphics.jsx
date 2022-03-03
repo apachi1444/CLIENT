@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Graphic from "@arcgis/core/Graphic";
 const MapGraphics = ({ view }) => {
   const formRef = useRef(null);
-  const [state, setstate] = useState({
+  const [zone, setZone] = useState({
     name: "map",
     address: "klsqjflk",
   });
