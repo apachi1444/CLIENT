@@ -6,13 +6,22 @@ nav {
   justify-content: space-between;
   margin: 5px;
 }
-.numberOffers,
-.TitleCities {
+.ListOfCities,
+.TitleZones {
   background: rgb(145, 145, 221);
   padding: 0.15rem;
   border-radius: 10px;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+}
+
+select.ListOfCities {
+  border-radius: 3px;
+  padding-right: 0rem;
+}
+
+select.ListOfCities:focus {
+  border-color: none;
 }
 .input {
   padding: 3px;
@@ -28,6 +37,7 @@ nav {
 }
 .secondDiv {
   display: flex;
+  height: 80%;
 }
 .MapDiv {
   background: #e7e7f7;
@@ -36,7 +46,7 @@ nav {
   display: flex;
   justify-content: space-between;
   margin: 5px;
-  width: 85%;
+  width: 88%;
 }
 .MapDiv .Map {
   background: white;
@@ -44,18 +54,12 @@ nav {
   padding: 0.05rem;
   margin: 2px;
   width: 100%;
+  height: 100%;
 }
-.MapDiv .Map {
-  background: white;
-  border-radius: 15px;
-  padding: 0.05rem;
-  margin: 2px;
-  width: 100%;
-}
+
 .theMap {
   border: 2px solid rgb(145, 145, 221);
   width: 100%;
-  height: 100%;
 }
 .MapDiv .Map .HoverMap {
   border: 2px solid rgb(145, 145, 221);
@@ -65,9 +69,8 @@ nav {
   overflow-y: scroll;
   width: 25rem;
   border-radius: 20px 0 5px 0;
-  display: flex;
-  flex-direction: column;
   display: none;
+  flex-direction: column;
 }
 .offersHoverMap {
   color: white;
@@ -80,18 +83,16 @@ nav {
 .theCities {
   background: #e7e7f7;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 0.8rem;
   display: flex;
-  justify-content: space-between;
-  margin: 2px;
-  width: 15%;
-  height: 40%;
+  margin: 5px;
+  width: 11%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.listOfCities {
+.listOfZones {
   height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
