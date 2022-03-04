@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { loadModules } from "esri-loader";
+// import { loadModules } from "esri-loader";
 import Map from "@arcgis/core/Map";
-import MapView from "@arcgis/core/views/MapView";
-import WebMap from "@arcgis/core/WebMap";
+// import MapView from "@arcgis/core/views/MapView";
+// import WebMap from "@arcgis/core/WebMap";
 import MapWidget from "./mapWidget/MapWidget";
 import MapGraphics from "./mapGraphics/MapGraphics";
 import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer";

@@ -3,21 +3,26 @@ import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 import './signUp.css';
 
-function Field({ label, isPassword, isEmail, cb }) {
+function Field({ label, isPassword, isEmail, value, cb }) {
     const [ visible, setVisible ]= useState(false);
-    const [data, setData]=useState('');
-    const cbx=(e)=>{
-        setData(e?.target?.value);
-        cb(data);
-    };
+    // const [ error, setError ]= useState('');
+    // const handleInput=(lab)=>{
+    //     return ()=>{
+    //         cb();
+    //         setError(verifyInput(lab, value));
+    //     }
+    // };
     return (
-        <div className="field">
-            <input value={data} type={isPassword && !visible ? "password": isEmail ? "email": "text"} 
-            onChange={cbx} placeholder={label}/>
-            <div className="view-me" onClick={()=>setVisible(!visible)} >
-                { isPassword && (!visible ? <VisibilityOutlinedIcon/>: <VisibilityOffOutlinedIcon/>) }
+        <>
+            <div className="field">
+                <input value={value} type={isPassword && !visible ? "password": isEmail ? "email": "text"} 
+                onChange={cb} placeholder={label}/>
+                <div className="view-me" onClick={()=>setVisible(!visible)} >
+                    { isPassword && (!visible ? <VisibilityOutlinedIcon/>: <VisibilityOffOutlinedIcon/>) }
+                </div>
             </div>
-        </div>
+            {/* <p className="error-input">{error}</p> */}
+        </>
     )
 };
 
@@ -26,6 +31,7 @@ Field.defaultProps={
     label: "Label",
     isPassword: false,
     isEmail: false,
+    value: "",
     cb: ()=>{}
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  { useState } from 'react';
 import Field from '../signUp/Field';
 import '../signUp/signUp.css';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
@@ -13,14 +13,18 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 function SignIn() {
     const dispatch = useDispatch();
+    const [username, setUsername]=useState('');
+    const [password, setPassword]=useState('');
+
     return (
         <motion.div className="sign-up"
             initial={{ x: "100vw", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.3 }}
         >
-            <Field label={"Username"} />
-            <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}/>
+            <Field label={"Username"} value={username} cb={(e)=>setUsername(e?.target?.value)}/>
+            <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}  value={password} 
+                cb={(e)=>setPassword(e?.target?.value)}/>
             <div onClick={()=>dispatch(pager("signup"))} className="have-account">Don't Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
             <button className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>Sign In</button>

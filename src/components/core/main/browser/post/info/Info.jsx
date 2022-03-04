@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 function Info({info}) {
   return (
     <div className="info-box">
-        {info.map(it=>(<Service title={it} key={uuid()}/>))}
+      {info.map(it=>(<Service title={it} key={uuid()}/>))}
     </div>
   )
 }

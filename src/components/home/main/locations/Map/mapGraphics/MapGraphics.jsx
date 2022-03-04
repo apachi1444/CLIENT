@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 import Graphic from "@arcgis/core/Graphic";
 const MapGraphics = ({ view }) => {
   const formRef = useRef(null);
-  const [zone, setZone] = useState({
-    name: "map",
-    address: "klsqjflk",
-  });
+  // const [zone, setZone] = useState({
+  //   name: "map",
+  //   address: "klsqjflk",
+  // });
   useEffect(() => {
     const layer = view.map.findLayerById("glResult1");
     console.log(layer);
@@ -61,7 +61,7 @@ const MapGraphics = ({ view }) => {
         }
       });
     });
-  }, []);
+  }, [view]);
   return (
     <div
       ref={formRef}

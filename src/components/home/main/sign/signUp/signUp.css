@@ -104,5 +104,10 @@
 .o-auth div{
     margin: 0 4px;
 }
-
+@media only screen and (max-width: 370px){
+    .sign-up{
+        width: 98%;
+        margin: auto;
+    }
+}
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import Field from './Field';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -14,6 +14,11 @@ import './signUp.css';
 
 function SignUp() {
     const dispatch = useDispatch();
+    const [username, setUsername]=useState('');
+    const [email, setEmail]=useState('');
+    const [password, setPassword]=useState('');
+    const [confirm, setConfirm]=useState('');
+    
     return (
         <motion.form className="sign-up"
             initial={{ x: "100vw", opacity: 0 }}
@@ -25,10 +30,13 @@ function SignUp() {
                 <label htmlFor='ava' className="avatar"><PermIdentityIcon/></label>
                 <p>Add Profile Picture</p>
             </div>
-            <Field label={"Username"} />
-            <Field icon={<MailOutlineIcon/>} label={"Email"} isEmail={true}/>
-            <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}/>
-            <Field icon={<LockOpenIcon/>} label={"Confirm"} isPassword={true}/>
+            <Field label={"Username"} value={username} cb={(e)=>setUsername(e?.target?.value)}/>
+            <Field icon={<MailOutlineIcon/>} label={"Email"} isEmail={true} value={email} 
+                cb={(e)=>setEmail(e?.target?.value)}/>
+            <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true} value={password} 
+                cb={(e)=>setPassword(e?.target?.value)}/>
+            <Field icon={<LockOpenIcon/>} label={"Confirm"} isPassword={true} value={confirm} 
+                cb={(e)=>setConfirm(e?.target?.value)}/>
             <div onClick={()=>dispatch(pager("signin"))} className="have-account">Already Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
             <button type='submit' className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>
