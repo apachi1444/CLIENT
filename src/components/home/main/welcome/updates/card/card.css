@@ -1,56 +1,56 @@
-
-.card{
-    display: grid;
-    padding: 6px;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
-    height: max-content;
-    width: 100%;
-    border-radius: 4px;
+.card {
+  display: grid;
+  padding: 6px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+  height: max-content;
+  width: 100%;
+  border-radius: 4px;
 }
 
-.image{
-    position: relative;
-    border-radius: 4px;
-    font-weight: 800;
-    color: white;
-    padding: 4px;
-    font-weight: 700;
-    font-family: 'Poppins', 'sans-serif';
+.image {
+  position: relative;
+  border-radius: 4px;
+  font-weight: 800;
+  color: white;
+  padding: 4px;
+  font-weight: 700;
+  font-family: "Poppins", "sans-serif";
 }
-.image  img{
-    inline-size: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 4px;
-    width: 100%;
-}
-
-.image .location{
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    border: none;
-}
-.image .price{
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
+.image img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 4px;
+  width: 100%;
 }
 
-.image .location, .image .price{
-    box-shadow: 0 2px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%);
-    border-radius: 6px;
-    padding: 1px;
+.image .location {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  border: none;
 }
-.more-about{
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
-    cursor: pointer;
+.image .price {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
 }
 
-.desc{
-    height: 12vh;
-    overflow-y: auto;
-    width: 100%;
+.image .location,
+.image .price {
+  box-shadow: 0 2px 3px rgb(0 0 0 / 6%), 0 1px 2px rgb(0 0 0 / 13%);
+  border-radius: 6px;
+  padding: 1px;
+}
+.more-about {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  cursor: pointer;
+}
+
+.desc {
+  height: 12vh;
+  overflow-y: auto;
+  width: 100%;
 }

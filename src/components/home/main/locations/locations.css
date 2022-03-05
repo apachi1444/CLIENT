@@ -41,7 +41,6 @@ select.ListOfCities:focus {
 }
 .MapDiv {
   background: #e7e7f7;
-  border-radius: 20px;
   padding: 0.7rem;
   display: flex;
   justify-content: space-between;
@@ -49,8 +48,6 @@ select.ListOfCities:focus {
   width: 88%;
 }
 .MapDiv .Map {
-  background: white;
-  border-radius: 15px;
   padding: 0.05rem;
   margin: 2px;
   width: 100%;
@@ -145,7 +142,8 @@ select.ListOfCities:focus {
   }
 }
 
-.location-nav .location-lat .input,  .input{
+.location-nav .location-lat .input,
+.input {
   outline: none;
   border: none;
   font-weight: 600;
