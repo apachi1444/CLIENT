@@ -15,10 +15,8 @@
 
 .field{
     max-width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-rows: auto auto auto;
     width: 99%;
     grid-gap: 4px;
     padding: 2px;
@@ -42,11 +40,13 @@
     outline: none;
     border: none;
     height: 2em;
-    padding: 3px 15px;
-    border-radius: 8px;
+    padding: 20px 15px;
+    border-radius: 10px;
     font-family: 'Poppins', 'sans-serif';
-    box-shadow: 0 3px 6px rgb(0 0 0 / 5%), 0 1px 2px rgb(0 0 0 / 10%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 20%);
     font-weight: 600;
+    width: 50vw;
+    max-width: 300px;
 };
 
 .field .view-me{
@@ -104,10 +104,30 @@
 .o-auth div{
     margin: 0 4px;
 }
-@media only screen and (max-width: 370px){
+@media only screen and (max-width: 600px){
     .sign-up{
         width: 98%;
+        margin: 1vh auto;
+        display: grid;
+        place-items: center;
+        padding: 3px;
+    }
+    .field input{
+        width: 80vw;
         margin: auto;
     }
 }
 
+.still-working-gif{
+    position: fixed;
+    inset: auto auto auto auto;
+}
+
+.error-input{
+    width: 60%;
+    font-weight: 600;
+    color: blue;
+    font-size: small;
+    margin: auto;
+    letter-spacing: 1px;
+}

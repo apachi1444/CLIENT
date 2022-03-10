@@ -7,7 +7,7 @@ import "./header.css";
 
 function Header() {
   const dispatch = useDispatch();
-  const isBig = useMedia({ minWidth: "500px" });
+  const isBig = useMedia({ minWidth: "630px" });
   if (!isBig)
     return (
       <div className="burg">

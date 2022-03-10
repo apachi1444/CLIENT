@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import { verifyInput } from '../../../../../logic/algorithms/security/verifyInput';
 import './signUp.css';
 
 function Field({ label, isPassword, isEmail, value, cb }) {
     const [ visible, setVisible ]= useState(false);
-    // const [ error, setError ]= useState('');
-    // const handleInput=(lab)=>{
-    //     return ()=>{
-    //         cb();
-    //         setError(verifyInput(lab, value));
-    //     }
-    // };
+    const [ error, setError ]= useState('');
+    useEffect(()=>{
+        setError(verifyInput(label, value));
+    }, [ value, label]);
     return (
         <>
             <div className="field">
@@ -20,8 +18,8 @@ function Field({ label, isPassword, isEmail, value, cb }) {
                 <div className="view-me" onClick={()=>setVisible(!visible)} >
                     { isPassword && (!visible ? <VisibilityOutlinedIcon/>: <VisibilityOffOutlinedIcon/>) }
                 </div>
+                {error && value && <p className="error-input">{error}</p>}
             </div>
-            {/* <p className="error-input">{error}</p> */}
         </>
     )
 };

@@ -16,8 +16,9 @@ const Page4 =({cb})=>{
         if (form.checkValidity() === false) {
         event.preventDefault();
         event.stopPropagation();
-        }
-
+    }
+    
+        console.log("Hello");
         setValidated(true);
     };
 

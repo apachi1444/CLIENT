@@ -11,6 +11,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import './signUp.css';
+import Processing from './Processing';
 
 function SignUp() {
     const dispatch = useDispatch();
@@ -18,7 +19,12 @@ function SignUp() {
     const [email, setEmail]=useState('');
     const [password, setPassword]=useState('');
     const [confirm, setConfirm]=useState('');
-    
+    const [processing, setProcessing]=useState(false);
+    const loginHandler=(e)=>{
+        e.preventDefault();
+        setProcessing(true);
+        //making api calls go here
+    }
     return (
         <motion.form className="sign-up"
             initial={{ x: "100vw", opacity: 0 }}
@@ -39,7 +45,7 @@ function SignUp() {
                 cb={(e)=>setConfirm(e?.target?.value)}/>
             <div onClick={()=>dispatch(pager("signin"))} className="have-account">Already Have Account?!</div>
             <div className="forgot-password">Forgot Password?!</div>
-            <button type='submit' className='signning' onClick={()=>dispatch(pager("core"))/*for testing*/}>
+            <button type='submit' className='signning' onClick={loginHandler}>
                 Sign Up
             </button>
             <h6>Or Sign Up With</h6>
@@ -49,6 +55,7 @@ function SignUp() {
                 <div className="github"><GitHubIcon style={{fill: '#171515'}}/></div>
                 <div className="twitter"><TwitterIcon style={{fill: '#00acee'}}/></div>
             </div>
+            <Processing flag={processing} width={100}/>
         </motion.form>
     )
 }
