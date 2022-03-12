@@ -8,9 +8,10 @@
     margin: 4vw auto;
     display: grid;
     place-items: center;
-    box-shadow: 0 3px 6px rgb(0 0 0 / 36%), 0 1px 2px rgb(0 0 0 / 43%);
+    box-shadow: 0 3px 6px rgb(0 0 0 / 46%), 0 1px 2px rgb(0 0 0 / 53%);
     font-family: 'Poppins', 'sans-serif';
-    background-color: rgb(223, 223, 238);
+    background-color: rgb(241, 245, 247);
+
 }
 
 .field{
@@ -22,6 +23,7 @@
     padding: 2px;
     margin: 4px auto;
     place-items: center;
+    
 }
 
 .sign-up .avatar{
@@ -43,10 +45,10 @@
     padding: 20px 15px;
     border-radius: 10px;
     font-family: 'Poppins', 'sans-serif';
-    box-shadow: 0 3px 6px rgb(0 0 0 / 10%), 0 1px 2px rgb(0 0 0 / 20%);
     font-weight: 600;
     width: 50vw;
     max-width: 300px;
+    border: 2px solid rgb(190, 190, 221);
 };
 
 .field .view-me{
@@ -122,7 +124,11 @@
     position: fixed;
     inset: auto auto auto auto;
 }
-
+.still-working-gif-abs{
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
 .error-input{
     width: 60%;
     font-weight: 600;
