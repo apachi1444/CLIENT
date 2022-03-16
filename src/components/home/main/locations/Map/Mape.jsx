@@ -9,12 +9,12 @@ import "./map.css";
 const Mape = () => {
   const mapRef = useRef(null);
   const [view, setView] = useState(null);
-  const glResult1 = new GraphicsLayer({
+  const [glResult1]=useState(new GraphicsLayer({
     id: "glResult1",
-  });
-  const glResult2 = new GraphicsLayer({
+  }));
+  const [glResult2]=useState(new GraphicsLayer({
     id: "glResult2",
-  });
+  }));
 
   useEffect(() => {
     const map = new Map({
@@ -29,7 +29,7 @@ const Mape = () => {
       zoom: 15,
     }).when((view) => setView(view));
     // the when function is a callback two param succes and err
-  }, []);
+  }, [glResult1, glResult2]);
 
   return (
     <div ref={mapRef} className="Map">

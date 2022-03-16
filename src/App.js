@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import Header from "./components/home/header/Header";
 import Contacts from "./components/home/contacts/Contacts";
@@ -7,21 +7,17 @@ import Manager from './Manager';
 import Search from './components/home/search/Search';
 import Core from "./components/core/Core";
 import Loading from "./templates/loading/Loading";
-// import  styled  from "styled-components";
-
+import socket from './logic/algorithms/sockets/sockets.js';
 import './app.css';
-// const Wrapper=styled.section`
-//   font-family: Poppins;
-//   display:  grid;
-//   height: 100vh;
-//   grid-template-rows: auto auto auto 1fr auto;
-//   background-color: #fdfdfd;
-//   width: 100vw;
-//   overflow:hidden;
-// `;
-//This is just for testing
 
 function App() {
+  useEffect(()=>{
+    //for testing
+    socket.on('someEvent', (data)=>{
+      console.log(data);
+    });
+    return ()=>socket.close();
+  }, []);
   const [loading, setLoading]=useState(true);
   const page=useSelector(state=>state.pager);
   setTimeout(()=>{setLoading(false)}, 2000);
