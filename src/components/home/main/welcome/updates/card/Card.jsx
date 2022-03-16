@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
+// import AddCircleIcon from "@mui/icons-material/AddCircle";
 import "./card.css";
 
 function Card({ details }) {

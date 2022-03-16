@@ -5,10 +5,10 @@ import Item from "../item/Item";
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import SingleBedOutlinedIcon from '@mui/icons-material/SingleBedOutlined';
 import ApartmentOutlinedIcon from '@mui/icons-material/ApartmentOutlined';
-import EmojiPeopleOutlinedIcon from '@mui/icons-material/EmojiPeopleOutlined';
+// import EmojiPeopleOutlinedIcon from '@mui/icons-material/EmojiPeopleOutlined';
 import Friend from './friend/Friend';
 import Rooms from './rooms/Rooms';
-import Owners from './owners/Owners';
+// import Owners from './owners/Owners';
 
 function Groupa() {
   //an api call here to get the friendslist
@@ -18,7 +18,7 @@ function Groupa() {
     <div className="groupa">
         <Item icon={<SingleBedOutlinedIcon/>} title={"Rooms"} body={[<Rooms key={uuid()}/>]}  key={uuid()}/>
         <Item icon={<ApartmentOutlinedIcon/>} title={"Apartments"} body={[<Rooms key={uuid()}/>]}  key={uuid()}/>
-        <Item icon={<EmojiPeopleOutlinedIcon/>} title={"More Owners"} body={[<Owners key={uuid()}/>]}  key={uuid()}/>
+        {/* <Item icon={<EmojiPeopleOutlinedIcon/>} title={"More Owners"} body={[<Owners key={uuid()}/>]}  key={uuid()}/> */}
         <Item icon={<LanguageOutlinedIcon/>} title={"Friends"} body={friendsList} key={uuid()}/>
     </div>
   );

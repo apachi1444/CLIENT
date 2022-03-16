@@ -2,11 +2,11 @@ import React from 'react'
 import Loading from '../../../../../templates/loading/Loading'
 import "./signUp.css";
 
-function Processing({msg, flag}) {
+function Processing({msg, flag, width, absolute}) {
   if(!flag) return <></>;
   return (
-    <div className="still-working-gif">
-        <Loading width={100} cercle={true}/>
+    <div className={`still-working-gif${absolute ? '': '-abs'}`}>
+        <Loading width={width} cercle={true}/>
         <h2>{msg}</h2>
     </div>
   )
@@ -15,6 +15,8 @@ function Processing({msg, flag}) {
 
 Processing.defaultProps={
     msg: "",
-    flag: false
+    flag: false,
+    width: 100,
+    absolute: true
 }
 export default Processing
