@@ -14,12 +14,13 @@ function Cities() {
         setOpen(!open);
     }
     const city_t=useSelector(state=>state.currentCity);
+    const { theme }=useSelector(state=>state.user);
     return(
         <>
-            <div className="open-cities" onClick={toggle}>
+            <div className={`open-cities`} onClick={toggle}>
                 {open ? <ExpandLessOutlinedIcon/>: <PlaceOutlinedIcon/>}
             </div>
-            {open && <motion.div className="cities"
+            {open && <motion.div className={`cities cities-${theme}`}
                 initial={{scale: 0, opacity: 0}}
                 animate={{scale: 1, opacity: 1}}
                 transition={{duration: 0.2}}

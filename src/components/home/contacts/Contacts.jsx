@@ -17,7 +17,7 @@ function Contacts() {
   }
   return (
     <div className="contacts">
-      <Logo fill={"rgb(172, 172, 231)"} background={"black"} />
+      <Logo fill={"rgb(172, 172, 231)"} background={"rgb(19, 19, 94)"} />
       {isSmall &&
         <div onClick={()=>setOpen(!open)} className="contacts-action">
           {open ? <ExpandLessOutlinedIcon/>: <ExpandMoreOutlinedIcon/>}

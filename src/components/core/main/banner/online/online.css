@@ -56,6 +56,9 @@
     animation: spreadit 0.s ease-out forwards;
 }
 
+.online-4, .online-5, .online-6{
+    color: rgb(137, 137, 177);
+}
 @keyframes spreadit {
     0%{
         height: 0;

@@ -1,5 +1,5 @@
 .contacts, .phone-email{
-    background-color: black;
+    background-color: rgb(19, 19, 94);
     display:  flex;
     justify-content: space-between;
     align-items: center;

@@ -2,15 +2,17 @@ import React, { useState } from 'react';
 import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import { useSelector } from 'react-redux';
 import "./online.css";
 import Picture from '../../../header/avatar/picture/Picture';
 import {v4 as uuid} from 'uuid';
 
 function Online({onlinePeople, list}) {
     const [open, setOpen]=useState(false);
+    const { theme } =useSelector(state=>state.user);
     const toggle=()=>setOpen(!open);
     return (
-        <div className="online">
+        <div className={`online online-${theme}`}>
             <div className="head" onClick={toggle}>
                 <div className="icon-t"><PeopleOutlineIcon/></div> 
                 <h3>Online People</h3> 

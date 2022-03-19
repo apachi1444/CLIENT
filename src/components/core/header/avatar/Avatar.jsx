@@ -38,7 +38,7 @@ function Avatar({username}) {
   const isMiniScreen=useMedia({maxWidth: "600px"});
   return (
       <div className="avatar">
-            <Picture width={"50px"} border='2px solid rgb(188, 151, 223)' auto={false}/>
+            <Picture width={"60px"} border='2px solid rgb(188, 151, 223)' auto={false}/>
             <h3>{username}</h3>
             <div className="about-mee" onClick={toggle}>
               {

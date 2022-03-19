@@ -1,4 +1,4 @@
-.header{
+.core-header-1, .core-header-2, .core-header-3, .core-header-4, .core-header-5, .core-header-6{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,4 +8,14 @@
     padding-bottom: 8px;
     height: 100%;
     border-bottom: 1px solid rgb(241, 241, 248);
+    background-color: rgb(19, 19, 94);
+    padding-left: 5px;
+    border-radius: 5px 5px 0 0;
 }
+
+.core-header-3, .core-header-4, .core-header-5, .core-header-6{
+    background-color: rgb(14, 13, 13);
+    border-bottom: 1px solid rgb(27, 27, 29);
+}
+
+

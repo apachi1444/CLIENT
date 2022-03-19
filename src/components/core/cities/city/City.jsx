@@ -13,11 +13,12 @@ function City({city, isCurrent}) {
   }, [isCurrent]);
   const showMe=()=>{
     dispatch(currentCity(current))
-    if(divRef.current && isCurrent) divRef.current.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    if(divRef.current && isCurrent) 
+      divRef.current.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   };
   return (
       <div className="city" ref={divRef} onClick={showMe}>
-          <Picture border={"2px solid blue"} auto={false}  width={"55px"} isCurrent={isCurrent}
+          <Picture border={"2px solid rgb(197, 197, 221)"} auto={false}  width={"50px"} isCurrent={isCurrent}
             imgUrl={"https://cdn.pixabay.com/photo/2019/04/29/20/41/amsterdam-4167026__340.png"}/>
           <h4>{city}</h4>
       </div>

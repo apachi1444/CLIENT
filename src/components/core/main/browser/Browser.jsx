@@ -18,6 +18,7 @@ import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 function Browser() {
   const ref=useRef(null);
   const page=useSelector(state=>state.browser);
+  const { theme }=useSelector(state=>state.user);
   const dispatch=useDispatch();
   const goHome=()=>{
     dispatch(browser("posts"));
@@ -32,7 +33,7 @@ function Browser() {
   switch(page){
     case 'profile':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Profile/>
           <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
@@ -44,7 +45,7 @@ function Browser() {
       );
     case 'banner':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Banner/>
           <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
@@ -56,7 +57,7 @@ function Browser() {
       );
     case 'editProfile':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <div className="go-save" onClick={handleSave}><SaveAsOutlinedIcon/></div>
           <Profile mode={true}/>
@@ -69,7 +70,7 @@ function Browser() {
       );
     case 'network':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Network/>
           <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
@@ -81,7 +82,7 @@ function Browser() {
       );
     case 'changePassword':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Password/>
           <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
@@ -93,7 +94,7 @@ function Browser() {
       );
     case 'deleteAccount':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <Delete/>
           <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
@@ -105,7 +106,7 @@ function Browser() {
       );
     case 'newPost':
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
           <motion.div className="new-post-t"
             initial={{ x: "100vw", opacity: 0 }}
@@ -118,7 +119,7 @@ function Browser() {
       );
     default:
       return (
-        <div className="browser">
+        <div className={`browser browser-${theme}`}>
           <div className="start_" ref={ref}></div>
           <Post/>
           <Post/>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Picture from '../../../header/avatar/picture/Picture';
 import Controller from "./controller/Controller";
 import Reaction from './reaction/Reaction';
@@ -11,11 +12,12 @@ import "./post.css";
 function Post({ownerImage, imagesVideosUrls, price, area, address, rooms, username, isMine,
             comments, hearts, likes, dislikes, description, commentsTree, stars, postTime, mode}) {
   const [des, setDes]=useState(description);
+  const { theme }=useSelector(state=>state.user);
   const handleDes=(e)=>{
       setDes(e.target.value);
   }
   return (
-      <div className="post">
+      <div className={`post post-${theme}`}>
           <div className="post-head">
               <div className="post-pic"><Picture width={"40px"} auto={false} imgUrl={ownerImage}/></div>
               <h4>{username}</h4>

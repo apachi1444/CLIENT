@@ -1,5 +1,5 @@
 
-.post{
+.post, .post-5, .post-4{
     width: 99%;
     height: max-content;
     margin: 10px auto;
@@ -10,6 +10,10 @@
     max-width: 100%;
 }
 
+.post-5{
+    background-color: rgb(15, 15, 15);
+    color: rgb(79, 78, 82);
+}
 .post-head{
     display: flex;
     justify-content: space-between;
@@ -29,6 +33,10 @@
 
 }
 
+.post-4 p, .post-5 p, .post-6 p{
+    border-left: 1px solid rgb(30, 30, 31);
+    border-bottom: 1px solid rgb(30, 30, 31);
+} 
 .stars{
     width: max-content;
     display: grid;

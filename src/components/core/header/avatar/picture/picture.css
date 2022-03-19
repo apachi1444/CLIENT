@@ -2,13 +2,12 @@
 .picture{
     display: grid;
     place-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 50%;
     position: relative;
-    background-color: black;
+    /* background-color: black; */
     cursor: pointer;
 }
-
 
 .red-dot{
     position: absolute;
@@ -23,4 +22,5 @@
 .picture img{
     aspect-ratio: 1/1;
     object-fit: cover;
+    /* background-color: rgb(197, 197, 221); */
 }

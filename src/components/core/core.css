@@ -1,4 +1,4 @@
-.core{
+.core-1, .core-2, .core-3, .core-4, .core-5, .core-6{
     display: grid;
     grid-template-rows: auto auto 1fr;
     place-items: center;
@@ -10,6 +10,15 @@
     max-height: 100vh;
 }
 
+.core-2{
+  background-color: rgb(180, 180, 202);
+}
+
+
+
+.core-4, .core-5, .core-6{
+  background-color: rgb(15, 15, 15);
+}
 /* Works on Firefox */
 * {
     scrollbar-width: thin;

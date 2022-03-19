@@ -1,4 +1,4 @@
-.cities {
+.cities, .cities-4, .cities-5, .cities-6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, auto);
   grid-auto-flow: column;
@@ -11,7 +11,10 @@
   height: max-content;
   margin-bottom: 5px;
 }
-
+.cities-4, .cities-5, .cities-6 {
+  background-color: rgb(15, 15, 15);
+  color: rgb(91, 91, 170);
+}
 .open-cities{
   position: fixed;
   inset: 1vh 3vw auto auto;

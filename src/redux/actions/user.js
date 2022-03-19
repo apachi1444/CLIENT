@@ -1,6 +1,6 @@
 const user=(pl)=>{
     return{
-        type: "userData",
+        type: "user",
         payload: pl
     }
 }
