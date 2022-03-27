@@ -19,6 +19,7 @@ function SignIn() {
     const [processing, setProcessing]=useState(false);
     const loginHandler=(e)=>{
         e.preventDefault();
+        dispatch(pager('core'));//Just for testing
         setProcessing(true);
         //api calling
     }

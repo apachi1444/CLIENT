@@ -6,7 +6,8 @@ const defaultUser={
     stars: 0,
     postsNumber: 0,
     bio: "Live As You Want And In The House You Want",
-    theme: 1//for light and true for dark theme
+    theme: 1,//for light and true for dark theme,
+    mode: true//false for user mode, true for admin mode
 };
 
 const user=(state=defaultUser, action)=>{

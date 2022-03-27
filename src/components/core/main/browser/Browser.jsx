@@ -15,7 +15,7 @@ import Delete from './delete/Delete';
 import AnnounceForm from './announce/Announce';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
-function Browser() {
+function Browser({ isAdmin }) {
   const ref=useRef(null);
   const page=useSelector(state=>state.browser);
   const { theme }=useSelector(state=>state.user);
@@ -117,10 +117,67 @@ function Browser() {
           </motion.div>
         </div>
       );
+    case 'users':
+      return ( isAdmin &&
+        <div className={`browser browser-${theme}`}>
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <h2>The Page {page} Is Not Built Yet</h2>
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
+        </div>
+      );
+    case 'visits':
+      return ( isAdmin &&
+        <div className={`browser browser-${theme}`}>
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <h2>The Page {page} Is Not Built Yet</h2>
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
+        </div>
+      );
+    case 'activeUsers':
+      return ( isAdmin &&
+        <div className={`browser browser-${theme}`}>
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <h2>The Page {page} Is Not Built Yet</h2>
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
+        </div>
+      );
+    case 'prices':
+      return ( isAdmin &&
+        <div className={`browser browser-${theme}`}>
+          <div className="go-home" onClick={goHome}><HomeOutlinedIcon/></div>
+          <h2>The Page {page} Is Not Built Yet</h2>
+          <motion.div className="add-new" onClick={()=>dispatch(browser("newPost"))}
+            initial={{ rotate: "180deg", opacity: 1 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1}}
+          ><AddOutlinedIcon/></motion.div>
+        </div>
+      );
     default:
       return (
         <div className={`browser browser-${theme}`}>
           <div className="start_" ref={ref}></div>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
           <Post/>
           <Post/>
           <Post/>

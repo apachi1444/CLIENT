@@ -14,11 +14,18 @@ import CloudQueueOutlinedIcon from '@mui/icons-material/CloudQueueOutlined';
 import StackedLineChartOutlinedIcon from '@mui/icons-material/StackedLineChartOutlined';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
+import TourOutlinedIcon from '@mui/icons-material/TourOutlined';
+import AttachMoneyOutlinedIcon from '@mui/icons-material/AttachMoneyOutlined';
+import CircleNotificationsOutlinedIcon from '@mui/icons-material/CircleNotificationsOutlined';
+
 import pager from '../../../../redux/actions/pager';
 import browser from '../../../../redux/actions/browser';
 
-function Avatar({username}) {
-  const pages=["banner", "newPost", "profile", "editProfile", "network", "changePassword", "deleteAccount"];
+function Avatar({username, isAdmin}) {
+  const pages=["banner", "newPost", "profile", "editProfile", "network", "changePassword", "deleteAccount",
+    "visists", 'users', 'prices', "activeUsers"
+  ];
   const dispatch=useDispatch();
   const [open, setOpen]=useState(false);
   const toggle=()=>{
@@ -45,7 +52,8 @@ function Avatar({username}) {
                 !open ? <ExpandMoreOutlinedIcon/>: <ExpandLessOutlinedIcon/>
               }
             </div>
-            {open && 
+            {open && ( 
+              !isAdmin ?
               <ul className="my-actions">
                 {isMiniScreen && 
                 <li className="my-act" onClick={navigate("banner")}>
@@ -72,13 +80,44 @@ function Avatar({username}) {
                 <li className="my-act" onClick={navigate("home")} >
                   <LogoutOutlinedIcon/> <h5>Log Out</h5>
                 </li>
-              </ul>
-            }
+              </ul>:
+              <ul className="my-actions">
+                {isMiniScreen && 
+                <li className="my-act" onClick={navigate("banner")}>
+                  <DashboardOutlinedIcon/> <h5>Dashboard</h5></li>
+                }
+                <li className="my-act" onClick={navigate("users")}>
+                  <PeopleOutlineIcon/> <h5>Users</h5>
+                </li>
+                <li className="my-act" onClick={navigate("visits")}>
+                  <TourOutlinedIcon/> <h5>Daily Visits</h5>
+                </li>
+                <li className="my-act" onClick={navigate("prices")}>
+                  <AttachMoneyOutlinedIcon/> <h5>Prices</h5>
+                </li>
+                <li className="my-act" onClick={navigate("activeUsers")}>
+                  <CircleNotificationsOutlinedIcon/> <h5>Most Active Users</h5>
+                </li>
+                <li className="my-act">
+                  <StackedLineChartOutlinedIcon/> <h5>More Statistics</h5>
+                </li>
+                <li className="my-act" onClick={navigate("changePassword")}>
+                  <VpnKeyOutlinedIcon/> <h5>Change Password</h5>
+                </li>
+                <li className="my-act" onClick={navigate("deleteAccount")}>
+                  <DeleteOutlineOutlinedIcon/> <h5>Delete Account</h5>
+                </li>
+                <li className="my-act" onClick={navigate("home")} >
+                  <LogoutOutlinedIcon/> <h5>Log Out</h5>
+                </li>
+            </ul>
+            )}
       </div>
   );
 }
 
 Avatar.defaultProps={
-    username : "John Doe"
+    username : "John Doe",
+    isAdmin: false
 }
 export default Avatar;

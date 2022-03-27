@@ -19,3 +19,11 @@
 }
 
 
+.toggle-mode{
+    border:  1px solid pink;
+    border-radius: 10px;
+    padding: 4px;
+    margin: 0 10px;
+    color: rgb(134, 128, 189);
+    cursor: pointer;
+}

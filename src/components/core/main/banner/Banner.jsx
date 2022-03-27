@@ -1,11 +1,14 @@
 import React from 'react';
-import "./banner.css";
 import Groupa from './groupa/Groupa';
 import Groupb from './groupb/Groupb';
 import Online from './online/Online';
+import Dashboard from './dashboard/Dashboard';
 import { useSelector } from 'react-redux';
-function Banner() {
+import "./banner.css";
+
+function Banner({isAdmin}) {
     const { theme } = useSelector(state=>state.user);
+    if(isAdmin) return <Dashboard/>;
     return (
         <div className={`banner banner-${theme}`}>
             <Online/>
@@ -15,4 +18,7 @@ function Banner() {
     );
 }
 
+Banner.defaultProps={
+    isAdmin: false
+}
 export default Banner;
