@@ -7,7 +7,7 @@ import "./loading.css";
 
 function Loading({width, gap, color, start, still, cercle}) {
   const dotStyles={ 
-        backgroundColor: color, width,height: width, margin: gap,
+        backgroundColor: color, width, height: width, margin: gap,
         borderRadius: "50%",
         boxShadow: "0 2px 4px rgb(0 0 0 / 76%), 0 1px 2px rgb(0 0 0 / 83%)", 
   };
