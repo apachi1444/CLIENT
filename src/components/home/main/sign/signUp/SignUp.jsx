@@ -36,7 +36,7 @@ function SignUp() {
       try {
         // const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
         const { data } = await axios.post(
-          "http://localhost:5000/api/users/signup",
+          "https://colocakesh.herokuapp.com/api/users/signup",
           signData
         );
         console.log(data);
