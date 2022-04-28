@@ -10,7 +10,7 @@
     place-items: center;
     box-shadow: 0 3px 6px rgb(0 0 0 / 46%), 0 1px 2px rgb(0 0 0 / 53%);
     font-family: 'Poppins', 'sans-serif';
-    background-color: rgb(241, 245, 247);
+    background-color: rgb(252, 252, 253);
 
 }
 
@@ -45,10 +45,10 @@
     padding: 20px 15px;
     border-radius: 10px;
     font-family: 'Poppins', 'sans-serif';
-    font-weight: 600;
+    font-weight: 800;
     width: 50vw;
     max-width: 300px;
-    border: 2px solid rgb(190, 190, 221);
+    border: 2px solid rgb(202, 202, 219);
 };
 
 .field .view-me{
@@ -66,6 +66,7 @@
 
 .sign-up .forgot-password, .sign-up .have-account{
     padding: 3px;
+    font-weight: 800;
 }
 
 .forgot-password:hover, .have-account:hover{
@@ -136,4 +137,10 @@
     font-size: small;
     margin: auto;
     letter-spacing: 1px;
+}
+
+.response-error{
+    font-weight: 900;
+    color: red;
+    font-size: large;
 }

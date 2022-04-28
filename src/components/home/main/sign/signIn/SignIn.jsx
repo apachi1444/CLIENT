@@ -1,50 +1,129 @@
-import React,  { useState } from 'react';
-import Field from '../signUp/Field';
-import '../signUp/signUp.css';
-import LockOpenIcon from '@mui/icons-material/LockOpen';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useDispatch } from "react-redux";
+import { motion } from "framer-motion";
+import Field from "../signUp/Field";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import pager from "../../../../../redux/actions/pager";
-
-import { motion }from "framer-motion";
-import GoogleIcon from '@mui/icons-material/Google';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import Processing from '../signUp/Processing';
+import user from "../../../../../redux/actions/user";
+import GoogleIcon from "@mui/icons-material/Google";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import Processing from "../signUp/Processing";
+import "../signUp/signUp.css";
 
 function SignIn() {
-    const dispatch = useDispatch();
-    const [username, setUsername]=useState('');
-    const [password, setPassword]=useState('');
-    const [processing, setProcessing]=useState(false);
-    const loginHandler=(e)=>{
-        e.preventDefault();
-        dispatch(pager('core'));//Just for testing
-        setProcessing(true);
-        //api calling
-    }
-    return (
-        <motion.div className="sign-up"
-            initial={{ x: "100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.3 }}
-        >
-            <Field label={"Username"} value={username} cb={(e)=>setUsername(e?.target?.value)}/>
-            <Field icon={<LockOpenIcon/>} label={"Password"} isPassword={true}  value={password} 
-                cb={(e)=>setPassword(e?.target?.value)}/>
-            <div onClick={()=>dispatch(pager("signup"))} className="have-account">Don't Have Account?!</div>
-            <div className="forgot-password">Forgot Password?!</div>
-            <button className='signning' onClick={loginHandler}>Sign In</button>
-            <h6>Or Log In With</h6>
-            <div className="o-auth">
-                <div className="google"><GoogleIcon style={{fill: '#4885ed'}}/></div>
-                <div className="facebook"><FacebookIcon style={{fill: '#3b5998'}}/></div>
-                <div className="github"><GitHubIcon style={{fill: '#171515'}}/></div>
-                <div className="twitter"><TwitterIcon style={{fill: '#00acee'}}/></div>
-            </div>
-             <Processing flag={processing} width={100}/>
-        </motion.div>
-    )
+  const [pass, emai] = [
+    localStorage.getItem("Password"),
+    localStorage.getItem("Email"),
+  ];
+  const dispatch = useDispatch();
+  const [error, setError] = useState("");
+  const [isMounted, setMounted] = useState(false);
+  const [signal, setSignal] = useState(false);
+  const [processing, setProcessing] = useState(false);
+  const [signData, setSignData] = useState({
+    email: emai ? emai : "",
+    password: pass ? pass : "",
+  });
+
+  useEffect(() => {
+    setMounted(true);
+
+    const getData = async () => {
+      setProcessing(true);
+      try {
+        // const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
+        const { data } = await axios.post(
+          "http://localhost:5000/api/users/signin",
+          signData
+        );
+        console.log(data);
+        if (!data.error) {
+          dispatch(user(data.data));
+          dispatch(pager("core"));
+
+          // dispatch(socket(socketIo));
+        } else {
+          if (isMounted) setError(data.message);
+        }
+      } catch (err) {
+        if (isMounted) setError(err.message);
+      }
+      setProcessing(false);
+    };
+    getData();
+    return () => {
+      setMounted(false);
+    };
+  }, [signal]);
+
+  const loginHandler = (e) => {
+    e.preventDefault();
+    setSignal(!signal);
+  };
+
+  return (
+    <motion.form
+      className="sign-up"
+      initial={{ x: "100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <div className="avatar">
+        <input type="file" id="ava" />
+        <label htmlFor="ava" className="avatar">
+          <PermIdentityIcon />
+        </label>
+        <p>Add Profile Picture</p>
+      </div>
+      <Field
+        icon={<MailOutlineIcon />}
+        label={"Email"}
+        isEmail={true}
+        value={signData.email}
+        cb={(e) => setSignData({ ...signData, email: e.target.value })}
+      />
+      <Field
+        icon={<LockOpenIcon />}
+        label={"Password"}
+        isPassword={true}
+        value={signData.password}
+        cb={(e) => setSignData({ ...signData, password: e.target.value })}
+      />
+
+      <div onClick={() => dispatch(pager("signup"))} className="have-account">
+        Don't Have An Account?!
+      </div>
+      <div className="forgot-password">Forgot Password?!</div>
+      <button type="submit" className="signning" onClick={loginHandler}>
+        Sign Up
+      </button>
+      <h6>Or Sign Up With</h6>
+      <div className="o-auth">
+        <div className="google">
+          <GoogleIcon style={{ fill: "#4885ed" }} />
+        </div>
+        <div className="facebook">
+          <FacebookIcon style={{ fill: "#3b5998" }} />
+        </div>
+        <div className="github">
+          <GitHubIcon style={{ fill: "#171515" }} />
+        </div>
+        <div className="twitter">
+          <TwitterIcon style={{ fill: "#00acee" }} />
+        </div>
+      </div>
+      {!processing ? (
+        <p className="response-error">{error}</p>
+      ) : (
+        <Processing flag={processing} width={100} />
+      )}
+    </motion.form>
+  );
 }
 
 export default SignIn;
