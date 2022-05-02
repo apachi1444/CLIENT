@@ -14,6 +14,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Processing from "./Processing";
 import "./signUp.css";
+import getUrl from "../../../../../logic/utils/urls";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ function SignUp() {
   const [isMounted, setMounted] = useState(false);
   const [signal, setSignal] = useState(false);
   const [processing, setProcessing] = useState(false);
+  const [avatar, setAvatar] = useState(null);
   const [signData, setSignData] = useState({
     username: "",
     email: "",
@@ -34,15 +36,25 @@ function SignUp() {
     const getData = async () => {
       setProcessing(true);
       try {
-        // const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
-        const { data } = await axios.post(
-          "https://colocakesh.herokuapp.com/api/users/signup",
-          signData
+        const formData = new FormData();
+        formData.append("image", avatar);
+        Object.keys(signData).forEach((key) =>
+          formData.append(key, signData[key])
         );
-        console.log(data);
+        const { data } = await axios.post(
+          getUrl(true, "api/users/signup"),
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log(data.data);
         if (!data.error) {
           dispatch(user(data.data));
-          dispatch(pager("core"));
+          if (data.data.mode) dispatch(pager("admin"));
+          else dispatch(pager("core"));
 
           localStorage.setItem("Email", signData.email);
           localStorage.setItem("Password", signData.password);
@@ -61,20 +73,27 @@ function SignUp() {
     };
   }, [signal]);
 
-  const loginHandler = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
     setSignal(!signal);
   };
 
+  const handleImage = (e) => {
+    setAvatar(e.target.files[0]);
+    console.log("was called");
+    console.log(avatar);
+  };
   return (
     <motion.form
+      onSubmit={onSubmit}
       className="sign-up"
       initial={{ x: "100vw", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.3 }}
+      encType="multipart/form-data"
     >
       <div className="avatar">
-        <input type="file" id="ava" />
+        <input type="file" id="ava" name="image" onChange={handleImage} />
         <label htmlFor="ava" className="avatar">
           <PermIdentityIcon />
         </label>
@@ -110,7 +129,7 @@ function SignUp() {
         Already Have Account?!
       </div>
       <div className="forgot-password">Forgot Password?!</div>
-      <button type="submit" className="signning" onClick={loginHandler}>
+      <button type="submit" className="signning">
         Sign Up
       </button>
       <h6>Or Sign Up With</h6>

@@ -24,7 +24,6 @@ function App() {
   setTimeout(()=>{setLoading(false)}, 2000);
   if(loading) return <Loading start={true} still={loading}/>;
   
-  // if(page!=='test') return <Admin/>; //Just for testing admin ui
   switch(page){
     case "admin":
       return <Admin/>

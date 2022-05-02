@@ -14,6 +14,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Processing from "../signUp/Processing";
 import "../signUp/signUp.css";
+import getUrl from "../../../../../logic/utils/urls";
 
 function SignIn() {
   const [pass, emai] = [
@@ -36,15 +37,14 @@ function SignIn() {
     const getData = async () => {
       setProcessing(true);
       try {
-        // const { data }=await axios.post("https://jotiaspacewebsite.herokuapp.com/sign/signUp", signData);
         const { data } = await axios.post(
-          "https://colocakesh.herokuapp.com/api/users/signin",
+          getUrl(true, "api/users/signin"),
           signData
         );
-        console.log(data);
         if (!data.error) {
           dispatch(user(data.data));
-          dispatch(pager("core"));
+          if (data.data.mode) dispatch(pager("admin"));
+          else dispatch(pager("core"));
 
           // dispatch(socket(socketIo));
         } else {
