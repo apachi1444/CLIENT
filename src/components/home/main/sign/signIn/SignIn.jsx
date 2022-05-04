@@ -13,8 +13,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Processing from "../signUp/Processing";
+import { getUrl, isProduction } from "../../../../../logic/utils/urls";
 import "../signUp/signUp.css";
-import getUrl from "../../../../../logic/utils/urls";
 
 function SignIn() {
   const [pass, emai] = [
@@ -38,7 +38,7 @@ function SignIn() {
       setProcessing(true);
       try {
         const { data } = await axios.post(
-          getUrl(true, "api/users/signin"),
+          getUrl(isProduction, "api/users/signin"),
           signData
         );
         if (!data.error) {

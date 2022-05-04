@@ -13,8 +13,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Processing from "./Processing";
+import { getUrl, isProduction } from "../../../../../logic/utils/urls";
 import "./signUp.css";
-import getUrl from "../../../../../logic/utils/urls";
 
 function SignUp() {
   const dispatch = useDispatch();
@@ -42,7 +42,7 @@ function SignUp() {
           formData.append(key, signData[key])
         );
         const { data } = await axios.post(
-          getUrl(true, "api/users/signup"),
+          getUrl(isProduction, "api/users/signup"),
           formData,
           {
             headers: {

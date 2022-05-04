@@ -17,7 +17,7 @@ import PeopleOutlineIcon from "@mui/icons-material/PeopleOutline";
 import TourOutlinedIcon from "@mui/icons-material/TourOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import CircleNotificationsOutlinedIcon from "@mui/icons-material/CircleNotificationsOutlined";
-import getUrl from "../../../../logic/utils/urls";
+import { getUrl, isProduction } from "../../../../logic/utils/urls";
 
 import pager from "../../../../redux/actions/pager";
 import browser from "../../../../redux/actions/browser";
@@ -36,7 +36,7 @@ function Avatar({ username, isAdmin }) {
     "prices",
     "activeUsers",
   ];
-  const { forgroundImage } = useSelector((state) => state.user);
+  const { foreGroundImage } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const toggle = () => {
@@ -60,9 +60,9 @@ function Avatar({ username, isAdmin }) {
     <div className="avatar">
       <Picture
         imgUrl={
-          forgroundImage
-            ? getUrl(false, `uploads/images/${forgroundImage}`)
-            : "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          foreGroundImage
+            ? getUrl(isProduction, `images/avatars/${foreGroundImage}`)
+            : getUrl(isProduction, "images/unkown/boyavatar.jpg")
         }
         width={"60px"}
         border="2px solid rgb(188, 151, 223)"
