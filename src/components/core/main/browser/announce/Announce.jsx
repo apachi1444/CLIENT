@@ -6,7 +6,9 @@ import Success from "./pages/Success";
 
 function AnnounceForm() {
   const [currentPage, setCurrentPage] = useState(0);
-  const [data, setData] = useState({});
+  const [data, setData] = useState({
+    images: [],
+  });
   const handlePage = (flag) => {
     setCurrentPage(flag ? currentPage + 1 : currentPage - 1);
   };

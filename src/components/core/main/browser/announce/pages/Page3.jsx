@@ -50,8 +50,8 @@ const Page3 = ({ cb, handleForm, form }) => {
             },
           }
         );
-        console.log(data);
         setPosting(false);
+        console.log(data);
         if (data.error) {
           alert(data.message);
         } else {
@@ -176,7 +176,7 @@ const Page3 = ({ cb, handleForm, form }) => {
                             setValidated(false);
                           } else {
                             handleForm({
-                              images: img.target.files,
+                              images: [...form.images, ...img.target.files],
                             })();
                             setValidated(true);
                           }
@@ -198,13 +198,6 @@ const Page3 = ({ cb, handleForm, form }) => {
                         }}
                       />
                     </InputGroup>
-                    {posting && (
-                      <Processing
-                        absolute={true}
-                        msg={"Posting..."}
-                        width={100}
-                      />
-                    )}
                   </div>
                 </Row>
               </Form>
@@ -240,6 +233,12 @@ const Page3 = ({ cb, handleForm, form }) => {
               >
                 Finish
               </Button>
+              <Processing
+                absolute={true}
+                msg={"Posting..."}
+                width={100}
+                flag={posting}
+              />
             </div>
           </Col>
           <Col lg={1} sm={1}></Col>
