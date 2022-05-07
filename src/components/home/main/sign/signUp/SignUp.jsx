@@ -41,7 +41,7 @@ function SignUp() {
         Object.keys(signData).forEach((key) =>
           formData.append(key, signData[key])
         );
-        const { data } = await axios.post(
+        const res = await axios.post(
           getUrl(isProduction, "api/users/signup"),
           formData,
           {
@@ -50,7 +50,8 @@ function SignUp() {
             },
           }
         );
-        console.log(data.data);
+        const data = res.data;
+        console.log(res);
         if (!data.error) {
           dispatch(user(data.data));
           if (data.data.mode) dispatch(pager("admin"));

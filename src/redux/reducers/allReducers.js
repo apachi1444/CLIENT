@@ -4,13 +4,15 @@ import currentCity from "./currentCity";
 import browser from "./browser";
 import messanger  from "./messanger";
 import user from './user';
+import post from "./post";
 
 const allReducers=combineReducers({
     pager,
     currentCity,
     browser,
     messanger,
-    user
+    user,
+    post
 });
 
 export default allReducers;
