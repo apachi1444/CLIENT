@@ -21,6 +21,7 @@ import { getUrl, isProduction } from "../../../../logic/utils/urls";
 
 import pager from "../../../../redux/actions/pager";
 import browser from "../../../../redux/actions/browser";
+import useClickOutside from "../../../../logic/algorithms/hooks/useClickOutside";
 
 function Avatar({ username, isAdmin }) {
   const pages = [
@@ -46,15 +47,15 @@ function Avatar({ username, isAdmin }) {
     if (page === "home")
       return () => {
         dispatch(pager(page));
-        setOpen(!open);
       };
     if (pages.includes(page))
       return () => {
         dispatch(browser(page));
-        setOpen(!open);
       };
     return () => {};
   };
+
+  let nodeRef = useClickOutside(toggle);
   const isMiniScreen = useMedia({ maxWidth: "600px" });
   return (
     <div className="avatar">
@@ -74,7 +75,7 @@ function Avatar({ username, isAdmin }) {
       </div>
       {open &&
         (!isAdmin ? (
-          <ul className="my-actions">
+          <ul className="my-actions" ref={nodeRef}>
             {isMiniScreen && (
               <li className="my-act" onClick={navigate("banner")}>
                 <DashboardOutlinedIcon /> <h5>Dashboard</h5>
@@ -103,7 +104,7 @@ function Avatar({ username, isAdmin }) {
             </li>
           </ul>
         ) : (
-          <ul className="my-actions">
+          <ul className="my-actions" ref={nodeRef}>
             {isMiniScreen && (
               <li className="my-act" onClick={navigate("banner")}>
                 <DashboardOutlinedIcon /> <h5>Dashboard</h5>
